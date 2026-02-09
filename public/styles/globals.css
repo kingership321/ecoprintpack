@@ -1,0 +1,59 @@
+/* styles/globals.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply text-gray-900;
+  }
+  body {
+    @apply font-sans antialiased bg-white;
+  }
+  h1, h2, h3, h4 {
+    @apply font-bold tracking-tight;
+  }
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer components {
+  /* Updated Button Styles matching graphics */
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-emerald-600 to-green-700 rounded-lg shadow-lg hover:shadow-xl hover:from-emerald-700 hover:to-green-800 focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-opacity-50;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-emerald-700 transition-all duration-300 bg-white border-2 border-emerald-600 rounded-lg hover:bg-emerald-50 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-emerald-500 focus:ring-opacity-50;
+  }
+  
+  /* Highlight badge for "Best Seller" etc. */
+  .highlight-badge {
+    @apply inline-block px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 rounded-full shadow-md;
+  }
+  
+  /* MOQ badge */
+  .moq-badge {
+    @apply inline-block px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-emerald-500 to-teal-600 rounded-full;
+  }
+  
+  /* Section styles */
+  .section-padding {
+    @apply px-6 py-16 md:px-12 lg:px-24 lg:py-20;
+  }
+  .section-padding-sm {
+    @apply px-6 py-8 md:px-12 lg:px-24 lg:py-12;
+  }
+  
+  /* Product card */
+  .product-card {
+    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden border border-gray-200;
+  }
+}
