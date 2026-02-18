@@ -3,43 +3,62 @@ import { Layout } from '../components/Layout'
 import { Hero } from '../components/Hero'
 import Link from 'next/link'
 
+
+
 export default function HomePage() {
-  const products = [
+  // Updated products with prices and discounts - matching reference style
+  const featuredProducts = [
     {
       id: 1,
       name: 'Loop Handle Non Woven Bag',
       description: 'Best selling eco-friendly bags with comfortable loop handles. Perfect for retail packaging.',
-      features: ['Durable Material', 'Custom Printing', 'Multiple Sizes', 'Water Resistant'],
+      price: 35000,
+      mrp: 42000,
+      discount: 17,
+      image: '👜',
+      features: ['70 GSM', 'Custom Print', 'Reusable'],
       moq: '20 KG',
-      badge: 'BEST SELLER',
-      color: 'from-emerald-500 to-green-600'
+      badge: 'BESTSELLER',
+      stock: 'In Stock'
     },
     {
       id: 2,
-      name: 'Printed D-Cut Non Woven',
-      description: 'Modern D-cut design with excellent print quality for brand visibility.',
-      features: ['High-Quality Print', 'Ergonomic Design', 'Reusable', 'Eco-Friendly'],
+      name: 'Printed D-Cut Non Woven Bag',
+      description: 'Modern D-cut design with excellent print quality for maximum brand visibility.',
+      price: 42000,
+      mrp: 50000,
+      discount: 16,
+      image: '🎀',
+      features: ['90 GSM', 'Premium Print', 'Luxury'],
       moq: '20 KG',
       badge: 'POPULAR',
-      color: 'from-teal-500 to-cyan-600'
+      stock: 'In Stock'
     },
     {
       id: 3,
-      name: 'Stitched Handle Bags',
-      description: 'Premium stitched handles for extra strength and durability.',
-      features: ['Reinforced Handles', 'Heavy Duty', 'Luxury Finish', 'Custom Colors'],
+      name: 'Stitched Handle Heavy Duty Bag',
+      description: 'Premium stitched handles for extra strength and durability. Ideal for heavy items.',
+      price: 48000,
+      mrp: 58000,
+      discount: 17,
+      image: '💼',
+      features: ['120 GSM', 'Double Stitch', 'Heavy Duty'],
       moq: '20 KG',
       badge: 'PREMIUM',
-      color: 'from-amber-500 to-orange-600'
+      stock: 'Limited Stock'
     },
     {
       id: 4,
-      name: 'Standard Non Woven Bags',
-      description: 'Classic non-woven bags for everyday packaging needs.',
-      features: ['Cost Effective', 'Lightweight', 'Various Colors', 'Bulk Orders'],
+      name: 'Standard Non Woven Shopping Bag',
+      description: 'Classic non-woven bags for everyday packaging needs. Cost-effective solution.',
+      price: 25000,
+      mrp: 32000,
+      discount: 22,
+      image: '🛍️',
+      features: ['70 GSM', 'Cost Effective', 'Bulk Orders'],
       moq: '20 KG',
       badge: 'ECONOMICAL',
-      color: 'from-blue-500 to-indigo-600'
+      stock: 'In Stock'
     }
   ]
 
@@ -66,6 +85,11 @@ export default function HomePage() {
     }
   ]
 
+  // Format price in NPR with commas
+  const formatPrice = (price) => {
+    return '₦' + price.toLocaleString('en-IN')
+  }
+
   return (
     <Layout 
       pageTitle="Home | Eco-Friendly Custom Bags Manufacturer"
@@ -74,7 +98,7 @@ export default function HomePage() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Products Preview Section */}
+      {/* Featured Products Section - Redesigned to match reference style */}
       <section className="section-padding bg-gradient-to-b from-white to-emerald-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -86,50 +110,83 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {products.map((product) => (
-              <div key={product.id} className="product-card group">
-                <div className={`h-3 bg-gradient-to-r ${product.color}`}></div>
-                <div className="p-6">
-                  <div className="flex justify-between items-start mb-4">
-                    <span className={`inline-block px-3 py-1 text-xs font-bold text-white rounded-full bg-gradient-to-r ${product.color}`}>
-                      {product.badge}
-                    </span>
-                    <span className="text-sm font-bold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">
-                      MOQ: {product.moq}
-                    </span>
-                  </div>
+          {/* Product Grid - Exactly like reference image */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredProducts.map((product) => (
+              <div key={product.id} className="bg-white border border-gray-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                {/* Product Image Area */}
+                <div className="h-48 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center relative">
+                  {/* Badge */}
+                  <span className={`absolute top-4 left-4 px-3 py-1.5 rounded-full text-xs font-bold ${
+                    product.badge === 'BESTSELLER' 
+                      ? 'bg-amber-500 text-white' 
+                      : product.badge === 'POPULAR'
+                      ? 'bg-blue-500 text-white'
+                      : product.badge === 'PREMIUM'
+                      ? 'bg-purple-500 text-white'
+                      : 'bg-green-500 text-white'
+                  }`}>
+                    {product.badge}
+                  </span>
                   
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-emerald-700 transition-colors">
+                  {/* Product Icon/Image */}
+                  <span className="text-6xl">{product.image}</span>
+                </div>
+                
+                {/* Product Details */}
+                <div className="p-5">
+                  {/* Product Name */}
+                  <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2 min-h-[3.5rem]">
                     {product.name}
                   </h3>
                   
-                  <p className="text-gray-600 mb-6">
+                  {/* Price Section - Exactly like reference */}
+                  <div className="mb-3">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-2xl font-bold text-emerald-700">
+                        {formatPrice(product.price)}
+                      </span>
+                      <span className="text-sm line-through text-gray-400">
+                        {formatPrice(product.mrp)}
+                      </span>
+                    </div>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <span className="text-xs font-bold text-white bg-emerald-600 px-2 py-1 rounded">
+                        {product.discount}% off
+                      </span>
+                      {product.stock === 'In Stock' && (
+                        <span className="text-xs text-emerald-600">✓ In Stock</span>
+                      )}
+                      {product.stock === 'Limited Stock' && (
+                        <span className="text-xs text-amber-600">⚠️ Limited</span>
+                      )}
+                    </div>
+                  </div>
+                  
+                  {/* Description */}
+                  <p className="text-sm text-gray-600 mb-4 line-clamp-2">
                     {product.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
+                  {/* Features as tags */}
+                  <div className="flex flex-wrap gap-2 mb-5">
                     {product.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center">
-                        <svg className="w-4 h-4 text-emerald-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-sm text-gray-700">{feature}</span>
-                      </div>
+                      <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full">
+                        {feature}
+                      </span>
                     ))}
                   </div>
                   
-                  <Link 
-                    href="/products"
-                    className="block w-full text-center btn-secondary py-3 text-sm font-bold"
-                  >
-                    VIEW DETAILS
-                  </Link>
+                  {/* MOQ Info */}
+                  <div className="mt-3 text-xs text-gray-500 text-center">
+                    MOQ: {product.moq} | Custom printing available
+                  </div>
                 </div>
               </div>
             ))}
           </div>
 
+          {/* View All Button */}
           <div className="text-center mt-12">
             <Link href="/products" className="btn-primary px-12">
               VIEW ALL PRODUCTS
@@ -138,7 +195,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* Features Section (unchanged) */}
       <section className="section-padding bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -162,7 +219,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Call to Action Section */}
+      {/* Call to Action Section (unchanged) */}
       <section className="section-padding bg-gradient-to-r from-emerald-600 to-green-700">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-black text-white mb-8">
@@ -214,7 +271,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonial/Trust Section */}
+      {/* Testimonial/Trust Section (unchanged) */}
       <section className="section-padding bg-gray-50">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
@@ -227,7 +284,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
-            {/* Trust badges - replace with actual client logos */}
+            {/* Trust badges */}
             {['Retail Stores', 'Supermarkets', 'Fashion Brands', 'Gift Shops', 'Event Planners', 'Exporters'].map((industry, idx) => (
               <div key={idx} className="bg-white p-6 rounded-xl shadow-lg text-center border border-gray-200">
                 <div className="text-3xl mb-4">🏪</div>

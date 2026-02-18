@@ -1,9 +1,12 @@
 // components/Header.jsx
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../public/logo.jpg';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'Products', href: '/products' },
@@ -11,22 +14,53 @@ export const Header = () => {
     { name: 'Contact', href: '/contact' },
   ];
 
+  // Logo configuration object for easy management
+  const logoConfig = {
+    sizes: {
+      mobile: { width: 48, height: 48 },
+      desktop: { width: 56, height: 56 }
+    },
+    text: {
+      primary: 'ECO',
+      secondary: 'PRINT & PACK',
+      tagline: 'more than you anticipate...'
+    }
+  };
+
   return (
     <header className="sticky top-0 z-50 bg-white/98 backdrop-blur-sm border-b border-emerald-100 shadow-sm">
-      <div className="section-padding-sm">
+      <div className="px-4 py-2 md:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* Logo - matching your graphic */}
-          <Link href="/" className="flex flex-col">
+          {/* Logo - Enhanced with better image management */}
+          <Link href="/" className="flex flex-col group outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-lg">
             <div className="flex items-center">
-              <div className="w-10 h-10 bg-gradient-to-r from-emerald-500 to-green-600 rounded-lg flex items-center justify-center mr-3">
-                <span className="text-white font-bold text-xl">E</span>
+              {/* Responsive Logo Image with Next.js optimization */}
+              <div className="relative w-12 h-12 md:w-14 md:h-14 mr-3 md:mr-4 flex-shrink-0">
+                <Image
+                  src={logo}
+                  alt="ECO PRINT & PACK - Sustainable Packaging Manufacturer since 2015"
+                  fill
+                  sizes="(max-width: 768px) 48px, 56px"
+                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                  priority
+                  quality={95}
+                  placeholder="blur"
+                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                />
               </div>
-              <div>
-                <div className="text-2xl font-black text-gray-900 leading-tight">
-                  ECO <span className="text-emerald-600">PRINT & PACK</span>
+              
+              {/* Logo Text with Responsive Sizing */}
+              <div className="flex flex-col">
+                <div className="flex flex-wrap items-baseline">
+                  <span className="text-xl sm:text-2xl font-black text-gray-900 leading-tight group-hover:text-gray-700 transition-colors">
+                    {logoConfig.text.primary}
+                  </span>
+                  <span className="text-xl sm:text-2xl font-black bg-gradient-to-r from-emerald-600 to-green-600 bg-clip-text text-transparent ml-1 group-hover:from-emerald-500 group-hover:to-green-500 transition-all duration-300">
+                    {logoConfig.text.secondary}
+                  </span>
                 </div>
-                <div className="text-xs text-gray-600 font-medium">
-                  more than you anticipate...
+                <div className="text-[10px] sm:text-xs text-gray-600 font-medium tracking-wide group-hover:text-gray-700 transition-colors">
+                  {logoConfig.text.tagline}
                 </div>
               </div>
             </div>

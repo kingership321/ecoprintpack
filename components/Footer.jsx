@@ -1,8 +1,23 @@
 // components/Footer.jsx
 import Link from 'next/link';
+import Image from 'next/image';
+import logo from '../public/logo.jpg';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
+
+    // Logo configuration object for easy management
+  const logoConfig = {
+    sizes: {
+      mobile: { width: 48, height: 48 },
+      desktop: { width: 56, height: 56 }
+    },
+    text: {
+      primary: 'ECO',
+      secondary: 'PRINT & PACK',
+      tagline: 'more than you anticipate...'
+    }
+  };
   return (
     <footer className="bg-gradient-to-b from-gray-900 to-emerald-950 text-gray-300">
       <div className="section-padding">
@@ -10,9 +25,25 @@ export const Footer = () => {
           {/* Brand Info */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-6">
-              <div className="w-12 h-12 bg-gradient-to-r from-emerald-500 to-green-600 rounded-lg flex items-center justify-center mr-4">
-                <span className="text-white font-bold text-2xl">E</span>
-              </div>
+                          {/* Logo - Enhanced with better image management */}
+                          <Link href="/" className="flex flex-col group outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-lg">
+
+                              {/* Responsive Logo Image with Next.js optimization */}
+                              <div className="relative w-12 h-12 md:w-14 md:h-14 mr-3 md:mr-4 flex-shrink-0">
+                                <Image
+                                  src={logo}
+                                  alt="ECO PRINT & PACK - Sustainable Packaging Manufacturer since 2015"
+                                  fill
+                                  sizes="(max-width: 768px) 48px, 56px"
+                                  className="object-contain transition-transform duration-300 group-hover:scale-105"
+                                  priority
+                                  quality={95}
+                                  placeholder="blur"
+                                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
+                                />
+                              </div>
+
+                          </Link>
               <div>
                 <div className="text-3xl font-black text-white leading-tight">
                   ECO <span className="text-emerald-400">PRINT & PACK</span>
