@@ -4,13 +4,13 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // import images from public folder
-import nonWovenBagsW from '/public/asset/NonWovenFabricWcutBag/W Cut Bag Non Woven Fabric 2.jpg';
-import nonWovenBagsD from '/public/asset/NonWovenFabricDcut/D cut Bag 3.jpg';
-import nonWovebBoxBags from '/public/asset/NonWovenFabricBoxBag/Box Bag Non woven Fabric 4.jpg';
-import handleLoopBags from 'public/asset/HandleLoopNonWovenBag/Handle Loop Bag 4.jpg'
-import canvasBags from '/public/asset/CanvasToteBag/Canvas Tote Bag 3.jpg';
-import loktaBags from '/public/asset/LoktaPaperProducts/Nepali Lokta Products 2.jpg';
-import paperBrownBags from '/public/asset/BrownPaperKraftBagPhoto/Brown Kraft Paper Bag 6.jpg';
+const nonWovenBagsW = '/asset/NonWovenFabricWcutBag/W Cut Bag Non Woven Fabric 2.jpg';
+const nonWovenBagsD = '/asset/NonWovenFabricDcut/D cut Bag 3.jpg';
+const nonWovebBoxBags = '/asset/NonWovenFabricBoxBag/Box Bag Non woven Fabric 4.jpg';
+const handleLoopBags = '/asset/HandleLoopNonWovenBag/Handle Loop Bag 4.jpg'
+const canvasBags = '/asset/CanvasToteBag/Canvas Tote Bag 3.jpg';
+const loktaBags = '/asset/LoktaPaperProducts/Nepali Lokta Products 2.jpg';
+const paperBrownBags = '/asset/BrownPaperKraftBagPhoto/Brown Kraft Paper Bag 6.jpg';
 
 
 // --- Icons (Uniform Set) ---
