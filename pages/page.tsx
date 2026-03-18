@@ -1,5 +1,5 @@
-// app/page.tsx
-import type { Metadata } from 'next';
+// pages/page.tsx
+import Head from 'next/head';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
 import { Hero } from '@/components/sections/Hero';
@@ -15,16 +15,14 @@ import { Services } from '@/components/sections/Services';
 import { OurOutlets } from '@/components/sections/OurOutlets';
 import { Contact } from '@/components/sections/Contact';
 
-// SEO Metadata for the Home Page
-export const metadata: Metadata = {
-  title: 'Sustainable Shopping Bags Manufactured in Nepal | ECO PRINT & PACK',
-  description: 'Eco Promotional Industries - Leading manufacturer of Non-Woven, Canvas, and Lokta Paper bags in Nepal. Go Green with sustainable packaging.',
-  keywords: 'eco friendly bags Nepal, non woven bags, canvas bags, lokta paper bags, sustainable packaging, manufacturer, Lalitpur',
-};
-
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-white">
+      <Head>
+        <title>Sustainable Shopping Bags Manufactured in Nepal | ECO PRINT & PACK</title>
+        <meta name="description" content="Eco Promotional Industries - Leading manufacturer of Non-Woven, Canvas, and Lokta Paper bags in Nepal. Go Green with sustainable packaging." />
+        <meta name="keywords" content="eco friendly bags Nepal, non woven bags, canvas bags, lokta paper bags, sustainable packaging, manufacturer, Lalitpur" />
+      </Head>
       <Header />
       <main className="flex-grow">
         {/* Hero Section */}
