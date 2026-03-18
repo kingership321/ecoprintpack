@@ -1,145 +1,141 @@
 // components/Footer.jsx
 import Link from 'next/link';
 import Image from 'next/image';
-import logo from '../public/logo.jpg';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-    // Logo configuration object for easy management
-  const logoConfig = {
-    sizes: {
-      mobile: { width: 48, height: 48 },
-      desktop: { width: 56, height: 56 }
-    },
-    text: {
-      primary: 'ECO',
-      secondary: 'PRINT & PACK',
-      tagline: 'more than you anticipate...'
-    }
-  };
   return (
-    <footer className="bg-gradient-to-b from-gray-900 to-emerald-950 text-gray-300">
-      <div className="section-padding">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-          {/* Brand Info */}
-          <div className="lg:col-span-2">
-            <div className="flex items-center mb-6">
-                          {/* Logo - Enhanced with better image management */}
-                          <Link href="/" className="flex flex-col group outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2 rounded-lg">
-
-                              {/* Responsive Logo Image with Next.js optimization */}
-                              <div className="relative w-12 h-12 md:w-14 md:h-14 mr-3 md:mr-4 flex-shrink-0">
-                                <Image
-                                  src={logo}
-                                  alt="ECO PRINT & PACK - Sustainable Packaging Manufacturer since 2015"
-                                  fill
-                                  sizes="(max-width: 768px) 48px, 56px"
-                                  className="object-contain transition-transform duration-300 group-hover:scale-105"
-                                  priority
-                                  quality={95}
-                                  placeholder="blur"
-                                  blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
-                                />
-                              </div>
-
-                          </Link>
-              <div>
-                <div className="text-3xl font-black text-white leading-tight">
-                  ECO <span className="text-emerald-400">PRINT & PACK</span>
+    <footer className="bg-gray-900 text-gray-300 font-sans">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          
+          {/* 1. Brand Info & Mission */}
+          <div className="lg:col-span-1 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start mb-4">
+              <Link href="/" className="flex items-center group">
+                <div className="relative w-10 h-10 md:w-12 md:h-12 mr-2 flex-shrink-0 bg-white rounded-lg p-0.5 shadow-sm">
+                  <Image
+                    src="/logo.jpg"
+                    alt="ECO PRINT & PACK Logo"
+                    fill
+                    sizes="(max-width: 768px) 40px, 48px"
+                    className="object-contain"
+                  />
                 </div>
-                <div className="text-sm text-emerald-300 font-medium">
-                  more than you anticipate...
+                <div>
+                  <div className="text-lg font-black text-white leading-tight">
+                    ECO <span className="text-green-400">PRINT & PACK</span>
+                  </div>
+                  <div className="text-[8px] sm:text-[10px] text-green-300 font-medium uppercase tracking-wider">
+                    Sustainable Packaging Solutions
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
-            <p className="text-lg mb-6 max-w-xl">
-              Leading manufacturer of eco-friendly non-woven bags, paper bags, suit covers, and printing works. We provide superior quality custom packaging solutions for retailers and wholesalers worldwide.
+            
+            {/* Mission Statement */}
+            <p className="text-xs mb-4 text-gray-400 leading-relaxed">
+              To provide Nepali businesses with high-quality, affordable, and sustainable packaging solutions that reduce plastic waste and protect our environment.
             </p>
-            <div className="moq-badge text-lg px-6 py-3">
-              Minimum Order Quantity: 20 KG
+
+            {/* Social Media Links */}
+            <div className="flex space-x-3 justify-center md:justify-start">
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 bg-gray-800 p-1.5 rounded-full hover:bg-green-800">
+                <span className="sr-only">Facebook</span>
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
+                </svg>
+              </a>
+              <a href="#" className="text-gray-400 hover:text-white transition-colors duration-200 bg-gray-800 p-1.5 rounded-full hover:bg-green-800">
+                <span className="sr-only">Instagram</span>
+                <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path fillRule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clipRule="evenodd" />
+                </svg>
+              </a>
             </div>
           </div>
 
-          {/* Quick Links */}
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-emerald-800">Our Products</h3>
-            <ul className="space-y-4">
-              <li><Link href="/products#non-woven" className="hover:text-white transition-colors text-lg flex items-center">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Non-Woven Bags
-              </Link></li>
-              <li><Link href="/products#loop-handle" className="hover:text-white transition-colors text-lg flex items-center">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Loop Handle Bags
-              </Link></li>
-              <li><Link href="/products#d-cut" className="hover:text-white transition-colors text-lg flex items-center">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                D-Cut Bags
-              </Link></li>
-              <li><Link href="/products#stitched" className="hover:text-white transition-colors text-lg flex items-center">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                Stitched Handle Bags
-              </Link></li>
-              <li><Link href="/products" className="hover:text-white transition-colors text-lg flex items-center">
-                <span className="w-2 h-2 bg-emerald-400 rounded-full mr-3"></span>
-                View All Products
-              </Link></li>
+          {/* 2. Quick Links */}
+          <div className="text-center md:text-left">
+            <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider border-b border-green-700 pb-1.5 inline-block md:block">
+              Quick Links
+            </h3>
+            <ul className="space-y-2">
+              <li><Link href="/" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Home</Link></li>
+              <li><Link href="/#about" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>About Us</Link></li>
+              <li><Link href="/#products" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Products</Link></li>
+              <li><Link href="/contact" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Contact Us</Link></li>
+              <li><Link href="/contact#quote" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Get a Quote</Link></li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div>
-            <h3 className="text-2xl font-bold text-white mb-6 pb-3 border-b border-emerald-800">Contact Us</h3>
-            <address className="not-italic space-y-5">
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-emerald-400 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* 3. Our Products */}
+          <div className="text-center md:text-left">
+            <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider border-b border-green-700 pb-1.5 inline-block md:block">
+              Our Products
+            </h3>
+            <ul className="space-y-2">
+              <li><Link href="/#products" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Non-Woven Bags</Link></li>
+              <li><Link href="/#products" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Canvas Bags</Link></li>
+              <li><Link href="/#products" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Lokta Paper Bags</Link></li>
+              <li><Link href="/#products" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Paper Shopping Bags</Link></li>
+              <li><Link href="/#products" className="hover:text-green-400 transition-colors flex items-center text-xs justify-center md:justify-start"><span className="w-1 h-1 bg-green-500 rounded-full mr-1.5"></span>Garment Covers</Link></li>
+            </ul>
+          </div>
+
+          {/* 4. Contact Info */}
+          <div className="text-center md:text-left">
+            <h3 className="text-sm font-bold text-white mb-3 uppercase tracking-wider border-b border-green-700 pb-1.5 inline-block md:block">
+              Contact Info
+            </h3>
+            <address className="not-italic space-y-3">
+              <div className="flex items-start justify-center md:justify-start">
+                <svg className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                <div>
-                  <p className="font-bold text-white">Call Us Now</p>
-                  <a href="tel:+977 986-9268248" className="hover:text-white transition-colors text-lg">+977 986-9268248</a>
-                  <br />
-                  <a href="tel:+977 976-2416063" className="hover:text-white transition-colors text-lg">+977 976-2416063</a>
+                <div className="text-xs">
+                  <p className="font-semibold text-white">Phone</p>
+                  <a href="tel:+9779869268248" className="hover:text-white transition-colors block">+977 9869268248</a>
+                  <a href="tel:+9779851189191" className="hover:text-white transition-colors block">+977 9851189191</a>
                 </div>
               </div>
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-emerald-400 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start justify-center md:justify-start">
+                <svg className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <div>
-                  <p className="font-bold text-white">Email Us</p>
-                  <a href="mailto:ecopromotional2@gmail.com" className="hover:text-white transition-colors break-all">ecopromotional2@gmail.com</a>
+                <div className="text-xs">
+                  <p className="font-semibold text-white">Email</p>
+                  <a href="mailto:Ecopromotional2@gmail.com" className="hover:text-white transition-colors break-all">
+                    Ecopromotional2@gmail.com
+                  </a>
                 </div>
               </div>
-              <div className="flex items-start">
-                <svg className="w-6 h-6 text-emerald-400 mr-4 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="flex items-start justify-center md:justify-start">
+                <svg className="w-4 h-4 text-green-400 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
-                <div>
-                  <p className="font-bold text-white">Based In</p>
-                  <p>Nepal</p>
+                <div className="text-xs">
+                  <p className="font-semibold text-white">Location</p>
+                  <p>Thashikhel Chowk, Lalitpur</p>
                 </div>
               </div>
             </address>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-emerald-900 mt-12 pt-8 text-center">
-          <div className="flex flex-col lg:flex-row justify-between items-center">
-            <p className="text-lg">&copy; {currentYear} ECO PRINT & PACK. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 lg:mt-0">
-              <span className="text-emerald-300 font-semibold">Follow us:</span>
-              <a href="https://instagram.com/eco.print_pack" aria-label="Instagram" className="hover:text-white transition-colors text-lg font-bold">
-                @eco.print_pack
-              </a>
-            </div>
-          </div>
-          <div className="mt-6 text-gray-500 text-sm">
-            <p>Non woven bag | Paper bag | Suit Cover | printing works and many more...</p>
-          </div>
+      {/* Bottom Bar */}
+      <div className="border-t border-gray-800 bg-gray-950">
+        <div className="container mx-auto px-4 py-4 text-center">
+          <p className="text-xs text-gray-500">
+            &copy; {currentYear} <span className="font-semibold text-gray-400">Eco Promotional Industries Pvt Ltd</span>. All rights reserved.
+          </p>
+          <p className="text-[10px] text-gray-600 mt-1">
+            Designed with 💚 for a Greener Nepal
+          </p>
         </div>
       </div>
     </footer>

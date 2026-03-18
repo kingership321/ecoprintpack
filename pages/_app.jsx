@@ -1,8 +1,10 @@
 // pages/_app.jsx
-import '../public/styles/globals.css'
+import '@/styles/globals.css'; // This line now works because the file exists
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <div className="flex flex-col min-h-screen bg-gray-50 font-sans">
+      <Component {...pageProps} />
+    </div>
+  );
 }
-
-export default MyApp

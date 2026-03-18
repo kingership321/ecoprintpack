@@ -33,3 +33,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Exclude problematic files with special characters
+public/asset/LoktaPaperProducts/
