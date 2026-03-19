@@ -1,5 +1,5 @@
 // pages/featuredproducts.js
-import FeaturedProducts from '@/components/sections/FeaturedProducts';
+import {FeaturedProducts} from '@/components/sections/FeaturedProducts';
 import { Layout } from '@/components/Layout';
 
 export default function FeaturedProductsPage() {

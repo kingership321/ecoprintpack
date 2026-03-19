@@ -6,7 +6,7 @@ import { Hero } from '@/components/sections/Hero';
 import { DirectorsMessage } from '@/components/sections/DirectorsMessage';
 import {BoardOfDirectors} from '@/components/sections/BoardOfDirectors';
 import Products from '@/components/sections/Products';
-import { FeaturedProducts} from '@/components/sections/FeaturedProducts';
+import { FeaturedProducts } from '@/components/sections/FeaturedProducts';
 import { WhoWeAre } from '@/components/sections/WhoWeAre';
 import { WhoWeServe } from '@/components/sections/WhoWeServe';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
