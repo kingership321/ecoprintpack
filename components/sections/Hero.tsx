@@ -74,7 +74,7 @@ const slides = [
     buttonLink: '/#products',
     bgImage: '/asset/product3.jpg',
     icon: <ScrollIcon />,
-    iconImage: '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg',
+    iconImage: '/asset/LoktaPaperProducts/NepaliLoktaProducts9.jpg',
     alt: 'Traditional Lokta paper bags crafted in Nepal',
   },
   {

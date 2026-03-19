@@ -1,5 +1,12 @@
 // components/sections/BoardOfDirectors.tsx
 'use client';
+import Image from 'next/image';
+
+// Import director images
+import amrishThapa from '/public/asset/DipeshJi.jpg';
+import dipeshRai from '/public/asset/DipeshJi.jpg';
+import sujanGhimire from '/public/asset/DipeshJi.jpg';
+import krishnaMahat from '/public/asset/DipeshJi.jpg';
 
 // Uniform Icon for Role
 const IconUser = () => (
@@ -16,6 +23,8 @@ const directors = [
     description: 'Strategic vision and business development',
     initials: 'AT',
     color: 'from-blue-500 to-indigo-600',
+    image: amrishThapa,
+    alt: 'Dr. Amrish Thapa - Chairman'
   },
   {
     name: 'Dipesh Rai',
@@ -23,6 +32,8 @@ const directors = [
     description: 'Operations and manufacturing excellence',
     initials: 'DR',
     color: 'from-green-500 to-emerald-600',
+    image: dipeshRai,
+    alt: 'Dipesh Rai - Managing Director'
   },
   {
     name: 'Sujan Ghimire',
@@ -30,6 +41,8 @@ const directors = [
     description: 'Marketing and client relations',
     initials: 'SG',
     color: 'from-amber-500 to-orange-600',
+    image: sujanGhimire,
+    alt: 'Sujan Ghimire - Director'
   },
   {
     name: 'Krishna Kaji Mahat',
@@ -37,6 +50,8 @@ const directors = [
     description: 'Finance and administration',
     initials: 'KM',
     color: 'from-purple-500 to-pink-600',
+    image: krishnaMahat,
+    alt: 'Krishna Kaji Mahat - Director'
   },
 ];
 
@@ -62,31 +77,42 @@ export function BoardOfDirectors() {
         </div>
 
         {/* Directors Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {directors.map((director, index) => (
             <div 
               key={index}
-              className="board-card"
+              className="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100"
             >
-              {/* Image / Avatar Area */}
-              <div className="relative h-36 flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100">
-                {/* Decorative Background Circle */}
-                <div className={`absolute w-24 h-24 rounded-full bg-gradient-to-br ${director.color} opacity-20 group-hover:scale-110 transition-transform duration-300`}></div>
+              {/* Image Area - Rectangular and prominent */}
+              <div className="relative h-64 w-full overflow-hidden bg-gradient-to-br from-gray-900 to-gray-700">
+                <Image
+                  src={director.image}
+                  alt={director.alt}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  priority={index < 2}
+                />
                 
-                {/* Avatar Circle */}
-                <div className={`relative z-10 w-20 h-20 rounded-full bg-gradient-to-br ${director.color} flex items-center justify-center shadow-md border-4 border-white`}>
-                  <span className="text-2xl font-black text-white">{director.initials}</span>
+                {/* Optional overlay with gradient for text readability */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
+                {/* Role badge on image (optional) */}
+                <div className="absolute bottom-3 left-3 bg-green-600 text-white text-xs font-semibold px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {director.role}
                 </div>
               </div>
 
               {/* Content */}
-              <div className="p-4 text-center">
-                <h3 className="text-base font-bold text-gray-900 mb-0.5">{director.name}</h3>
-                <div className="inline-flex items-center justify-center text-xs font-semibold text-green-600 mb-2">
+              <div className="p-5 text-center">
+                <h3 className="text-lg font-bold text-gray-900 mb-1">{director.name}</h3>
+                <div className="inline-flex items-center justify-center text-sm font-medium text-green-600 mb-2 bg-green-50 px-3 py-1 rounded-full">
                   <IconUser />
-                  <span className="ml-1">{director.role}</span>
+                  <span className="ml-1.5">{director.role}</span>
                 </div>
-                <p className="text-gray-500 text-xs leading-relaxed">{director.description}</p>
+                <p className="text-gray-500 text-sm leading-relaxed border-t border-gray-100 pt-3 mt-1">
+                  {director.description}
+                </p>
               </div>
             </div>
           ))}

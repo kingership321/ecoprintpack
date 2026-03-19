@@ -223,28 +223,6 @@ export function FeaturedProducts() {
           </div>
         </div>
 
-        {/* CTA Banner */}
-        <div className="mt-10 md:mt-12 bg-gradient-to-r from-green-700 to-emerald-600 rounded-xl p-6 md:p-8 text-center text-white relative overflow-hidden">
-          <div className="absolute inset-0 opacity-10">
-            <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-              <path d="M0 0h100v100H0z" fill="url(#grid)" />
-            </svg>
-          </div>
-          <div className="relative z-10">
-            <h3 className="text-lg md:text-xl font-bold mb-2">Order to Support Sustainability</h3>
-            <p className="text-green-100 text-sm mb-4 max-w-xl mx-auto">Every bag we produce is a step towards a greener Nepal. Request a quote today.</p>
-            <Link 
-              href="/contact#quote"
-              className="btn-secondary inline-flex items-center text-sm py-2 px-4"
-            >
-              <svg className="w-4 h-4 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-              </svg>
-              Get a Quote
-            </Link>
-          </div>
-        </div>
-
       </div>
     </section>
   );

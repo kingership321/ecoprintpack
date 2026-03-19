@@ -32,14 +32,14 @@ export function DirectorsMessage() {
                 {/* Image Container */}
                 <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg overflow-hidden bg-green-600 flex items-center justify-center">
                   {/* Placeholder with Initials - Replace with Image component when real photo is available */}
-                  {/* 
+                  
                     <Image 
-                      src="/images/director.jpg" 
+                      src="/asset/DipeshJi.jpg" 
                       alt="Dipesh Rai - Managing Director" 
                       fill 
                       className="object-cover"
                     />
-                  */}
+                 
                   <span className="text-3xl md:text-4xl font-bold text-white">DR</span>
                 </div>
               </div>
