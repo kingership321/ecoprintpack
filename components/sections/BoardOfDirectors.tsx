@@ -3,10 +3,10 @@
 import Image from 'next/image';
 
 // Import director images
-import amrishThapa from '/public/asset/DipeshJi.jpg';
-import dipeshRai from '/public/asset/DipeshJi.jpg';
-import sujanGhimire from '/public/asset/DipeshJi.jpg';
-import krishnaMahat from '/public/asset/DipeshJi.jpg';
+import amrishThapa from '/public/asset/DipeshJI.jpg';
+import dipeshRai from '/public/asset/DipeshJI.jpg';
+import sujanGhimire from '/public/asset/DipeshJI.jpg';
+import krishnaMahat from '/public/asset/DipeshJI.jpg';
 
 // Uniform Icon for Role
 const IconUser = () => (
