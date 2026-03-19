@@ -4,10 +4,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // import images from public folder
-const nonWovenBags = '/asset/NonWovenFabricWcutBag/W Cut Bag Non Woven Fabric 2.jpg';
-const canvasBags = '/asset/CanvasToteBag/Canvas Tote Bag 3.jpg';
-const loktaBags = '/asset/LoktaPaperProducts/Nepali Lokta Products 2.jpg';
-const paperBags = '/asset/PaperBag/Paper Bag 3.jpg';
+const nonWovenBags = '/asset/NonWovenFabricWcutBag/wcut2.jpg';
+const canvasBags = '/asset/CanvasToteBag/CanvasToteBag3.jpg';
+const loktaBags = '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg';
+const paperBags = '/asset/PaperBag/PaperBag3.jpg';
 
 // --- Keep only gallery icons (for the product range section) ---
 const IconBoxBag = () => (

@@ -4,13 +4,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 // import images from public folder
-const nonWovenBagsW = '/asset/NonWovenFabricWcutBag/W Cut Bag Non Woven Fabric 2.jpg';
-const nonWovenBagsD = '/asset/NonWovenFabricDcut/D cut Bag 3.jpg';
-const nonWovebBoxBags = '/asset/NonWovenFabricBoxBag/Box Bag Non woven Fabric 4.jpg';
-const handleLoopBags = '/asset/HandleLoopNonWovenBag/Handle Loop Bag 4.jpg'
-const canvasBags = '/asset/CanvasToteBag/Canvas Tote Bag 3.jpg';
-const loktaBags = '/asset/LoktaPaperProducts/Nepali Lokta Products 2.jpg';
-const paperBrownBags = '/asset/BrownPaperKraftBagPhoto/Brown Kraft Paper Bag 6.jpg';
+const nonWovenBagsW = '/asset/NonWovenFabricWcutBag/wcut2.jpg';
+const nonWovenBagsD = '/asset/NonWovenFabricDcut/DcutBag3.jpg';
+const nonWovebBoxBags = '/asset/NonWovenFabricBoxBag/BoxBagNonwovenFabric4.jpg';
+const handleLoopBags = '/asset/HandleLoopNonWovenBag/HandleLoopBag4.jpg'
+const canvasBags = '/asset/CanvasToteBag/CanvasToteBag3.jpg';
+const loktaBags = '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg';
+const loktashopBags = '/asset/LoktaPaperProducts/NepaliLoktaProducts9.jpg';
+const paperBrownBags = '/asset/BrownPaperKraftBagPhoto/BrownKraftPaperBag6.jpg';
 
 
 // --- Icons (Uniform Set) ---
@@ -143,7 +144,7 @@ const allProducts = [
     description: 'Specialized paper wine bag.', 
     color: 'amber', 
     minQty: '50 Pcs',
-    image: '/images/products/lokta-wine.jpg',
+    image: '',
     alt: 'Lokta Paper Wine Bag'
   },
   { 
@@ -153,7 +154,7 @@ const allProducts = [
     description: 'Eco-friendly shopping bag from Daphne bark.', 
     color: 'amber', 
     minQty: '50 Pcs',
-    image: '/images/products/lokta-shopping.jpg',
+    image: loktashopBags,
     alt: 'Lokta Paper Shopping Bag'
   },
   { 
@@ -173,7 +174,7 @@ const allProducts = [
     description: 'High-gloss finish for luxury packaging.', 
     color: 'purple', 
     minQty: '100 Pcs',
-    image: '/images/products/paper-artboard.jpg',
+    image: '',
     alt: 'Art Board Boutique Bag'
   },
   { 
@@ -183,7 +184,7 @@ const allProducts = [
     description: 'Full-color printed paper bags.', 
     color: 'purple', 
     minQty: '100 Pcs',
-    image: '/images/products/paper-printed.jpg',
+    image: '',
     alt: 'Custom Printed Paper Bag'
   },
   { 
@@ -193,7 +194,7 @@ const allProducts = [
     description: 'Breathable garment cover.', 
     color: 'gray', 
     minQty: '50 Pcs',
-    image: '/images/products/cover-coat.jpg',
+    image: '',
     alt: 'Coat Garment Cover'
   },
   { 
@@ -203,7 +204,7 @@ const allProducts = [
     description: 'Long garment cover with window.', 
     color: 'gray', 
     minQty: '50 Pcs',
-    image: '/images/products/cover-lehenga.jpg',
+    image: '',
     alt: 'Lehenga Garment Cover'
   },
   { 
@@ -213,7 +214,7 @@ const allProducts = [
     description: 'Large capacity cover for bedding.', 
     color: 'gray', 
     minQty: '50 Pcs',
-    image: '/images/products/cover-blanket.jpg',
+    image: '',
     alt: 'Blanket Storage Cover'
   },
 ];
