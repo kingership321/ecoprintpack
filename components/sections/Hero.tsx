@@ -62,7 +62,7 @@ const slides = [
     buttonLink: '/#products',
     bgImage: '/asset/product2.jpg',
     icon: <BoxIcon />,
-    iconImage: '/asset/product5.jpg',
+    iconImage: '/asset/NonWovenFabricWcutBag/wcut2.jpg',
     alt: 'Non-woven and canvas bags for retail and events',
   },
   {
@@ -74,7 +74,7 @@ const slides = [
     buttonLink: '/#products',
     bgImage: '/asset/product3.jpg',
     icon: <ScrollIcon />,
-    iconImage: '/asset/product5.jpg',
+    iconImage: '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg',
     alt: 'Traditional Lokta paper bags crafted in Nepal',
   },
   {
@@ -86,7 +86,7 @@ const slides = [
     buttonLink: '/contact#quote',
     bgImage: '/asset/product4.jpg',
     icon: <LeafIcon />,
-    iconImage: '/asset/product5.jpg',
+    iconImage: '/asset/PaperBag/PaperBag3.jpg',
     alt: 'Eco-friendly packaging solutions for all businesses',
   },
 ];
@@ -176,17 +176,6 @@ export function Hero() {
                 {/* Product Image Showcase Card - Rectangular */}
                 <div className="hidden md:flex items-center justify-center relative">
                   <div className="relative w-72 h-72 lg:w-96 lg:h-96 bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-500 group">
-                    {/* Background Pattern */}
-                    <div className="absolute inset-0 opacity-10">
-                      <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
-                        <defs>
-                          <pattern id={`product-pattern-${slide.id}`} patternUnits="userSpaceOnUse" width="20" height="20">
-                            <path d="M10 0C10 5 5 10 0 10C5 10 10 15 10 20C10 15 15 10 20 10C15 10 10 5 10 0Z" fill="currentColor"/>
-                          </pattern>
-                        </defs>
-                        <rect width="100%" height="100%" fill={`url(#product-pattern-${slide.id})`} />
-                      </svg>
-                    </div>
 
                     {/* Image Container */}
                     <div className="absolute inset-0 flex items-center justify-center p-4">
