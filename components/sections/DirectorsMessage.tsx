@@ -34,7 +34,7 @@ export function DirectorsMessage() {
                   {/* Placeholder with Initials - Replace with Image component when real photo is available */}
                   
                     <Image 
-                      src="/asset/DipeshJi.jpg" 
+                      src="/asset/DipeshJI.jpg" 
                       alt="Dipesh Rai - Managing Director" 
                       fill 
                       className="object-cover"
