@@ -36,3 +36,10 @@ next-env.d.ts
 
 # Exclude problematic files with special characters
 public/asset/LoktaPaperProducts/
+
+# scratch directory
+/scratch
+
+# screenshots
+/screenshots
+

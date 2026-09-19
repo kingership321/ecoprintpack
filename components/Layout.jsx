@@ -39,11 +39,11 @@ export const Layout = ({ children, pageTitle, pageDescription }) => {
         <meta property="og:site_name" content="ECO PRINT & PACK" />
 
         {/* Theme Color for Mobile Browsers */}
-        <meta name="theme-color" content="#065F46" /> {/* Matches green-800 */}
-        <meta name="msapplication-navbutton-color" content="#065F46" />
+        <meta name="theme-color" content="#12231A" />
+        <meta name="msapplication-navbutton-color" content="#12231A" />
       </Head>
 
-      <div className="min-h-screen flex flex-col bg-slate-50 text-slate-800 font-sans antialiased">
+      <div className="min-h-screen flex flex-col bg-brand-linen text-brand-charcoal font-sans antialiased">
         <Header />
         <main className="flex-grow">
           {children}

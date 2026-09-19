@@ -1,3 +1,4 @@
+// components/MailingPopup.tsx
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -13,10 +14,10 @@ export function MailingPopup() {
     const hasSeenPopup = localStorage.getItem('hasSeenMailingPopup');
     
     if (!hasSeenPopup) {
-      // Show popup after 5 seconds (5000ms) for better user experience
+      // Show popup after 8 seconds
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, 5000);
+      }, 8000);
       
       return () => clearTimeout(timer);
     }
@@ -34,7 +35,6 @@ export function MailingPopup() {
 
     const formData = new FormData(e.currentTarget);
     const email = formData.get('email') as string;
-    const name = formData.get('name') as string;
 
     try {
       const response = await fetch('/api/subscribe', {
@@ -46,7 +46,6 @@ export function MailingPopup() {
       });
 
       if (response.ok) {
-        // Success
         closePopup();
       } else {
         const data = await response.json();
@@ -62,70 +61,82 @@ export function MailingPopup() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm transition-opacity duration-300">
-      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-lg overflow-hidden transform transition-all duration-300 scale-100">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-brand-forest/70 backdrop-blur-sm transition-opacity duration-300 font-sans">
+      <div className="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden border border-stone-200/90 transform transition-all duration-300">
         
         {/* Close Button */}
         <button 
           onClick={closePopup}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-900 transition-colors z-10 bg-white rounded-full p-1"
+          className="absolute top-4 right-4 text-stone-400 hover:text-stone-900 transition-colors z-10 p-1 rounded-full hover:bg-stone-100"
+          aria-label="Close"
         >
-          <X size={24} />
+          <X size={20} />
         </button>
 
         <div className="grid md:grid-cols-5">
           {/* Left Decorative Side */}
-          <div className="md:col-span-2 bg-gradient-to-br from-green-600 to-emerald-700 p-8 text-white flex flex-col justify-center items-center">
-            <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mb-4">
-              <Mail size={32} />
+          <div className="md:col-span-2 bg-brand-forest p-8 text-white flex flex-col justify-between relative overflow-hidden">
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+
+            <div className="relative z-10">
+              <span className="text-[10px] uppercase font-sans tracking-widest text-brand-gold font-bold">
+                Atelier Journal
+              </span>
+              <h3 className="font-serif text-2xl font-bold mt-2 leading-tight">
+                Sustainable Dispatch
+              </h3>
+              <p className="text-stone-300 text-xs mt-2 leading-relaxed">
+                Wholesale seasonal discounts, new fiber varieties, and eco packaging trends.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-center">Stay Updated</h3>
-            <p className="text-green-100 text-sm text-center mt-2">Join the Green Movement.</p>
+
+            <div className="relative z-10 pt-6 text-[10px] text-stone-400 font-sans uppercase tracking-wider">
+              Lalitpur, Nepal
+            </div>
           </div>
 
           {/* Right Form Side */}
-          <div className="md:col-span-3 p-8">
-            <h2 className="text-2xl font-black text-gray-900 mb-2">Join Our Mailing List</h2>
-            <p className="text-gray-600 mb-6 text-sm">
-              Get the latest updates on sustainable packaging, new products, and exclusive offers delivered to your inbox.
+          <div className="md:col-span-3 p-7 sm:p-8 bg-brand-linen">
+            <h2 className="font-serif text-xl sm:text-2xl font-bold text-brand-forest mb-1">
+              Join Our Registry
+            </h2>
+            <p className="text-stone-600 mb-5 text-xs leading-relaxed">
+              Stay ahead with factory direct updates and eco-packaging insights.
             </p>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3.5">
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-1">Name</label>
+                <label className="block text-xs font-semibold text-stone-700 mb-1 uppercase tracking-wider">Name</label>
                 <input 
                   type="text" 
                   name="name"
                   placeholder="Your Name" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none text-sm"
+                  className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss outline-none text-xs font-sans text-stone-800"
                   required
                 />
               </div>
               <div>
-                <label className="block text-sm font-bold text-gray-700 mb-1">Email</label>
+                <label className="block text-xs font-semibold text-stone-700 mb-1 uppercase tracking-wider">Email</label>
                 <input 
                   type="email" 
                   name="email"
-                  placeholder="you@example.com" 
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 outline-none text-sm"
+                  placeholder="you@company.com" 
+                  className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss outline-none text-xs font-sans text-stone-800"
                   required
                 />
               </div>
-              {error && <p className="text-red-500 text-sm">{error}</p>}
+              {error && <p className="text-red-500 text-xs">{error}</p>}
               <button 
                 type="submit" 
                 disabled={isSubmitting}
-                className="w-full bg-green-600 text-white font-bold py-3 rounded-lg hover:bg-green-700 transition-colors shadow-md disabled:opacity-50"
+                className="w-full bg-brand-forest text-white font-sans text-xs font-semibold tracking-widest uppercase py-3 rounded-full hover:bg-brand-moss transition-colors shadow-xs disabled:opacity-50"
               >
-                {isSubmitting ? 'Subscribing...' : 'Subscribe Now'}
+                {isSubmitting ? 'Joining...' : 'Join Newsletter →'}
               </button>
             </form>
-
-            <p className="text-xs text-gray-400 mt-4 text-center">
-              We respect your privacy. Unsubscribe at any time.
-            </p>
           </div>
         </div>
+
       </div>
     </div>
   );

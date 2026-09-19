@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="forestGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F2418" />
+      <stop offset="100%" stop-color="#1B3A29" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2B76D" />
+      <stop offset="50%" stop-color="#C8933A" />
+      <stop offset="100%" stop-color="#A57223" />
+    </linearGradient>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2D6A4F" />
+      <stop offset="100%" stop-color="#1B4332" />
+    </linearGradient>
+    <filter id="subtleGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.06" />
+    </filter>
+  </defs>
+
+  <g filter="url(#subtleGlow)">
+    <!-- THE LUXURY TOTE BAG OUTLINE -->
+    <!-- Bag handles: double arched bezier loop with brass rivet attachments -->
+    <path d="M 285 160 C 285 70, 415 70, 415 160" 
+          fill="none" 
+          stroke="url(#forestGrad)" 
+          stroke-width="12" 
+          stroke-linecap="round" />
+    <circle cx="285" cy="165" r="7" fill="url(#goldGrad)" />
+    <circle cx="415" cy="165" r="7" fill="url(#goldGrad)" />
+
+    <!-- Bag Main Contour -->
+    <path d="M 190 190 
+             L 510 190 
+             C 525 190, 532 205, 530 220 
+             L 505 450 
+             C 503 468, 488 480, 470 480 
+             L 230 480 
+             C 212 480, 197 468, 195 450 
+             L 170 220 
+             C 168 205, 175 190, 190 190 Z" 
+          fill="none" 
+          stroke="url(#forestGrad)" 
+          stroke-width="10" 
+          stroke-linejoin="round" />
+
+    <!-- Fold Crease Accents (Subtle Artisanal Lines) -->
+    <path d="M 220 190 L 250 480" fill="none" stroke="#E5E0D8" stroke-width="2.5" stroke-dasharray="4 4" />
+    <path d="M 480 190 L 450 480" fill="none" stroke="#E5E0D8" stroke-width="2.5" stroke-dasharray="4 4" />
+
+    <!-- TWIN BOTANICAL LEAVES (Sprouting Gracefully from Left Corner) -->
+    <!-- Primary Leaf -->
+    <path d="M 175 465 
+             C 110 460, 70 380, 105 300 
+             C 135 250, 190 280, 195 360 
+             C 198 420, 185 450, 175 465 Z" 
+          fill="url(#leafGrad)" />
+    <!-- Leaf central gold vein -->
+    <path d="M 170 455 C 150 400, 130 350, 108 303" 
+          fill="none" 
+          stroke="url(#goldGrad)" 
+          stroke-width="3" 
+          stroke-linecap="round" />
+
+    <!-- Secondary Accent Leaf -->
+    <path d="M 140 460 
+             C 75 480, 40 430, 50 375 
+             C 65 340, 110 360, 125 410 
+             C 135 435, 138 450, 140 460 Z" 
+          fill="#52796F" />
+    <path d="M 135 452 C 105 425, 80 400, 53 378" 
+          fill="none" 
+          stroke="url(#goldGrad)" 
+          stroke-width="2" 
+          stroke-linecap="round" />
+
+    <!-- TYPOGRAPHY: ECO PRINT & PACK -->
+    <!-- Main Brandmark "ECO" in High-Contrast Stately Serif -->
+    <text x="350" y="325" 
+          text-anchor="middle" 
+          font-family="'Playfair Display', 'Cinzel', Georgia, serif" 
+          font-size="94" 
+          font-weight="700" 
+          fill="url(#forestGrad)" 
+          letter-spacing="6">ECO</text>
+
+    <!-- Horizontal Gold Architectural Divider -->
+    <line x1="240" y1="345" x2="460" y2="345" stroke="url(#goldGrad)" stroke-width="2.5" />
+    <polygon points="350,341 354,345 350,349 346,345" fill="url(#goldGrad)" />
+
+    <!-- Sub Brandmark "PRINT & PACK" -->
+    <text x="350" y="385" 
+          text-anchor="middle" 
+          font-family="'Plus Jakarta Sans', system-ui, sans-serif" 
+          font-size="28" 
+          font-weight="800" 
+          fill="url(#forestGrad)" 
+          letter-spacing="11">PRINT &amp; PACK</text>
+
+    <!-- Tagline: "SUSTAINABLE PACKAGING ATELIER" -->
+    <text x="350" y="420" 
+          text-anchor="middle" 
+          font-family="'Plus Jakarta Sans', system-ui, sans-serif" 
+          font-size="12" 
+          font-weight="600" 
+          fill="#8A8275" 
+          letter-spacing="5">SUSTAINABLE PACKAGING ATELIER</text>
+
+    <!-- Geographic & Origin Stamp -->
+    <text x="350" y="445" 
+          text-anchor="middle" 
+          font-family="'Playfair Display', Georgia, serif" 
+          font-style="italic" 
+          font-size="13" 
+          fill="url(#goldGrad)" 
+          letter-spacing="2">Kathmandu • Lalitpur, Nepal</text>
+  </g>
+</svg>

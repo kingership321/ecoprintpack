@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="100%" height="100%">
+  <defs>
+    <linearGradient id="forestGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#12261A" />
+      <stop offset="100%" stop-color="#1F422D" />
+    </linearGradient>
+    <linearGradient id="goldGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E2B76D" />
+      <stop offset="50%" stop-color="#C8933A" />
+      <stop offset="100%" stop-color="#9C6B1C" />
+    </linearGradient>
+    <path id="textCircleTop" d="M 120 300 A 180 180 0 0 1 480 300" fill="none" />
+    <path id="textCircleBottom" d="M 480 300 A 180 180 0 0 1 120 300" fill="none" />
+  </defs>
+
+  <g transform="translate(0, 0)">
+    <!-- Outer Archival Border Rings -->
+    <circle cx="300" cy="300" r="260" fill="none" stroke="url(#goldGrad2)" stroke-width="2" />
+    <circle cx="300" cy="300" r="252" fill="none" stroke="url(#forestGrad2)" stroke-width="8" />
+    <circle cx="300" cy="300" r="240" fill="none" stroke="url(#goldGrad2)" stroke-width="1.5" stroke-dasharray="4 3" />
+    <circle cx="300" cy="300" r="190" fill="none" stroke="url(#forestGrad2)" stroke-width="2" />
+
+    <!-- Circular Typography along Arcs -->
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-size="20" font-weight="800" fill="url(#forestGrad2)" letter-spacing="9">
+      <textPath href="#textCircleTop" startOffset="50%" text-anchor="middle">
+        ECO PRINT &amp; PACK
+      </textPath>
+    </text>
+
+    <text font-family="'Plus Jakarta Sans', sans-serif" font-size="14" font-weight="700" fill="url(#goldGrad2)" letter-spacing="7">
+      <textPath href="#textCircleBottom" startOffset="50%" text-anchor="middle">
+        ✦ LALITPUR • NEPAL ✦
+      </textPath>
+    </text>
+
+    <!-- Center Emblem: Minimalist Crafted Bag & Botanical Sprig -->
+    <g transform="translate(300, 290)">
+      <!-- Mini Laurel Wreath -->
+      <path d="M -90 -10 C -110 60, -60 110, 0 125 C 60 110, 110 60, 90 -10" 
+            fill="none" stroke="url(#goldGrad2)" stroke-width="2" />
+      
+      <!-- Leaf nodes along wreath -->
+      <circle cx="-85" cy="15" r="4" fill="url(#goldGrad2)" />
+      <circle cx="-65" cy="65" r="4.5" fill="url(#goldGrad2)" />
+      <circle cx="-35" cy="100" r="4" fill="url(#goldGrad2)" />
+      <circle cx="85" cy="15" r="4" fill="url(#goldGrad2)" />
+      <circle cx="65" cy="65" r="4.5" fill="url(#goldGrad2)" />
+      <circle cx="35" cy="100" r="4" fill="url(#goldGrad2)" />
+
+      <!-- Iconic Bag Silhouette -->
+      <!-- Handle -->
+      <path d="M -25 -40 C -25 -75, 25 -75, 25 -40" fill="none" stroke="url(#forestGrad2)" stroke-width="6" stroke-linecap="round" />
+      <!-- Bag Body -->
+      <path d="M -50 -35 L 50 -35 L 42 45 C 40 52, 34 58, 26 58 L -26 58 C -34 58, -40 52, -42 45 Z" 
+            fill="#FAF7F2" stroke="url(#forestGrad2)" stroke-width="6" stroke-linejoin="round" />
+      
+      <!-- Monogram 'E' in center of bag -->
+      <text x="0" y="24" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="44" font-weight="700" fill="url(#goldGrad2)">E</text>
+
+      <!-- Heritage Year -->
+      <text x="0" y="82" text-anchor="middle" font-family="'Plus Jakarta Sans', sans-serif" font-size="11" font-weight="800" fill="url(#forestGrad2)" letter-spacing="4">EST. 2018</text>
+    </g>
+  </g>
+</svg>

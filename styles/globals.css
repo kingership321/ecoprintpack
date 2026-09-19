@@ -6,114 +6,83 @@
 @layer base {
   html {
     scroll-behavior: smooth;
-    @apply text-gray-900;
+    @apply text-brand-charcoal;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
   
   body {
-    @apply font-sans antialiased bg-white;
-  }
-  
-  /* Highlight selection in Green */
-  ::selection {
-    @apply bg-green-600 text-white;
+    @apply font-sans antialiased bg-brand-linen text-brand-charcoal selection:bg-brand-moss selection:text-brand-linen;
   }
 
-  h1, h2, h3, h4 {
-    @apply font-bold tracking-tight;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight text-brand-forest;
   }
-  
-  h1 { @apply text-4xl md:text-5xl lg:text-6xl; }
-  h2 { @apply text-3xl md:text-4xl; }
-  h3 { @apply text-2xl md:text-3xl; }
 }
 
 @layer components {
-  /* Primary Button - "Go Green. Order Now" style */
-  .btn-primary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-gradient-to-r from-green-600 to-emerald-600 rounded-lg shadow-lg hover:shadow-xl hover:from-green-700 hover:to-emerald-700 focus:outline-none focus:ring-4 focus:ring-green-300 transform hover:-translate-y-1;
+  /* Editorial Primary Button */
+  .btn-primary, .btn-editorial {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wider uppercase text-white bg-brand-forest hover:bg-brand-moss border border-brand-forest hover:border-brand-moss rounded-full shadow-sm hover:shadow-md transition-all duration-300;
   }
 
-  /* Secondary Button */
-  .btn-secondary {
-    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-green-700 transition-all duration-300 bg-white border-2 border-green-600 rounded-lg hover:bg-green-50 hover:shadow-lg focus:outline-none focus:ring-4 focus:ring-green-300;
+  /* Editorial Outline / Secondary Button */
+  .btn-secondary, .btn-editorial-outline {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wider uppercase text-brand-forest bg-transparent border border-stone-300 hover:border-brand-forest hover:bg-brand-forest hover:text-white rounded-full transition-all duration-300;
+  }
+
+  /* Editorial Gold Accent Button */
+  .btn-gold {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-wider uppercase text-brand-forest bg-brand-gold hover:bg-brand-gold-light rounded-full shadow-xs hover:shadow-sm transition-all duration-300;
   }
   
-  /* Highlight badge for "Best Seller" or "Eco-Friendly" */
-  .highlight-badge {
-    @apply inline-block px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-amber-500 to-orange-500 rounded-full shadow-md;
-  }
-  
-  /* MOQ badge */
-  .moq-badge {
-    @apply inline-block px-4 py-2 text-sm font-bold text-white bg-gradient-to-r from-green-500 to-teal-600 rounded-full;
-  }
-  
-  /* Section styles */
+  /* Section styles with balanced rhythm */
   .section-padding {
     @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
   }
   
   .section-padding-sm {
-    @apply px-4 py-8 sm:px-6 lg:px-8 lg:py-12;
+    @apply px-4 py-10 sm:px-6 lg:px-8 lg:py-14;
   }
   
-  /* Product card - Enhanced for professional look */
-  .product-card {
-    @apply bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100;
-  }
-  
-  .product-card:hover {
-    @apply border-green-400 transform -translate-y-2;
+  /* Artisanal Card */
+  .card-editorial {
+    @apply bg-white rounded-2xl border border-stone-200/80 shadow-[0_4px_20px_-4px_rgba(20,35,26,0.05)] hover:shadow-[0_12px_30px_-6px_rgba(20,35,26,0.1)] transition-all duration-500;
   }
 
-  /* Director Message Quote Style */
-  .director-message {
-    @apply relative p-8 md:p-12 bg-green-50 border-l-4 border-green-600 rounded-r-xl text-gray-700 text-lg leading-relaxed;
-  }
-
-  /* Board Member Card */
-  .board-card {
-    @apply bg-white rounded-xl shadow-md p-6 text-center hover:shadow-xl transition-shadow duration-300 border border-gray-100;
-  }
-
-  /* Outlet/Machine Card */
-  .outlet-card {
-    @apply relative overflow-hidden rounded-xl shadow-lg group;
-  }
-  
-  .outlet-card img {
-    @apply w-full h-full object-cover transition-transform duration-500 group-hover:scale-110;
+  /* Archival Label Tag */
+  .editorial-tag {
+    @apply inline-flex items-center font-sans text-[11px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-stone-100 text-stone-700 border border-stone-200/60;
   }
 }
 
 @layer utilities {
-  /* Animation for scroll reveal */
-  .fade-in-up {
-    @apply opacity-0 translate-y-8 transition-all duration-1000 ease-out;
+  /* Subtle dotted texture */
+  .dotted-texture {
+    background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    background-size: 16px 16px;
   }
   
-  .fade-in-up.is-visible {
-    @apply opacity-100 translate-y-0;
+  .dotted-texture-dark {
+    background-image: radial-gradient(rgba(18, 35, 26, 0.08) 1px, transparent 1px);
+    background-size: 16px 16px;
   }
 
-  /* Text Balance for headings */
   .text-balance {
     text-wrap: balance;
   }
 }
 
-/* styles/globals.css */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
 }
 
-.animate-fadeIn {
-  animation: fadeIn 0.3s ease-out forwards;
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
 }

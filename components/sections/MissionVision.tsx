@@ -3,95 +3,107 @@
 
 export function MissionVision() {
   return (
-    <section className="section-padding pt-0 bg-gray-50">
-      <div className="max-w-7xl mx-auto">
+    <section className="section-padding bg-brand-linen pt-0 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-3">
-            <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            OUR PURPOSE
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <div className="editorial-tag mb-3">
+            <span>Our Guiding Principles</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-3">
-            Mission & <span className="text-green-600">Vision</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-brand-forest">
+            Mission & <span className="italic font-serif text-brand-gold">Long-Term Vision</span>
           </h2>
+          <p className="mt-3 text-stone-600 font-sans text-sm sm:text-base leading-relaxed">
+            The philosophical pillars that guide every cut, stitch, and partnership we forge in Nepal.
+          </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
+        {/* Dual Manifesto Split */}
+        <div className="grid md:grid-cols-2 gap-8 items-stretch">
           
-          {/* Mission Card */}
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-md border border-gray-100 hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-24 h-24 bg-green-50 rounded-full -mr-12 -mt-12 transform group-hover:scale-150 transition-transform duration-500"></div>
-            <div className="relative z-10">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center mr-3 shadow-md">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.879 16.121A3 3 0 1012.015 11L11 14H9c0 .768.293 1.536.879 2.121z" />
-                  </svg>
+          {/* Mission Card: Warm Linen Craft */}
+          <div className="bg-white rounded-3xl p-8 sm:p-10 border border-stone-200/90 shadow-xs flex flex-col justify-between relative overflow-hidden">
+            <div className="space-y-6">
+              
+              <div className="flex items-center justify-between pb-4 border-b border-stone-150">
+                <div className="flex items-center space-x-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-forest" />
+                  <h3 className="font-serif text-2xl text-brand-forest font-bold">Our Mission</h3>
                 </div>
-                <h3 className="text-xl font-black text-gray-900">Our Mission</h3>
+                <span className="text-[11px] font-sans font-semibold tracking-widest uppercase text-stone-400">
+                  Everyday Action
+                </span>
               </div>
-              
-              <blockquote className="text-base md:text-lg text-gray-800 font-semibold leading-relaxed mb-5 border-l-4 border-green-600 pl-4 py-1.5 bg-green-50 rounded-r-lg">
-                &ldquo;To provide Nepali businesses with high-quality, affordable, and sustainable packaging solutions that reduce plastic waste and protect our environment.&rdquo;
+
+              <blockquote className="font-serif text-lg sm:text-xl text-stone-800 italic leading-relaxed pl-4 border-l-2 border-brand-gold">
+                &ldquo;To equip Nepali retailers and enterprises with durable, accessible, and truly eco-friendly packaging solutions that actively curb single-use plastic pollution.&rdquo;
               </blockquote>
-              
-              <ul className="space-y-2">
+
+              <div className="space-y-3 pt-2">
                 {[
-                  'Develop eco-friendly alternatives to plastic packaging',
-                  'Make sustainable packaging accessible for all businesses',
-                  'Support local manufacturing and craftsmanship',
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-sm text-gray-600">
-                    <svg className="w-4 h-4 mr-2 text-green-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
+                  'Manufacture reliable, cost-effective alternatives to polythene shopping bags.',
+                  'Maintain rigorous quality standards so bags are reused dozens of times.',
+                  'Foster direct relationships with Nepali businesses with transparent factory pricing.',
+                ].map((point, idx) => (
+                  <div key={idx} className="flex items-start text-xs sm:text-sm font-sans text-stone-600">
+                    <span className="text-brand-forest mr-2.5 mt-0.5 font-bold">✦</span>
+                    <span>{point}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+            </div>
+
+            <div className="pt-6 mt-8 border-t border-stone-100 text-[11px] font-sans text-stone-400 uppercase tracking-widest">
+              Actionable Sustainability
             </div>
           </div>
 
-          {/* Vision Card */}
-          <div className="bg-gradient-to-br from-gray-900 to-green-900 rounded-2xl p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 relative overflow-hidden group">
-             <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full -ml-16 -mb-16 transform group-hover:scale-150 transition-transform duration-500"></div>
-             <div className="relative z-10">
-              <div className="flex items-center mb-4">
-                <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mr-3 shadow-md border border-white/10">
-                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
+          {/* Vision Card: Deep Botanical Forest */}
+          <div className="bg-brand-forest text-white rounded-3xl p-8 sm:p-10 border border-brand-moss shadow-lg flex flex-col justify-between relative overflow-hidden">
+            
+            {/* Subtle Dotted Texture */}
+            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+
+            <div className="relative z-10 space-y-6">
+              
+              <div className="flex items-center justify-between pb-4 border-b border-white/15">
+                <div className="flex items-center space-x-3">
+                  <span className="w-2.5 h-2.5 rounded-full bg-brand-gold" />
+                  <h3 className="font-serif text-2xl text-white font-bold">Our Vision</h3>
                 </div>
-                <h3 className="text-xl font-black text-white">Our Vision</h3>
+                <span className="text-[11px] font-sans font-semibold tracking-widest uppercase text-brand-gold">
+                  Future Horizon
+                </span>
               </div>
-              
-              <blockquote className="text-base md:text-lg text-white font-semibold leading-relaxed mb-5 border-l-4 border-green-400 pl-4 py-1.5 bg-white/10 rounded-r-lg backdrop-blur-sm">
-                &ldquo;To create a Nepal where every shopping bag is reusable, every garment is protected in eco-friendly covers, and every business chooses sustainability over plastic.&rdquo;
+
+              <blockquote className="font-serif text-lg sm:text-xl text-stone-100 italic leading-relaxed pl-4 border-l-2 border-brand-gold">
+                &ldquo;A clean Nepal where every shopping bag is kept, reused, and celebrated — and where sustainable packaging is the default, proud standard for all commercial trade.&rdquo;
               </blockquote>
-              
-              <ul className="space-y-2">
+
+              <div className="space-y-3 pt-2">
                 {[
-                  'Lead Nepal toward a plastic-free future',
-                  'Preserve traditional craftsmanship like Lokta paper making',
-                  'Inspire the next generation of eco-conscious businesses',
-                ].map((item, idx) => (
-                  <li key={idx} className="flex items-start text-sm text-gray-300">
-                    <svg className="w-4 h-4 mr-2 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                    {item}
-                  </li>
+                  'Lead Nepal toward complete phase-out of plastic shopping bags by demonstration.',
+                  'Safeguard and modernize indigenous Himalayan Lokta papermaking for global markets.',
+                  'Inspire a conscious manufacturing ecosystem grounded in dignity of labor and quality.',
+                ].map((point, idx) => (
+                  <div key={idx} className="flex items-start text-xs sm:text-sm font-sans text-stone-300">
+                    <span className="text-brand-gold mr-2.5 mt-0.5">✦</span>
+                    <span>{point}</span>
+                  </div>
                 ))}
-              </ul>
+              </div>
+
+            </div>
+
+            <div className="relative z-10 pt-6 mt-8 border-t border-white/15 text-[11px] font-sans text-stone-400 uppercase tracking-widest">
+              Himalayan Legacy & Future
             </div>
           </div>
 
         </div>
+
       </div>
     </section>
   );

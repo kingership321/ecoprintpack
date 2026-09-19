@@ -4,99 +4,101 @@ import Image from 'next/image';
 
 export function DirectorsMessage() {
   return (
-    <section className="section-padding bg-white">
-      <div className="max-w-6xl mx-auto">
+    <section className="section-padding bg-brand-linen relative">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-3">
-            <svg className="w-3 h-3 mr-1.5" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
-            </svg>
-            FROM THE FOUNDER
+        <div className="text-center mb-10 md:mb-12">
+          <div className="editorial-tag mb-3 bg-stone-150 text-stone-700">
+            <span>The Founder's Letter</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900">
-            Director's <span className="text-green-600">Message</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-brand-forest">
+            A Commitment to <span className="italic font-serif text-brand-gold">Craft & Care</span>
           </h2>
         </div>
 
-        <div className="bg-gradient-to-r from-green-50 via-white to-emerald-50 rounded-2xl p-4 md:p-6 lg:p-8 shadow-lg border border-green-100 overflow-hidden">
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8 items-start">
+        {/* Journal Profile Card */}
+        <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 border border-stone-200/90 shadow-[0_8px_30px_-6px_rgba(20,35,26,0.06)] relative overflow-hidden">
+          
+          <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
             
-            {/* Director Photo / Avatar Area */}
-            <div className="text-center md:text-left flex flex-col items-center">
-              <div className="relative w-32 h-32 md:w-40 md:h-40 flex-shrink-0">
-                {/* Decorative Ring */}
-                <div className="absolute inset-0 bg-gradient-to-br from-green-400 to-emerald-600 rounded-full animate-spin-slow opacity-40 blur-sm"></div>
-                
-                {/* Image Container */}
-                <div className="relative w-full h-full rounded-full border-4 border-white shadow-lg overflow-hidden bg-green-600 flex items-center justify-center">
-                  {/* Placeholder with Initials - Replace with Image component when real photo is available */}
-                  
-                    <Image 
-                      src="/asset/DipeshJI.jpg" 
-                      alt="Dipesh Rai - Managing Director" 
-                      fill 
-                      className="object-cover"
-                    />
-                 
-                  <span className="text-3xl md:text-4xl font-bold text-white">DR</span>
-                </div>
+            {/* Founder Portrait Column (4 cols) */}
+            <div className="md:col-span-4 flex flex-col items-center text-center">
+              <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-2xl overflow-hidden shadow-md border-2 border-brand-linen bg-stone-100 flex-shrink-0">
+                <Image 
+                  src="/asset/DipeshJI.jpg" 
+                  alt="Dipesh Rai - Managing Director, Eco Promotional Industries" 
+                  fill 
+                  className="object-cover object-top"
+                />
               </div>
               
-              {/* Name Tag */}
-              <div className="mt-4 text-center">
-                <h3 className="text-lg md:text-xl font-black text-gray-900">Dipesh Rai</h3>
-                <div className="text-green-600 font-bold text-sm md:text-base">Managing Director</div>
-                <div className="text-gray-500 text-xs mt-0.5">Eco Promotional Industries Pvt Ltd</div>
+              <div className="mt-4 space-y-1 text-center">
+                <h3 className="font-serif text-lg font-bold text-brand-forest">Dipesh Rai</h3>
+                <p className="text-xs font-sans font-semibold tracking-wider uppercase text-brand-moss">
+                  Managing Director
+                </p>
+                <p className="text-[11px] font-sans text-stone-500">
+                  Eco Promotional Industries Pvt Ltd
+                </p>
+              </div>
+
+              {/* Artisanal Heritage Seal */}
+              <div className="mt-5 px-3 py-1.5 rounded-full bg-stone-50 border border-stone-200 text-[10px] font-sans uppercase tracking-widest text-stone-600">
+                Kathmandu Valley Atelier
               </div>
             </div>
 
-            {/* Message Content */}
-            <div className="md:col-span-2 relative">
-              <div className="text-4xl md:text-5xl text-green-200 font-serif leading-none absolute -top-3 -left-2 opacity-40 select-none">
-                &ldquo;
-              </div>
+            {/* Letter Body Column (8 cols) */}
+            <div className="md:col-span-8 space-y-5 text-stone-700 font-sans text-sm sm:text-base leading-relaxed">
               
-              <div className="relative z-10 space-y-3 md:space-y-4 text-gray-700 text-sm md:text-base leading-relaxed">
-                <p className="font-semibold text-gray-900 text-base md:text-lg">
-                  I often get asked: Why bags? Why start a manufacturing company in Nepal?
-                </p>
-                
-                <p>
-                  The answer is simple: because I saw a problem that needed solving. Every day, Nepal generates thousands of kilograms of plastic waste. A huge portion comes from single-use shopping bags used for ten minutes, then thrown away to sit in landfills or rivers for hundreds of years.
-                </p>
-                
-                <p>
-                  I wanted to offer an alternative. I wanted to give businesses a way to package their products that didn&apos;t come with a side of guilt.
-                </p>
-                
-                <p>
-                  But I also wanted to offer something else: <strong className="text-green-700">respect</strong>. Respect for the business owner who needs bags that won&apos;t break. Respect for the brand that needs packaging that looks as good as their products. Respect for the craftspeople who stitch every bag with care.
-                </p>
-                
-                <div className="director-message my-4 p-4 md:p-5">
-                  <p className="text-green-800 font-semibold text-base">
-                    That is what Eco Promotional Industries Pvt Ltd stands for. Practical sustainability. Local quality. Genuine care.
-                  </p>
-                </div>
-                
-                <p className="text-gray-600 italic text-sm">
-                  Thank you for being here. Thank you for caring about where your packaging comes from. And thank you for giving us the chance to serve you.
+              {/* Pull Quote */}
+              <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-brand-forest italic leading-snug border-l-2 border-brand-gold pl-5 py-1">
+                &ldquo;Why bags? Because every day, thousands of kilograms of plastic are thrown away after ten minutes of use. We wanted to offer an alternative that comes with zero guilt.&rdquo;
+              </blockquote>
+
+              <p>
+                When we founded <strong className="text-brand-forest font-semibold">Eco Promotional Industries</strong>, 
+                our goal was simple yet urgent: provide Nepali businesses with packaging that doesn't cost the earth. 
+                Single-use plastic bags choke our rivers and landfills for centuries. But solving that problem requires 
+                more than just idealism.
+              </p>
+
+              <p>
+                It requires <strong className="text-brand-forest font-semibold">respect</strong>: 
+                Respect for the business owner who cannot afford handles tearing under weight; 
+                respect for brands that require packaging as refined as their products; 
+                and respect for our skilled local craftspeople who cut, stitch, and print every piece right here in Lalitpur.
+              </p>
+
+              {/* Highlight callout in warm paper style */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-brand-linen/80 border border-stone-200/80">
+                <p className="font-serif text-base sm:text-lg text-brand-forest italic">
+                  Practical sustainability. Dependable local craftsmanship. Genuine care for the future of our environment.
                 </p>
               </div>
-              
-              {/* Signature Area */}
-              <div className="flex items-center mt-6 pt-4 border-t border-green-200">
-                <div className="w-8 h-0.5 bg-green-600 mr-3 rounded-full"></div>
+
+              <p className="text-stone-600 text-xs sm:text-sm italic">
+                Thank you for choosing to make a difference, for supporting Nepali manufacturing, and for trusting us with your brand.
+              </p>
+
+              {/* Signature Line */}
+              <div className="pt-4 border-t border-stone-200 flex items-center justify-between">
                 <div>
-                  <div className="font-bold text-gray-900 text-base">Dipesh Rai</div>
-                  <div className="text-gray-600 text-xs">Managing Director, Eco Promotional Industries Pvt Ltd</div>
+                  <div className="font-serif font-bold text-brand-forest text-base">Dipesh Rai</div>
+                  <div className="text-[11px] text-stone-500 font-sans uppercase tracking-wider">
+                    Managing Director • Eco Promotional Industries Pvt Ltd
+                  </div>
                 </div>
+                <span className="font-serif text-2xl text-brand-gold italic">~ D. Rai</span>
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
     </section>
   );

@@ -1,232 +1,155 @@
 // components/sections/Hero.tsx
 'use client';
-import { useState, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Import images - Fix the import paths
-// For images in public folder, you don't need to import them
-// Just use the path directly
-
-// --- Icon Components for Uniformity (kept as fallback) ---
-const ShoppingBagIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
-    <line x1="3" y1="6" x2="21" y2="6"></line>
-    <path d="M16 10a4 4 0 0 1-8 0"></path>
-  </svg>
-);
-
-const BoxIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-    <line x1="12" y1="22.08" x2="12" y2="12"></line>
-  </svg>
-);
-
-const ScrollIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M8 21h8a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2z"></path>
-    <path d="M12 17h.01"></path>
-  </svg>
-);
-
-const LeafIcon = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-12 h-12 md:w-16 md:h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-    <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-  </svg>
-);
-
-// Slide data with images - Use direct paths for public folder images
-const slides = [
-  {
-    id: 1,
-    title: 'Sustainable Shopping Bags.',
-    highlight: 'Manufactured in Nepal.',
-    description: 'Practical sustainability. Local quality. Genuine care. Join the movement to make Nepal cleaner and greener.',
-    buttonText: 'Go Green. Order Now',
-    buttonLink: '/contact#quote',
-    bgImage: '/asset/product1.jpg', // Direct path from public folder
-    icon: <ShoppingBagIcon />,
-    iconImage: '/asset/product5.jpg',
-    alt: 'Sustainable shopping bags manufactured in Nepal',
-  },
-  {
-    id: 2,
-    title: 'Non-Woven & Canvas Bags',
-    highlight: 'Strength & Style',
-    description: 'Water resistant, tear resistant, and fully customizable. Perfect for retailers, events, and corporate branding.',
-    buttonText: 'View Products',
-    buttonLink: '/#products',
-    bgImage: '/asset/product2.jpg',
-    icon: <BoxIcon />,
-    iconImage: '/asset/NonWovenFabricWcutBag/wcut2.jpg',
-    alt: 'Non-woven and canvas bags for retail and events',
-  },
-  {
-    id: 3,
-    title: 'Traditional Lokta Paper',
-    highlight: '1000-Year Heritage',
-    description: 'Crafted by Nepali artisans using traditional methods. Tree-free, naturally textured, and exceptionally strong.',
-    buttonText: 'Discover Lokta',
-    buttonLink: '/#products',
-    bgImage: '/asset/product3.jpg',
-    icon: <ScrollIcon />,
-    iconImage: '/asset/LoktaPaperProducts/NepaliLoktaProducts9.jpg',
-    alt: 'Traditional Lokta paper bags crafted in Nepal',
-  },
-  {
-    id: 4,
-    title: 'Eco-Friendly Packaging',
-    highlight: 'For Every Business',
-    description: 'From Kirana pasals to boutique showrooms. We deliver sustainable packaging solutions tailored to your needs.',
-    buttonText: 'Get a Quote',
-    buttonLink: '/contact#quote',
-    bgImage: '/asset/product4.jpg',
-    icon: <LeafIcon />,
-    iconImage: '/asset/PaperBag/PaperBag3.jpg',
-    alt: 'Eco-friendly packaging solutions for all businesses',
-  },
-];
-
 export function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearTimeout(timer);
-  }, [currentSlide]);
-
-  const goToSlide = useCallback((index: number) => {
-    setCurrentSlide(index);
-  }, []);
-
-  const handleImageError = (id: string) => {
-    setImageErrors(prev => ({ ...prev, [id]: true }));
-  };
-
   return (
-    <section className="relative bg-gray-900 text-white overflow-hidden">
-      <div className="relative h-[50vh] md:h-[70vh] min-h-[400px]">
-        {slides.map((slide, index) => (
-          <div
-            key={slide.id}
-            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-              index === currentSlide ? 'opacity-100 z-10' : 'opacity-0 z-0'
-            }`}
-          >
-            {/* Background Image */}
-            <div className="absolute inset-0">
-              {!imageErrors[`bg-${slide.id}`] ? (
-                <Image
-                  src={slide.bgImage}
-                  alt={slide.alt}
-                  fill
-                  className="object-cover"
-                  priority={index === 0}
-                  onError={() => handleImageError(`bg-${slide.id}`)}
-                  quality={90}
-                />
-              ) : (
-                // Fallback gradient if image fails to load
-                <div className={`absolute inset-0 bg-gradient-to-br ${
-                  index === 0 ? 'from-green-700 to-emerald-600' :
-                  index === 1 ? 'from-emerald-600 to-teal-500' :
-                  index === 2 ? 'from-amber-600 to-orange-500' :
-                  'from-green-800 to-lime-600'
-                }`} />
-              )}
-              
-              {/* Overlay for better text readability */}
-              <div className="absolute inset-0 bg-black/40" />
+    <section className="relative bg-brand-forest text-white overflow-hidden">
+      {/* Background Architectural Texture */}
+      <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none" />
+      
+      {/* Subtle organic radial glow */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-brand-moss/50 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pt-20 md:pb-24">
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+          
+          {/* Left Column: Editorial Manifesto & Typography (7 cols) */}
+          <div className="lg:col-span-7 text-center lg:text-left space-y-6">
+            
+            {/* Archival Heritage Stamp */}
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-stone-200 text-[11px] font-sans font-semibold tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
+              <span>Est. 2018 • Kathmandu, Nepal</span>
+              <span className="text-white/30">•</span>
+              <span className="text-brand-gold">Direct Factory Manufacturer</span>
             </div>
 
-            <div className="relative h-full container mx-auto px-4 sm:px-6 lg:px-8 flex items-center">
-              <div className="grid md:grid-cols-2 gap-6 items-center w-full">
-                <div className={`text-center md:text-left transition-all duration-700 delay-300 ${
-                  index === currentSlide ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-                }`}>
-                  
-                  
-                  <h1 className="text-2xl md:text-3xl lg:text-4xl font-black mb-3 leading-tight drop-shadow-md">
-                    {slide.title}<br />
-                    <span className="text-green-200 text-xl md:text-2xl lg:text-3xl">{slide.highlight}</span>
-                  </h1>
-                  
-                  <p className="text-sm md:text-base mb-6 text-green-50 max-w-xl mx-auto md:mx-0 leading-relaxed">
-                    {slide.description}
-                  </p>
-                  
+            {/* Editorial Title */}
+            <div className="space-y-2">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-white leading-[1.15]">
+                Packaging Crafted with <span className="italic font-serif text-brand-gold font-normal">Integrity.</span>
+              </h1>
+              <p className="text-lg sm:text-xl font-serif italic text-stone-300 font-normal">
+                Manufactured locally. Built for conscious brands.
+              </p>
+            </div>
+
+            {/* Story copy */}
+            <p className="text-stone-300 text-sm sm:text-base font-sans leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+              From Kathmandu’s heritage ateliers to wholesale retail chains nationwide — we engineer durable, 
+              eco-friendly bags in Non-Woven, Cotton Canvas, 1,000-year Himalayan Lokta, and Kraft Paper. 
+              Zero guilt. Uncompromising strength. Direct from our Lalitpur manufacturing facility.
+            </p>
+
+            {/* CTAs */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
+              <Link
+                href="/products"
+                className="inline-flex items-center gap-2.5 bg-brand-gold hover:bg-brand-gold-light text-brand-forest font-sans text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
+              >
+                <span>Explore Collections</span>
+                <span className="transform transition-transform group-hover:translate-x-1 font-bold">→</span>
+              </Link>
+              
+              <Link
+                href="/contact#quote"
+                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-sans text-xs font-semibold uppercase tracking-widest px-6 py-3.5 rounded-full border border-white/20 transition-all duration-300"
+              >
+                <span>Request Custom Quote</span>
+              </Link>
+            </div>
+
+            {/* Key Spec Badges */}
+            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-left">
+              <div>
+                <div className="font-serif text-xl sm:text-2xl text-white font-bold">1,000+</div>
+                <div className="text-[11px] text-stone-400 uppercase tracking-wider font-sans mt-0.5">Retailers Served</div>
+              </div>
+              <div>
+                <div className="font-serif text-xl sm:text-2xl text-white font-bold">50K+</div>
+                <div className="text-[11px] text-stone-400 uppercase tracking-wider font-sans mt-0.5">Bags Monthly</div>
+              </div>
+              <div>
+                <div className="font-serif text-xl sm:text-2xl text-white font-bold">100%</div>
+                <div className="text-[11px] text-stone-400 uppercase tracking-wider font-sans mt-0.5">Nepal Made</div>
+              </div>
+            </div>
+
+          </div>
+
+          {/* Right Column: Passe-Partout Framed Bag Showcase (5 cols) */}
+          <div className="lg:col-span-5">
+            <div className="relative mx-auto max-w-lg lg:max-w-none">
+              
+              {/* Archival Museum Mount Card */}
+              <div className="relative bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-white/30 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.4)]">
+                
+                {/* Visual Label Tag */}
+                <div className="flex items-center justify-between pb-3 mb-3 border-b border-stone-200/80 text-[10px] font-sans uppercase tracking-widest text-stone-600 font-bold">
+                  <span className="flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-brand-forest" />
+                    Our 5 Core Varieties
+                  </span>
+                  <span className="text-brand-gold font-serif italic text-xs capitalize">Atelier Collection</span>
+                </div>
+
+                {/* Banner Image */}
+                <Link href="/products" className="block group overflow-hidden rounded-xl bg-brand-linen relative">
+                  <Image
+                    src="/asset/hero-product-banner.png"
+                    alt="Eco Print & Pack Bag Varieties: Tote Bag, Non-woven Fabric Bag, Lokta Craft Bags, Brown Krafted Bag, Paper Bag"
+                    width={1200}
+                    height={567}
+                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+                    priority
+                  />
+                </Link>
+
+                {/* Material Index Strip */}
+                <div className="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-[11px] font-sans text-stone-700">
+                  <div className="flex items-center space-x-1">
+                    <span className="text-brand-forest font-bold">Materials:</span>
+                    <span className="text-stone-500 text-[10px]">Non-Woven • Canvas • Lokta • Kraft</span>
+                  </div>
                   <Link 
-                    href={slide.buttonLink} 
-                    className="btn-primary inline-flex items-center"
+                    href="/products" 
+                    className="font-bold text-brand-forest hover:text-brand-gold transition-colors inline-flex items-center text-xs"
                   >
-                    <svg className="w-4 h-4 mr-2 text-white transition-transform group-hover:scale-110" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z" />
-                    </svg>
-                    {slide.buttonText}
+                    <span>View All</span>
+                    <span className="ml-1">→</span>
                   </Link>
                 </div>
 
-                {/* Product Image Showcase Card - Rectangular */}
-                <div className="hidden md:flex items-center justify-center relative">
-                  <div className="relative w-72 h-72 lg:w-96 lg:h-96 bg-white/10 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/20 shadow-2xl transform hover:scale-105 transition-all duration-500 group">
-
-                    {/* Image Container */}
-                    <div className="absolute inset-0 flex items-center justify-center p-4">
-                      {slide.iconImage && !imageErrors[`icon-${slide.id}`] ? (
-                        <div className="relative w-full h-full flex items-center justify-center">
-                          <Image
-                            src={slide.iconImage}
-                            alt="Product showcase"
-                            width={280}
-                            height={200}
-                            className="w-auto h-auto max-w-full max-h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
-                          />
-                        </div>
-                      ) : (
-                        <div className="text-white/40 transform group-hover:scale-110 transition-transform duration-500">
-                          {slide.icon}
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Gradient Overlay on Hover */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-green-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-                    {/* Bottom Label */}
-                    <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-green-900/80 to-transparent p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                      <p className="text-white text-xs font-semibold text-center">
-                        {slide.title.split(' ')[0]} Collection
-                      </p>
-                    </div>
-                  </div>
-                </div>
               </div>
+
+              {/* Decorative Subtle Corner Accent */}
+              <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full rounded-2xl border border-brand-gold/30 pointer-events-none hidden sm:block" />
+
             </div>
           </div>
-        ))}
+
+        </div>
       </div>
 
-      {/* Slide indicators */}
-      <div className="absolute bottom-4 left-0 right-0 z-20 flex justify-center space-x-2">
-        {slides.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
-              index === currentSlide 
-                ? 'bg-white w-6' 
-                : 'bg-white/40 hover:bg-white/70'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
+      {/* Marquee Ticker - Editorial Archival Band */}
+      <div className="relative z-20 bg-brand-moss/80 border-t border-white/10 py-3 overflow-hidden backdrop-blur-sm">
+        <div className="animate-marquee space-x-8 text-[11px] font-sans font-semibold text-stone-300 tracking-widest uppercase items-center">
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> D-Cut & W-Cut Non-Woven Bags</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 100% Pure Cotton Canvas Totes</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 1,000-Year Heritage Nepali Lokta Craft</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Heavy Duty Brown Kraft Paper Bags</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Garment, Lehenga & Blanket Protective Covers</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Custom Screen & Flexographic Printing</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> D-Cut & W-Cut Non-Woven Bags</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 100% Pure Cotton Canvas Totes</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 1,000-Year Heritage Nepali Lokta Craft</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Heavy Duty Brown Kraft Paper Bags</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Garment, Lehenga & Blanket Protective Covers</span>
+          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Custom Screen & Flexographic Printing</span>
+        </div>
       </div>
     </section>
   );

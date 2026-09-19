@@ -1,139 +1,113 @@
 // components/sections/WhyChooseUs.tsx
 'use client';
 
-// --- Uniform Icons in White (all using same stroke width and design language) ---
-const IconFactory = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
-    <path d="M17 18h1" /><path d="M12 18h1" /><path d="M7 18h1" />
-  </svg>
-);
-
-const IconNepal = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <circle cx="12" cy="12" r="10" />
-    <line x1="2" y1="12" x2="22" y2="12" />
-    <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
-  </svg>
-);
-
-const IconStar = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-  </svg>
-);
-
-const IconLeafHeart = () => (
-  <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z" />
-    <path d="M12 20v-9" />
-    <path d="M9 12l3-3 3 3" />
-  </svg>
-);
-
 const reasons = [
   {
-    title: 'We Are Manufacturers, Not Just Suppliers',
-    description: 'There is a difference between buying a bag and having a bag made for you. When you work with us, you work directly with the people who cut, stitch, and print.',
-    iconComponent: <IconFactory />,
-    color: 'emerald',
+    index: '01',
+    title: 'Direct Manufacturing, No Middlemen',
+    subtitle: 'From Factory Floor to Your Door',
+    description: 'When you work with us, you work directly with the craftsmen and technicians who cut, stitch, and print. No import delays, no hidden markups, and total flexibility on custom dimensions.',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+      </svg>
+    ),
   },
   {
-    title: 'We Understand Nepal Because We Are Nepal Made',
-    description: 'We know that a bakery in Patan needs different packaging than a wedding in Dhulikhel. We tailor our approach to the Nepali marketplace.',
-    iconComponent: <IconNepal />,
-    color: 'blue',
+    index: '02',
+    title: 'Authentic Nepali Craft & Heritage',
+    subtitle: 'Preserving 1,000 Years of Tradition',
+    description: 'We understand local marketplace realities — from luxury wedding packaging in Pokhara to daily retail shopping bags in Patan. We proudly champion indigenous Himalayan Daphne Lokta paper.',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
   },
   {
-    title: 'We Care About Quality as Much as You Do',
-    description: 'Your brand is on that bag. If the handle breaks, if the print fades, that reflects on you. We ensure every bag meets our high standards before it ships.',
-    iconComponent: <IconStar />,
-    color: 'amber',
+    index: '03',
+    title: 'Uncompromising Tensile Quality',
+    subtitle: 'Tested for Weight, Tear & Wear',
+    description: 'Your brand name travels on that bag. If a handle rips or ink rubs off, your reputation suffers. We enforce strict ultrasonic weld and reinforced cross-stitch quality benchmarks on every run.',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+      </svg>
+    ),
   },
   {
-    title: 'We Are on a Mission',
-    description: 'Nepal has a plastic problem. We see it on our streets, in our rivers. Every eco-friendly bag we produce is a small step toward solving that problem.',
-    iconComponent: <IconLeafHeart />,
-    color: 'green',
+    index: '04',
+    title: 'A Tangible Ecological Mission',
+    subtitle: 'Zero Plastic Waste, One Bag at a Time',
+    description: 'Single-use plastic remains Nepal’s most critical visual pollution problem. Every reusable non-woven bag, canvas tote, and biodegradable paper carrier we manufacture eliminates hundreds of plastics from landfills.',
+    icon: (
+      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+      </svg>
+    ),
   },
 ];
 
 export function WhyChooseUs() {
   return (
-    <section className="section-padding pt-0 bg-gradient-to-b from-white to-green-50">
+    <section className="section-padding bg-brand-linen pt-0 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-10 md:mb-12">
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-4 py-2 rounded-full text-xs font-semibold mb-4 tracking-wider">
-            <svg className="w-3.5 h-3.5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-            OUR COMMITMENT
+        <div className="text-center max-w-3xl mx-auto mb-12 md:mb-16">
+          <div className="editorial-tag mb-3">
+            <span>Our Distinction</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-4">
-            Why Choose <span className="text-green-600">Us?</span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-brand-forest">
+            Why Discerning Brands <span className="italic font-serif text-brand-gold">Choose Us</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
-            We don't just make bags — we build partnerships based on quality, integrity, and shared values.
+          <p className="mt-3 text-stone-600 font-sans text-sm sm:text-base leading-relaxed">
+            We don&apos;t just produce packaging; we engineer dependable, eco-conscious brand ambassadors for your business.
           </p>
         </div>
 
-        {/* Reasons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-          {reasons.map((reason, index) => (
+        {/* 4 Architectural Indexed Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {reasons.map((reason) => (
             <div 
-              key={index}
-              className="group relative bg-white rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-xl transition-all duration-500 border border-gray-100 hover:border-transparent overflow-hidden"
+              key={reason.index}
+              className="bg-white rounded-3xl p-7 sm:p-9 border border-stone-200/90 shadow-xs hover:shadow-md hover:border-brand-moss/40 transition-all duration-300 flex flex-col justify-between group"
             >
-              {/* Elegant gradient background on hover */}
-              <div className={`absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br ${
-                reason.color === 'emerald' ? 'from-emerald-50 to-green-50' :
-                reason.color === 'blue' ? 'from-blue-50 to-indigo-50' :
-                reason.color === 'amber' ? 'from-amber-50 to-orange-50' :
-                'from-green-50 to-teal-50'
-              }`}></div>
-              
-              {/* Top accent line */}
-              <div className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${
-                reason.color === 'emerald' ? 'from-emerald-400 to-green-500' :
-                reason.color === 'blue' ? 'from-blue-400 to-indigo-500' :
-                reason.color === 'amber' ? 'from-amber-400 to-orange-500' :
-                'from-green-400 to-teal-500'
-              }`}></div>
-
-              <div className="relative z-10 flex flex-col sm:flex-row gap-5 items-start">
-                {/* Icon Container - White icons on colored gradient background */}
-                <div className={`w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md transform group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 ${
-                  reason.color === 'emerald' ? 'bg-gradient-to-br from-emerald-500 to-green-600' :
-                  reason.color === 'blue' ? 'bg-gradient-to-br from-blue-500 to-indigo-600' :
-                  reason.color === 'amber' ? 'bg-gradient-to-br from-amber-500 to-orange-600' :
-                  'bg-gradient-to-br from-green-500 to-teal-600'
-                }`}>
-                  {reason.iconComponent}
+              <div>
+                {/* Header row with Index number and icon */}
+                <div className="flex items-center justify-between mb-6 pb-4 border-b border-stone-100">
+                  <span className="font-serif text-3xl sm:text-4xl text-brand-gold/70 font-bold tracking-tight">
+                    {reason.index}
+                  </span>
+                  <div className="w-11 h-11 rounded-2xl bg-brand-linen flex items-center justify-center text-brand-forest group-hover:bg-brand-forest group-hover:text-brand-gold transition-colors duration-300 border border-stone-200/60">
+                    {reason.icon}
+                  </div>
                 </div>
-                
-                {/* Content */}
-                <div className="flex-1">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3 group-hover:text-gray-900 transition-colors">
+
+                <div className="space-y-2">
+                  <h3 className="font-serif text-xl sm:text-2xl text-brand-forest font-bold group-hover:text-brand-moss transition-colors">
                     {reason.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed text-sm md:text-base group-hover:text-gray-700 transition-colors">
+                  <p className="text-xs font-sans uppercase tracking-wider font-semibold text-brand-gold">
+                    {reason.subtitle}
+                  </p>
+                  <p className="text-stone-600 font-sans text-sm leading-relaxed pt-2">
                     {reason.description}
                   </p>
-                  
-                  {/* Decorative element */}
-                  <div className={`mt-4 w-12 h-0.5 rounded-full bg-gradient-to-r ${
-                    reason.color === 'emerald' ? 'from-emerald-400 to-green-500' :
-                    reason.color === 'blue' ? 'from-blue-400 to-indigo-500' :
-                    reason.color === 'amber' ? 'from-amber-400 to-orange-500' :
-                    'from-green-400 to-teal-500'
-                  } opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                 </div>
+              </div>
+
+              {/* Bottom Hairline Progress Indicator */}
+              <div className="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between text-[11px] font-sans font-semibold text-stone-400">
+                <span className="uppercase tracking-widest text-stone-500">Eco Print & Pack Standard</span>
+                <span className="text-brand-forest font-bold group-hover:translate-x-1 transition-transform inline-flex items-center">
+                  Learn More <span className="ml-1 text-brand-gold">→</span>
+                </span>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
   );

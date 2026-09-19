@@ -3,7 +3,7 @@ import '@/styles/globals.css'; // This line now works because the file exists
 
 export default function App({ Component, pageProps }) {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-50 font-sans">
+    <div className="flex flex-col min-h-screen bg-brand-linen text-brand-charcoal font-sans antialiased">
       <Component {...pageProps} />
     </div>
   );
