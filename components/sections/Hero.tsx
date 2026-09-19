@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section className="relative bg-brand-forest text-white overflow-hidden">
       {/* Background Architectural Texture */}
-      <div className="absolute inset-0 opacity-[0.07] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:18px_18px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.08] graffiti-texture pointer-events-none" />
       
       {/* Subtle organic radial glow */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-brand-moss/50 rounded-full blur-3xl pointer-events-none" />

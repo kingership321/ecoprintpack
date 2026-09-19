@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <footer className="bg-brand-forest text-stone-300 font-sans border-t border-white/10 relative overflow-hidden">
       {/* Background Architectural Texture */}
-      <div className="absolute inset-0 opacity-[0.05] bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.06] graffiti-texture pointer-events-none" />
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16 relative z-10">

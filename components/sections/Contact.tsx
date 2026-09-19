@@ -228,7 +228,7 @@ export function Contact() {
             
             {/* Atelier Card */}
             <div className="bg-brand-forest text-white rounded-3xl p-7 sm:p-9 border border-brand-moss shadow-lg relative overflow-hidden">
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+              <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
               
               <div className="relative z-10 space-y-6">
                 <div>

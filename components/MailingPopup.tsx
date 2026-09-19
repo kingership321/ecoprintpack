@@ -76,7 +76,7 @@ export function MailingPopup() {
         <div className="grid md:grid-cols-5">
           {/* Left Decorative Side */}
           <div className="md:col-span-2 bg-brand-forest p-8 text-white flex flex-col justify-between relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+            <div className="absolute inset-0 opacity-[0.09] graffiti-texture-sm pointer-events-none" />
 
             <div className="relative z-10">
               <span className="text-[10px] uppercase font-sans tracking-widest text-brand-gold font-bold">

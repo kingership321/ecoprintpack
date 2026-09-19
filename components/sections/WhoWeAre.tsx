@@ -76,7 +76,7 @@ export function WhoWeAre() {
             <div className="w-full bg-brand-forest text-white rounded-3xl p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden border border-brand-moss shadow-xl">
               
               {/* Background Archival Texture */}
-              <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+              <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
 
               <div className="relative z-10 space-y-6">
                 

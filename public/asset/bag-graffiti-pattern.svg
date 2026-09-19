@@ -1,0 +1,249 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500" fill="none" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Seamless Packaging Graffiti Pattern (Eco Print & Pack) -->
+
+  <!-- 1. NON-WOVEN LOOP HANDLE TOTE BAG (Top-Left, tilted) -->
+  <g transform="translate(60, 45) rotate(-6)">
+    <!-- Bag body -->
+    <rect x="0" y="25" width="70" height="85" rx="4" />
+    <!-- Gusset line -->
+    <line x1="12" y1="25" x2="12" y2="110" stroke-dasharray="3 3" opacity="0.6" />
+    <!-- Bottom fold -->
+    <path d="M 0 98 L 12 110 L 70 110" opacity="0.6" />
+    <!-- Loop handles -->
+    <path d="M 22 25 C 22 2, 48 2, 48 25" stroke-width="2" />
+    <path d="M 26 25 C 26 8, 44 8, 44 25" opacity="0.6" />
+    <!-- Handle stitch reinforcement X -->
+    <rect x="20" y="25" width="6" height="8" opacity="0.5" />
+    <rect x="44" y="25" width="6" height="8" opacity="0.5" />
+    <!-- Eco leaf graphic on bag -->
+    <path d="M 35 55 C 25 65, 25 80, 35 85 C 45 80, 45 65, 35 55 Z" />
+    <path d="M 35 55 L 35 85" opacity="0.6" />
+    <path d="M 35 68 C 30 65, 28 62, 28 60" opacity="0.6" />
+    <path d="M 35 72 C 40 69, 42 66, 42 64" opacity="0.6" />
+  </g>
+
+  <!-- 2. D-CUT PACKAGING BAG (Top-Right, tilted) -->
+  <g transform="translate(330, 40) rotate(8)">
+    <rect x="0" y="0" width="65" height="80" rx="3" />
+    <!-- D-cut oval handle -->
+    <rect x="18" y="10" width="28" height="11" rx="5.5" stroke-width="1.8" />
+    <!-- Top hem stitching -->
+    <line x1="2" y1="25" x2="63" y2="25" stroke-dasharray="2 3" opacity="0.7" />
+    <!-- Brand text doodle -->
+    <path d="M 16 42 Q 32 38 48 42" opacity="0.5" />
+    <text x="32" y="56" font-family="sans-serif" font-size="8" font-weight="bold" fill="white" stroke="none" text-anchor="middle" letter-spacing="1">ECO</text>
+    <text x="32" y="66" font-family="sans-serif" font-size="5" fill="white" stroke="none" text-anchor="middle" letter-spacing="1.5" opacity="0.8">PACK</text>
+  </g>
+
+  <!-- 3. KRAFT PAPER SHOPPING BAG with Twisted Handles (Center-Right) -->
+  <g transform="translate(240, 210) rotate(-4)">
+    <!-- Serrated top edge -->
+    <path d="M 0 28 L 3 25 L 6 28 L 9 25 L 12 28 L 15 25 L 18 28 L 21 25 L 24 28 L 27 25 L 30 28 L 33 25 L 36 28 L 39 25 L 42 28 L 45 25 L 48 28 L 51 25 L 54 28 L 57 25 L 60 28 L 63 25 L 66 28 L 69 25 L 72 28 L 75 25 L 78 28 L 80 26 L 80 115 L 0 115 Z" />
+    <!-- Side accordion pleat -->
+    <line x1="16" y1="27" x2="16" y2="115" opacity="0.5" />
+    <line x1="16" y1="102" x2="0" y2="115" opacity="0.5" />
+    <!-- Twisted cord handles -->
+    <path d="M 28 26 C 28 -5, 52 -5, 52 26" stroke-width="2" />
+    <path d="M 32 26 C 32 0, 48 0, 48 26" stroke-dasharray="3 2" opacity="0.7" />
+    <!-- Tree / Natural emblem -->
+    <circle cx="48" cy="68" r="16" stroke-dasharray="3 2" opacity="0.6" />
+    <path d="M 48 58 L 48 78" />
+    <path d="M 48 64 L 42 58" />
+    <path d="M 48 68 L 54 62" />
+    <path d="M 48 72 L 40 66" />
+    <path d="M 48 74 L 55 70" />
+  </g>
+
+  <!-- 4. STAND-UP ZIPPER POUCH with Window (Mid-Left) -->
+  <g transform="translate(45, 230) rotate(10)">
+    <!-- Pouch body with tear notches -->
+    <path d="M 5 0 L 60 0 L 60 8 L 57 11 L 60 14 L 60 85 C 60 90, 55 92, 48 92 L 17 92 C 10 92, 5 90, 5 85 L 5 14 L 8 11 L 5 8 Z" />
+    <!-- Zipper lock line -->
+    <line x1="5" y1="18" x2="60" y2="18" stroke-dasharray="2 2" stroke-width="1.2" />
+    <!-- Clear display window -->
+    <ellipse cx="32" cy="54" rx="16" ry="20" stroke-width="1.4" opacity="0.8" />
+    <!-- Beans / contents doodle inside -->
+    <circle cx="28" cy="50" r="3" opacity="0.5" />
+    <circle cx="36" cy="52" r="3.5" opacity="0.5" />
+    <circle cx="31" cy="60" r="3" opacity="0.5" />
+    <!-- Bottom gusset crease -->
+    <path d="M 5 80 Q 32 90 60 80" opacity="0.6" />
+  </g>
+
+  <!-- 5. W-CUT / T-SHIRT VEST CARRIER BAG (Bottom-Left) -->
+  <g transform="translate(65, 380) rotate(-8)">
+    <!-- Vest handles & body -->
+    <path d="M 0 0 L 16 0 L 16 28 C 16 35, 44 35, 44 28 L 44 0 L 60 0 L 60 90 L 0 90 Z" />
+    <!-- Center neck cutout contour -->
+    <path d="M 20 0 L 20 25 C 20 30, 40 30, 40 25 L 40 0" opacity="0.5" />
+    <!-- Side pleats -->
+    <line x1="10" y1="0" x2="10" y2="90" stroke-dasharray="4 3" opacity="0.5" />
+    <line x1="50" y1="0" x2="50" y2="90" stroke-dasharray="4 3" opacity="0.5" />
+    <!-- 100% RECYCLE doodle icon -->
+    <circle cx="30" cy="58" r="12" />
+    <text x="30" y="61" font-family="sans-serif" font-size="6" font-weight="bold" fill="white" stroke="none" text-anchor="middle">100%</text>
+    <text x="30" y="68" font-family="sans-serif" font-size="4" fill="white" stroke="none" text-anchor="middle">ECO</text>
+  </g>
+
+  <!-- 6. LOKTA RIGID GIFT BOX & LUXURY CARRIER with Ribbon (Bottom-Right) -->
+  <g transform="translate(340, 360) rotate(6)">
+    <!-- Box carrier -->
+    <rect x="0" y="20" width="75" height="70" rx="2" />
+    <line x1="0" y1="35" x2="75" y2="35" opacity="0.6" />
+    <!-- Vertical ribbon -->
+    <rect x="32" y="20" width="10" height="70" stroke-dasharray="2 2" opacity="0.7" />
+    <!-- Ribbon bow on top -->
+    <path d="M 37 20 C 22 5, 20 18, 37 20 C 54 18, 52 5, 37 20 Z" fill="white" fill-opacity="0.1" />
+    <circle cx="37" cy="20" r="3" />
+    <path d="M 37 20 Q 25 32 20 38" />
+    <path d="M 37 20 Q 48 30 52 40" />
+    <!-- Dangling artisanal hangtag -->
+    <g transform="translate(56, 35) rotate(20)">
+      <polygon points="0,0 16,0 20,8 16,16 0,16" stroke-width="1.2" />
+      <circle cx="4" cy="8" r="1.5" />
+      <line x1="0" y1="8" x2="-8" y2="-2" stroke-dasharray="1 1" />
+    </g>
+  </g>
+
+  <!-- 7. RECYCLING CHASE ARROWS DOODLE (Top-Center) -->
+  <g transform="translate(205, 75) scale(0.9)">
+    <!-- Arrow 1 -->
+    <path d="M 22 5 L 34 5 L 30 0 M 34 5 L 30 10" />
+    <path d="M 12 18 C 14 10, 22 5, 32 5" />
+    <!-- Arrow 2 -->
+    <path d="M 38 32 L 32 42 L 37 44 M 32 42 L 28 36" />
+    <path d="M 38 18 C 42 26, 38 36, 33 41" />
+    <!-- Arrow 3 -->
+    <path d="M 10 32 L 6 22 L 1 25 M 6 22 L 10 21" />
+    <path d="M 24 40 C 14 40, 8 32, 6 23" />
+  </g>
+
+  <!-- 8. CRAFT TAILOR SCISSORS (Center, cutting dashed line) -->
+  <g transform="translate(160, 160) rotate(-35) scale(0.75)">
+    <!-- Handles -->
+    <circle cx="10" cy="10" r="9" stroke-width="1.8" />
+    <circle cx="10" cy="32" r="9" stroke-width="1.8" />
+    <path d="M 18 13 L 32 20" />
+    <path d="M 18 29 L 32 22" />
+    <!-- Pivot pin -->
+    <circle cx="33" cy="21" r="2" fill="white" />
+    <!-- Blades -->
+    <path d="M 33 21 L 65 14" stroke-width="1.8" />
+    <path d="M 33 21 L 65 28" stroke-width="1.8" />
+    <!-- Cutting stitch dashes -->
+    <line x1="68" y1="21" x2="110" y2="21" stroke-dasharray="4 3" stroke-width="1.5" />
+  </g>
+
+  <!-- 9. SKEIN OF CORD / COTTON HANDLE THREAD (Right-Edge, y=160) -->
+  <g transform="translate(420, 150) rotate(15)">
+    <ellipse cx="25" cy="20" rx="18" ry="12" />
+    <ellipse cx="25" cy="20" rx="12" ry="8" stroke-dasharray="2 2" opacity="0.6" />
+    <path d="M 38 24 C 48 30, 42 45, 55 52" />
+    <path d="M 55 52 C 62 56, 70 50, 75 58" stroke-dasharray="3 2" />
+  </g>
+
+  <!-- 10. BOTANICAL TEA/LOKTA LEAF BRANCHES & SPROUTS (Scattered throughout) -->
+  <!-- Branch 1 (Center-Left) -->
+  <g transform="translate(145, 290) rotate(25) scale(0.8)">
+    <path d="M 0 40 Q 15 20 20 0" stroke-width="1.8" />
+    <path d="M 7 30 C 0 25, 0 15, 8 18 C 12 24, 9 28, 7 30 Z" fill="white" fill-opacity="0.1" />
+    <path d="M 15 18 C 24 15, 26 5, 17 8 C 13 12, 14 16, 15 18 Z" fill="white" fill-opacity="0.1" />
+    <path d="M 20 0 C 12 -5, 18 -15, 24 -10 C 26 -5, 23 -2, 20 0 Z" fill="white" fill-opacity="0.1" />
+  </g>
+
+  <!-- Branch 2 (Top-Right edge) -->
+  <g transform="translate(435, 25) rotate(-20) scale(0.7)">
+    <path d="M 0 35 Q 12 18 18 0" stroke-width="1.8" />
+    <path d="M 5 25 C -2 20, 0 12, 7 15 Z" />
+    <path d="M 12 15 C 20 12, 22 4, 14 7 Z" />
+    <path d="M 18 0 C 14 -8, 22 -6, 20 0 Z" />
+  </g>
+
+  <!-- Branch 3 (Bottom-Center) -->
+  <g transform="translate(250, 420) rotate(-15) scale(0.85)">
+    <path d="M 0 35 Q 10 15 15 0" stroke-width="1.8" />
+    <path d="M 6 25 C 0 20, 0 12, 7 15 Z" fill="white" fill-opacity="0.1" />
+    <path d="M 11 14 C 18 10, 20 2, 13 5 Z" fill="white" fill-opacity="0.1" />
+    <path d="M 15 0 C 10 -6, 17 -8, 17 0 Z" />
+  </g>
+
+  <!-- 11. ARTISANAL BARCODE STAMP (Near Kraft bag) -->
+  <g transform="translate(170, 365) rotate(4)">
+    <rect x="0" y="0" width="55" height="26" rx="2" stroke-width="1" opacity="0.6" />
+    <!-- Barcode lines -->
+    <line x1="6" y1="4" x2="6" y2="18" stroke-width="2" />
+    <line x1="10" y1="4" x2="10" y2="18" stroke-width="1" />
+    <line x1="13" y1="4" x2="13" y2="18" stroke-width="3" />
+    <line x1="18" y1="4" x2="18" y2="18" stroke-width="1" />
+    <line x1="22" y1="4" x2="22" y2="18" stroke-width="2" />
+    <line x1="26" y1="4" x2="26" y2="18" stroke-width="1.5" />
+    <line x1="30" y1="4" x2="30" y2="18" stroke-width="3" />
+    <line x1="36" y1="4" x2="36" y2="18" stroke-width="1" />
+    <line x1="40" y1="4" x2="40" y2="18" stroke-width="2.5" />
+    <line x1="45" y1="4" x2="45" y2="18" stroke-width="1" />
+    <line x1="49" y1="4" x2="49" y2="18" stroke-width="2" />
+    <text x="27" y="24" font-family="monospace" font-size="4.5" fill="white" stroke="none" text-anchor="middle" letter-spacing="1">NEPAL-2018</text>
+  </g>
+
+  <!-- 12. GRAFFITI DOODLE ACCENTS & SPARKS (Seamless edge connectors) -->
+  <!-- Needle & thread loop (Top border x=260) -->
+  <g transform="translate(260, 20) rotate(45) scale(0.8)">
+    <path d="M 0 0 L 30 0" stroke-width="1.8" />
+    <ellipse cx="4" cy="0" rx="2" ry="0.8" fill="white" />
+    <path d="M 2 0 C -8 -10, -15 15, -25 0" stroke-dasharray="2 2" />
+  </g>
+
+  <!-- Sparkles & Diamonds -->
+  <!-- Sparkle 1 -->
+  <path d="M 180 30 Q 180 40 190 40 Q 180 40 180 50 Q 180 40 170 40 Q 180 40 180 30 Z" fill="white" fill-opacity="0.3" stroke="none" />
+  <!-- Sparkle 2 -->
+  <path d="M 330 190 Q 330 200 340 200 Q 330 200 330 210 Q 330 200 320 200 Q 330 200 330 190 Z" fill="white" fill-opacity="0.3" stroke="none" />
+  <!-- Sparkle 3 -->
+  <path d="M 140 460 Q 140 468 148 468 Q 140 468 140 476 Q 140 468 132 468 Q 140 468 140 460 Z" fill="white" fill-opacity="0.3" stroke="none" />
+  <!-- Sparkle 4 -->
+  <path d="M 460 310 Q 460 318 468 318 Q 460 318 460 326 Q 460 318 452 318 Q 460 318 460 310 Z" fill="white" fill-opacity="0.3" stroke="none" />
+  <!-- Sparkle 5 -->
+  <path d="M 40 160 Q 40 168 48 168 Q 40 168 40 176 Q 40 168 32 168 Q 40 168 40 160 Z" fill="white" fill-opacity="0.3" stroke="none" />
+
+  <!-- Playful stitched swirls -->
+  <path d="M 90 160 Q 130 140 160 170" stroke-dasharray="3 3" opacity="0.5" />
+  <path d="M 290 140 Q 340 170 380 130" stroke-dasharray="3 3" opacity="0.5" />
+  <path d="M 220 320 Q 250 350 220 370" stroke-dasharray="3 3" opacity="0.5" />
+  <path d="M 390 280 Q 430 260 410 320" stroke-dasharray="3 3" opacity="0.5" />
+
+  <!-- SEAMLESS WRAPPING ELEMENTS (Edges to make it tile perfectly) -->
+  <!-- Left to Right wrap element (y=470) -->
+  <g transform="translate(-10, 450) rotate(12)">
+    <rect x="0" y="0" width="35" height="40" rx="3" />
+    <path d="M 10 0 C 10 -10, 25 -10, 25 0" stroke-width="1.5" />
+  </g>
+  <g transform="translate(490, 450) rotate(12)">
+    <rect x="0" y="0" width="35" height="40" rx="3" />
+    <path d="M 10 0 C 10 -10, 25 -10, 25 0" stroke-width="1.5" />
+  </g>
+
+  <!-- Top to Bottom wrap element (x=450) -->
+  <g transform="translate(430, -15)">
+    <circle cx="20" cy="15" r="14" stroke-dasharray="3 2" opacity="0.6" />
+    <text x="20" y="18" font-family="sans-serif" font-size="6" fill="white" stroke="none" text-anchor="middle">BAG</text>
+  </g>
+  <g transform="translate(430, 485)">
+    <circle cx="20" cy="15" r="14" stroke-dasharray="3 2" opacity="0.6" />
+    <text x="20" y="18" font-family="sans-serif" font-size="6" fill="white" stroke="none" text-anchor="middle">BAG</text>
+  </g>
+
+  <!-- Top-Left corner wrap (x=0, y=0) -->
+  <g transform="translate(-15, -15)">
+    <path d="M 10 25 C 20 20, 25 10, 20 5 C 15 0, 5 10, 10 25 Z" fill="white" fill-opacity="0.1" />
+  </g>
+  <g transform="translate(485, -15)">
+    <path d="M 10 25 C 20 20, 25 10, 20 5 C 15 0, 5 10, 10 25 Z" fill="white" fill-opacity="0.1" />
+  </g>
+  <g transform="translate(-15, 485)">
+    <path d="M 10 25 C 20 20, 25 10, 20 5 C 15 0, 5 10, 10 25 Z" fill="white" fill-opacity="0.1" />
+  </g>
+  <g transform="translate(485, 485)">
+    <path d="M 10 25 C 20 20, 25 10, 20 5 C 15 0, 5 10, 10 25 Z" fill="white" fill-opacity="0.1" />
+  </g>
+
+</svg>

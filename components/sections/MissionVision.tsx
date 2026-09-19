@@ -63,8 +63,8 @@ export function MissionVision() {
           {/* Vision Card: Deep Botanical Forest */}
           <div className="bg-brand-forest text-white rounded-3xl p-8 sm:p-10 border border-brand-moss shadow-lg flex flex-col justify-between relative overflow-hidden">
             
-            {/* Subtle Dotted Texture */}
-            <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
+            {/* Subtle Graffiti Texture */}
+            <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
 
             <div className="relative z-10 space-y-6">
               

@@ -56,7 +56,20 @@
 }
 
 @layer utilities {
-  /* Subtle dotted texture */
+  /* Packaging Bag Graffiti Pattern Texture */
+  .graffiti-texture {
+    background-image: url('/asset/bag-graffiti-pattern.svg');
+    background-size: 360px 360px;
+    background-repeat: repeat;
+  }
+  
+  .graffiti-texture-sm {
+    background-image: url('/asset/bag-graffiti-pattern.svg');
+    background-size: 260px 260px;
+    background-repeat: repeat;
+  }
+
+  /* Subtle dotted texture fallback */
   .dotted-texture {
     background-image: radial-gradient(rgba(255, 255, 255, 0.12) 1px, transparent 1px);
     background-size: 16px 16px;
