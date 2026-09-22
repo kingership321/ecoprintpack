@@ -1,17 +1,142 @@
 // components/sections/Hero.tsx
-'use client';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
+const heroProducts = [
+  {
+    id: 'canvas',
+    name: 'Cotton Canvas Tote Bag',
+    shortName: 'Canvas',
+    badge: 'Cotton & Canvas',
+    material: 'Pure Woven Cotton',
+    image: '/asset/products-studio/canvas-tote.jpg',
+    link: '/products#canvas',
+    desc: 'Heavy-duty natural canvas with reinforced shoulder straps',
+  },
+  {
+    id: 'wcut',
+    name: 'W-Cut Non-Woven Bag',
+    shortName: 'W-Cut',
+    badge: 'Non-Woven',
+    material: 'Water-Resistant PP',
+    image: '/asset/products-studio/wcut-bag.jpg',
+    link: '/products#non-woven',
+    desc: 'Expandable side gussets with flexible shopping carry',
+  },
+  {
+    id: 'coat',
+    name: 'Coat & Suit Garment Cover',
+    shortName: 'Suit Cover',
+    badge: 'Garment Cover',
+    material: 'Breathable Fabric',
+    image: '/asset/products-studio/coat-cover.jpg',
+    link: '/products#covers',
+    desc: 'Full-length zipper with hanger opening for wardrobe care',
+  },
+  {
+    id: 'lokta',
+    name: 'Himalayan Lokta Paper Bag',
+    shortName: 'Lokta Paper',
+    badge: 'Handmade Lokta',
+    material: 'Artisanal Daphne Bark',
+    image: '/asset/products-studio/lokta-bag.jpg',
+    link: '/products#lokta',
+    desc: 'Tree-free paper embedded with natural mountain petals',
+  },
+  {
+    id: 'kraft',
+    name: 'Brown Kraft Paper Bag',
+    shortName: 'Kraft Paper',
+    badge: 'Kraft Paper',
+    material: '100% Recycled Kraft',
+    image: '/asset/products-studio/kraft-bag.jpg',
+    link: '/products#paper',
+    desc: 'Unbleached natural kraft with sturdy twisted paper handle',
+  },
+  {
+    id: 'lehenga',
+    name: 'Lehenga & Bridal Cover',
+    shortName: 'Bridal Cover',
+    badge: 'Garment Cover',
+    material: 'Heavy-Duty Fabric',
+    image: '/asset/products-studio/lehenga-cover.jpg',
+    link: '/products#covers',
+    desc: 'Wide gusset protective carrier for sarees, bridal gowns & lehengas',
+  },
+  {
+    id: 'boutique',
+    name: 'Luxury Boutique Paper Bag',
+    shortName: 'Boutique',
+    badge: 'Boutique Paper',
+    material: 'Art Board Laminated',
+    image: '/asset/products-studio/paper-boutique.jpg',
+    link: '/products#paper',
+    desc: 'Vibrant offset print with luxury turnover and braided rope',
+  },
+  {
+    id: 'box',
+    name: 'Non-Woven Box Bag',
+    shortName: 'Box Bag',
+    badge: 'Non-Woven',
+    material: 'Rigid 3D Gusset',
+    image: '/asset/products-studio/box-bag.jpg',
+    link: '/products#non-woven',
+    desc: 'Self-standing box structure for grocery and retail boxes',
+  },
+  {
+    id: 'quilt',
+    name: 'Quilt & Bedding Storage Bag',
+    shortName: 'Quilt Bag',
+    badge: 'Storage Cover',
+    material: 'Transparent Window',
+    image: '/asset/products-studio/quilt-bag.jpg',
+    link: '/products#covers',
+    desc: 'Spacious zipped storage for blankets, duvets, and linens',
+  },
+];
+
 export function Hero() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+  const thumbnailContainerRef = useRef<HTMLDivElement>(null);
+
+  // Auto-slide every 3.2 seconds
+  useEffect(() => {
+    if (isPaused) return;
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % heroProducts.length);
+    }, 3200);
+    return () => clearInterval(interval);
+  }, [isPaused]);
+
+  // Smoothly scroll active thumbnail pill into view without affecting viewport/page
+  useEffect(() => {
+    const container = thumbnailContainerRef.current;
+    if (!container) return;
+    const activeBtn = container.children[activeIndex] as HTMLElement | undefined;
+    if (activeBtn) {
+      const targetScrollLeft = activeBtn.offsetLeft - (container.clientWidth / 2) + (activeBtn.clientWidth / 2);
+      container.scrollTo({ left: Math.max(0, targetScrollLeft), behavior: 'smooth' });
+    }
+  }, [activeIndex]);
+
+  const goToNext = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % heroProducts.length);
+  }, []);
+
+  const goToPrev = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + heroProducts.length) % heroProducts.length);
+  }, []);
+
+  const activeProduct = heroProducts[activeIndex];
+
   return (
-    <section className="relative bg-brand-forest text-white overflow-hidden">
-      {/* Background Architectural Texture */}
-      <div className="absolute inset-0 opacity-[0.08] graffiti-texture pointer-events-none" />
-      
-      {/* Subtle organic radial glow */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-brand-moss/50 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-brand-gold/10 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative bg-gradient-to-b from-white via-[#F4FAF6] to-[#D8F3DC] text-stone-800 overflow-hidden">
+      {/* Subtle organic light radial ambiance */}
+      <div className="absolute -top-32 -left-32 w-96 h-96 bg-[#74C69D]/25 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -bottom-32 -right-32 w-96 h-96 bg-[#D8F3DC]/70 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 opacity-[0.035] graffiti-texture pointer-events-none" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-16 md:pt-20 md:pb-24">
         <div className="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -20,25 +145,25 @@ export function Hero() {
           <div className="lg:col-span-7 text-center lg:text-left space-y-6">
             
             {/* Archival Heritage Stamp */}
-            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-stone-200 text-[11px] font-sans font-semibold tracking-widest uppercase">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
+            <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#1B4332]/5 backdrop-blur-md border border-[#1B4332]/15 text-brand-forest text-[11px] font-sans font-semibold tracking-widest uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-olive animate-pulse" />
               <span>Est. 2018 • Kathmandu, Nepal</span>
-              <span className="text-white/30">•</span>
-              <span className="text-brand-gold">Direct Factory Manufacturer</span>
+              <span className="text-brand-forest/30">•</span>
+              <span className="text-brand-olive font-bold">Direct Factory Manufacturer</span>
             </div>
 
             {/* Editorial Title */}
             <div className="space-y-2">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-white leading-[1.15]">
-                Packaging Crafted with <span className="italic font-serif text-brand-gold font-normal">Integrity.</span>
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-brand-forest leading-[1.15]">
+                Packaging Crafted with <span className="italic font-serif text-brand-olive font-normal">Integrity.</span>
               </h1>
-              <p className="text-lg sm:text-xl font-serif italic text-stone-300 font-normal">
+              <p className="text-lg sm:text-xl font-serif italic text-stone-600 font-normal">
                 Manufactured locally. Built for conscious brands.
               </p>
             </div>
 
             {/* Story copy */}
-            <p className="text-stone-300 text-sm sm:text-base font-sans leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            <p className="text-stone-700 text-sm sm:text-base font-sans leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
               From Kathmandu’s heritage ateliers to wholesale retail chains nationwide — we engineer durable, 
               eco-friendly bags in Non-Woven, Cotton Canvas, 1,000-year Himalayan Lokta, and Kraft Paper. 
               Zero guilt. Uncompromising strength. Direct from our Lalitpur manufacturing facility.
@@ -48,85 +173,268 @@ export function Hero() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
               <Link
                 href="/products"
-                className="inline-flex items-center gap-2.5 bg-brand-gold hover:bg-brand-gold-light text-brand-forest font-sans text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
+                className="inline-flex items-center gap-2.5 bg-brand-forest hover:bg-brand-moss text-white font-sans text-xs font-bold uppercase tracking-widest px-7 py-3.5 rounded-full shadow-md hover:shadow-lg transition-all duration-300 group"
               >
                 <span>Explore Collections</span>
-                <span className="transform transition-transform group-hover:translate-x-1 font-bold">→</span>
+                <span className="transform transition-transform group-hover:translate-x-1 font-bold text-brand-mint">→</span>
               </Link>
               
               <Link
                 href="/contact#quote"
-                className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-sans text-xs font-semibold uppercase tracking-widest px-6 py-3.5 rounded-full border border-white/20 transition-all duration-300"
+                className="inline-flex items-center gap-2 bg-white/90 hover:bg-white text-brand-forest font-sans text-xs font-semibold uppercase tracking-widest px-6 py-3.5 rounded-full border border-brand-forest/20 hover:border-brand-olive shadow-xs transition-all duration-300"
               >
                 <span>Request Custom Quote</span>
               </Link>
             </div>
 
             {/* Key Spec Badges */}
-            <div className="pt-6 border-t border-white/10 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-left">
+            <div className="pt-6 border-t border-[#1B4332]/10 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 text-left">
               <div>
-                <div className="font-serif text-xl sm:text-2xl text-white font-bold">1,000+</div>
-                <div className="text-[11px] text-stone-400 uppercase tracking-wider font-sans mt-0.5">Retailers Served</div>
+                <div className="font-serif text-xl sm:text-2xl text-brand-forest font-bold">1,000+</div>
+                <div className="text-[11px] text-stone-600 uppercase tracking-wider font-sans mt-0.5">Retailers Served</div>
               </div>
               <div>
-                <div className="font-serif text-xl sm:text-2xl text-white font-bold">50K+</div>
-                <div className="text-[11px] text-stone-400 uppercase tracking-wider font-sans mt-0.5">Bags Monthly</div>
+                <div className="font-serif text-xl sm:text-2xl text-brand-forest font-bold">50K+</div>
+                <div className="text-[11px] text-stone-600 uppercase tracking-wider font-sans mt-0.5">Bags Monthly</div>
               </div>
               <div>
-                <div className="font-serif text-xl sm:text-2xl text-white font-bold">100%</div>
-                <div className="text-[11px] text-stone-400 uppercase tracking-wider font-sans mt-0.5">Nepal Made</div>
+                <div className="font-serif text-xl sm:text-2xl text-brand-forest font-bold">100%</div>
+                <div className="text-[11px] text-stone-600 uppercase tracking-wider font-sans mt-0.5">Nepal Made</div>
+              </div>
+            </div>
+
+            {/* Trust / Authenticity Badge Row */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5 pt-5">
+              {/* Made in Nepal badge */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-forest/20 bg-white/80 text-[10px] font-sans font-bold uppercase tracking-wider text-brand-forest">
+                <span className="text-base leading-none">🇳🇵</span>
+                <span>Made in Nepal</span>
+              </div>
+              {/* Factory Direct badge */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-olive/30 bg-brand-beige/50 text-[10px] font-sans font-bold uppercase tracking-wider text-brand-moss">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+                <span>Factory Direct</span>
+              </div>
+              {/* Eco-Certified badge */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-mint/40 bg-white/80 text-[10px] font-sans font-bold uppercase tracking-wider text-brand-olive">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
+                <span>Eco-Friendly</span>
+              </div>
+              {/* 8+ Years Experience */}
+              <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-stone-300/60 bg-white/80 text-[10px] font-sans font-bold uppercase tracking-wider text-stone-600">
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <span>8+ Yrs Experience</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Passe-Partout Framed Bag Showcase (5 cols) */}
+          {/* Right Column: Seamless Framed Bag Showcase (5 cols) */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
               
-              {/* Archival Museum Mount Card */}
-              <div className="relative bg-white/95 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-white/30 shadow-[0_20px_50px_-10px_rgba(0,0,0,0.4)]">
+              {/* Refined Harmonious Mount Card */}
+              <div 
+                className="relative bg-white/95 backdrop-blur-md rounded-3xl p-4 sm:p-5 border border-brand-beige shadow-[0_20px_45px_-12px_rgba(27,67,50,0.14)]"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+              >
                 
                 {/* Visual Label Tag */}
                 <div className="flex items-center justify-between pb-3 mb-3 border-b border-stone-200/80 text-[10px] font-sans uppercase tracking-widest text-stone-600 font-bold">
                   <span className="flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-brand-forest" />
-                    Our 5 Core Varieties
+                    <span className="w-2 h-2 rounded-full bg-brand-olive animate-pulse" />
+                    Manufactured Varieties
                   </span>
-                  <span className="text-brand-gold font-serif italic text-xs capitalize">Atelier Collection</span>
+                  <div className="flex items-center gap-2">
+                    <span className="text-stone-400 font-mono text-[10px]">{activeIndex + 1} / {heroProducts.length}</span>
+                    <span className="text-brand-olive font-serif italic text-xs capitalize">Atelier Showcase</span>
+                  </div>
                 </div>
 
-                {/* Banner Image */}
-                <Link href="/products" className="block group overflow-hidden rounded-xl bg-brand-linen relative">
-                  <Image
-                    src="/asset/hero-product-banner.png"
-                    alt="Eco Print & Pack Bag Varieties: Tote Bag, Non-woven Fabric Bag, Lokta Craft Bags, Brown Krafted Bag, Paper Bag"
-                    width={1200}
-                    height={567}
-                    className="w-full h-auto object-contain transition-transform duration-700 group-hover:scale-[1.03]"
-                    priority
-                  />
-                </Link>
-
-                {/* Material Index Strip */}
-                <div className="mt-4 pt-3 border-t border-stone-200/80 flex items-center justify-between text-[11px] font-sans text-stone-700">
-                  <div className="flex items-center space-x-1">
-                    <span className="text-brand-forest font-bold">Materials:</span>
-                    <span className="text-stone-500 text-[10px]">Non-Woven • Canvas • Lokta • Kraft</span>
-                  </div>
-                  <Link 
-                    href="/products" 
-                    className="font-bold text-brand-forest hover:text-brand-gold transition-colors inline-flex items-center text-xs"
+                {/* Auto-Sliding Coverflow Stage with Enlarged Center Product */}
+                <div className="relative h-64 sm:h-72 w-full bg-[#FAF8F5] rounded-2xl overflow-hidden border border-stone-200/80 flex items-center justify-center select-none">
+                  
+                  {/* Left Navigation Arrow */}
+                  <button
+                    onClick={goToPrev}
+                    className="absolute left-2 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-stone-700 hover:text-brand-forest shadow-sm border border-stone-200/80 flex items-center justify-center transition-all hover:scale-105 active:scale-95"
+                    aria-label="Previous product"
                   >
-                    <span>View All</span>
-                    <span className="ml-1">→</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+
+                  {/* Right Navigation Arrow */}
+                  <button
+                    onClick={goToNext}
+                    className="absolute right-2 top-1/2 -translate-y-1/2 z-30 w-8 h-8 rounded-full bg-white/90 hover:bg-white text-stone-700 hover:text-brand-forest shadow-sm border border-stone-200/80 flex items-center justify-center transition-all hover:scale-105 active:scale-95"
+                    aria-label="Next product"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+
+                  {/* Products Render Loop */}
+                  {heroProducts.map((product, idx) => {
+                    const n = heroProducts.length;
+                    let offset = (idx - activeIndex + n) % n;
+                    if (offset > n / 2) offset -= n;
+
+                    const isCenter = offset === 0;
+                    const isLeft = offset === -1;
+                    const isRight = offset === 1;
+                    const isVisible = Math.abs(offset) <= 1;
+
+                    let translateX = '0%';
+                    let scale = 1.15;
+                    let opacity = 1;
+                    let zIndex = 20;
+
+                    if (isCenter) {
+                      translateX = '0%';
+                      scale = 1.15;
+                      opacity = 1;
+                      zIndex = 20;
+                    } else if (isLeft) {
+                      translateX = '-62%';
+                      scale = 0.78;
+                      opacity = 0.50;
+                      zIndex = 10;
+                    } else if (isRight) {
+                      translateX = '62%';
+                      scale = 0.78;
+                      opacity = 0.50;
+                      zIndex = 10;
+                    } else if (offset < -1) {
+                      translateX = '-125%';
+                      scale = 0.50;
+                      opacity = 0;
+                      zIndex = 0;
+                    } else {
+                      translateX = '125%';
+                      scale = 0.50;
+                      opacity = 0;
+                      zIndex = 0;
+                    }
+
+                    return (
+                      <div
+                        key={product.id}
+                        onClick={() => {
+                          if (isLeft) goToPrev();
+                          if (isRight) goToNext();
+                        }}
+                        className="absolute top-1/2 left-1/2 w-48 h-48 sm:w-56 sm:h-56 -mt-24 -ml-24 sm:-mt-28 sm:-ml-28 rounded-2xl transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] flex items-center justify-center cursor-pointer"
+                        style={{
+                          transform: `translate3d(${translateX}, 0, 0) scale(${scale})`,
+                          opacity,
+                          zIndex,
+                          pointerEvents: isVisible ? 'auto' : 'none',
+                        }}
+                      >
+                        {isCenter ? (
+                          <Link href={product.link} className="block w-full h-full p-2 relative group/center">
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              unoptimized
+                              priority={idx === 0}
+                              className="object-contain transition-transform duration-500 group-hover/center:scale-105"
+                            />
+                          </Link>
+                        ) : (
+                          <div className="w-full h-full p-2 relative">
+                            <Image
+                              src={product.image}
+                              alt={product.name}
+                              fill
+                              unoptimized
+                              className="object-contain"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Active Product Details Strip */}
+                <div className="mt-3.5 pt-3 border-t border-stone-200/80 flex items-center justify-between gap-3">
+                  <div className="min-w-0">
+                    <div className="flex items-center gap-2 mb-0.5">
+                      <span className="editorial-tag text-[9px] py-0.5 px-2 bg-brand-beige text-brand-forest border border-brand-mint/40 font-bold uppercase tracking-wider">
+                        {activeProduct.badge}
+                      </span>
+                      <span className="text-[10px] text-stone-400 font-sans">•</span>
+                      <span className="text-[11px] text-stone-500 font-sans truncate">
+                        {activeProduct.material}
+                      </span>
+                    </div>
+                    <h4 className="font-serif font-bold text-sm sm:text-base text-brand-forest truncate">
+                      {activeProduct.name}
+                    </h4>
+                  </div>
+
+                  <Link 
+                    href={activeProduct.link}
+                    className="inline-flex items-center gap-1.5 bg-brand-forest hover:bg-brand-moss text-white text-[11px] font-sans font-bold uppercase tracking-wider px-4 py-2 rounded-full shadow-xs hover:shadow-sm transition-all flex-shrink-0"
+                  >
+                    <span>Explore</span>
+                    <span className="text-brand-mint font-bold">→</span>
                   </Link>
+                </div>
+
+                {/* Bottom Interactive Variety Selector Strip */}
+                <div 
+                  ref={thumbnailContainerRef}
+                  className="flex items-center gap-2 pt-3 mt-3 border-t border-stone-100 overflow-x-auto scrollbar-none pb-0.5"
+                >
+                  {heroProducts.map((v, idx) => {
+                    const isActive = idx === activeIndex;
+                    return (
+                      <button
+                        key={v.id}
+                        onClick={() => setActiveIndex(idx)}
+                        className={`flex-shrink-0 flex flex-col items-center p-1 sm:p-1.5 rounded-xl transition-all duration-300 ${
+                          isActive
+                            ? 'bg-brand-beige/70 ring-2 ring-brand-olive border border-brand-olive shadow-xs scale-105'
+                            : 'bg-stone-50/80 hover:bg-[#FAF8F5] border border-stone-200/60 opacity-65 hover:opacity-100'
+                        }`}
+                        title={`${v.name} - ${v.badge}`}
+                      >
+                        <div className="relative w-9 h-9 sm:w-11 sm:h-11 rounded-lg overflow-hidden bg-[#FAF8F5] mb-1 border border-stone-200/50">
+                          <Image
+                            src={v.image}
+                            alt={v.name}
+                            fill
+                            unoptimized
+                            className="object-cover"
+                          />
+                        </div>
+                        <span className={`text-[8px] sm:text-[9px] font-sans truncate max-w-[50px] sm:max-w-[58px] ${
+                          isActive ? 'font-bold text-brand-forest' : 'font-medium text-stone-600'
+                        }`}>
+                          {v.shortName}
+                        </span>
+                      </button>
+                    );
+                  })}
                 </div>
 
               </div>
 
               {/* Decorative Subtle Corner Accent */}
-              <div className="absolute -bottom-3 -right-3 -z-10 w-full h-full rounded-2xl border border-brand-gold/30 pointer-events-none hidden sm:block" />
+              <div className="absolute inset-0 translate-x-2.5 translate-y-2.5 -z-10 rounded-3xl border border-brand-olive/20 pointer-events-none hidden sm:block" />
 
             </div>
           </div>
@@ -135,20 +443,57 @@ export function Hero() {
       </div>
 
       {/* Marquee Ticker - Editorial Archival Band */}
-      <div className="relative z-20 bg-brand-moss/80 border-t border-white/10 py-3 overflow-hidden backdrop-blur-sm">
-        <div className="animate-marquee space-x-8 text-[11px] font-sans font-semibold text-stone-300 tracking-widest uppercase items-center">
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> D-Cut & W-Cut Non-Woven Bags</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 100% Pure Cotton Canvas Totes</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 1,000-Year Heritage Nepali Lokta Craft</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Heavy Duty Brown Kraft Paper Bags</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Garment, Lehenga & Blanket Protective Covers</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Custom Screen & Flexographic Printing</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> D-Cut & W-Cut Non-Woven Bags</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 100% Pure Cotton Canvas Totes</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> 1,000-Year Heritage Nepali Lokta Craft</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Heavy Duty Brown Kraft Paper Bags</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Garment, Lehenga & Blanket Protective Covers</span>
-          <span className="flex items-center whitespace-nowrap"><span className="text-brand-gold mr-3">✦</span> Custom Screen & Flexographic Printing</span>
+      <div className="relative z-20 w-full max-w-full bg-[#1B4332]/5 border-t border-[#1B4332]/10 py-3 overflow-hidden backdrop-blur-sm">
+        <div className="animate-marquee space-x-8 text-[11px] font-sans font-semibold text-brand-forest tracking-widest uppercase items-center">
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            D-Cut &amp; W-Cut Non-Woven Bags
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            100% Pure Cotton Canvas Totes
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            1,000-Year Heritage Nepali Lokta Craft
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            Heavy Duty Brown Kraft Paper Bags
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            Garment, Lehenga &amp; Quilt Storage Covers
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            Custom Screen &amp; Flexographic Printing
+          </span>
+          {/* Duplicate for seamless loop */}
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            D-Cut &amp; W-Cut Non-Woven Bags
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            100% Pure Cotton Canvas Totes
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            1,000-Year Heritage Nepali Lokta Craft
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            Heavy Duty Brown Kraft Paper Bags
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            Garment, Lehenga &amp; Quilt Storage Covers
+          </span>
+          <span className="flex items-center whitespace-nowrap gap-2">
+            <svg className="w-3 h-3 text-brand-olive flex-shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M17 8C8 10 5.9 16.17 3.82 19c3.56-3.07 7.21-2.85 9.18-1.98C14 19.42 14.5 21 15.5 21c1.5 0 2.5-1 2.5-2.5 0-.64-.2-1.28-.5-1.86.48-.87.82-1.86.9-2.77C20.5 14 22 15 22 16v-4c0-3-2-4-5-4z"/></svg>
+            Custom Screen &amp; Flexographic Printing
+          </span>
         </div>
       </div>
     </section>

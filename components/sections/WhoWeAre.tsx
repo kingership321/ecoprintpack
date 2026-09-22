@@ -1,5 +1,6 @@
 // components/sections/WhoWeAre.tsx
 'use client';
+import Image from 'next/image';
 
 export function WhoWeAre() {
   return (
@@ -12,124 +13,200 @@ export function WhoWeAre() {
             <span>Direct Manufacturing Excellence</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-brand-forest leading-tight">
-            We don’t just supply bags. <br />
-            <span className="italic font-serif text-brand-gold">We craft them from the raw fiber.</span>
+            We don&apos;t just supply bags. <br />
+            <span className="italic font-serif text-brand-olive">We craft them from the raw fiber.</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-stretch">
-          
-          {/* Left Story & Stats Column (7 cols) */}
-          <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
+        {/* Full-Width Row: Factory Picture + Manifesto Card */}
+        <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+
+          {/* Left: Authentic Nepali Factory & Atelier Picture Card */}
+          <div className="relative group rounded-3xl overflow-hidden border border-brand-beige shadow-md bg-white">
+            <div className="relative h-72 sm:h-80 lg:h-full min-h-[320px] w-full overflow-hidden">
+              <Image
+                src="/asset/production/nepal-factory-lalitpur-editorial.jpg"
+                alt="Authentic Nepali Bag and Packaging Production Culture at Lalitpur Facility"
+                fill
+                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
+              
+              {/* Heritage Badge Overlay */}
+              <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/55 backdrop-blur-md border border-white/20 text-white text-[10px] font-sans font-semibold tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-mint animate-pulse" />
+                <span>Lalitpur Atelier • Nepal</span>
+              </div>
+
+              {/* Caption Overlay at Bottom */}
+              <div className="absolute bottom-5 left-5 right-5 text-white">
+                <div className="font-serif italic text-base sm:text-lg text-white/95">
+                  Authentic Artisan Weaving &amp; Bag Crafting
+                </div>
+                <div className="text-[10px] font-sans text-stone-300 uppercase tracking-widest mt-1 flex items-center gap-2">
+                  <span>Mahalaxmi, Lalitpur</span>
+                  <span>•</span>
+                  <span className="text-brand-mint font-semibold">100% In-House Production</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right: Editorial Manifesto Card */}
+          <div className="w-full bg-brand-forest text-white rounded-3xl p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden border border-brand-moss shadow-xl">
             
-            <div className="space-y-4 text-stone-700 font-sans text-sm sm:text-base leading-relaxed">
-              <p>
-                At <strong className="text-brand-forest font-semibold">Eco Promotional Industries</strong>, 
-                we believe high-grade packaging should never come at the expense of our Himalayan ecosystem. 
-                That conviction led us to build a full-fledged local manufacturing facility in Lalitpur, Nepal.
-              </p>
+            {/* Background Archival Texture */}
+            <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
+
+            <div className="relative z-10 space-y-6">
               
-              <p>
-                When you collaborate with us, you eliminate third-party markups and communicate directly 
-                with the specialists who supervise raw material sourcing, automated ultrasonic cutting, 
-                heavy-duty stitching, and precision multi-color screen printing.
+              <div className="inline-block border-b border-brand-mint/40 pb-2">
+                <span className="font-serif italic text-brand-mint text-sm sm:text-base">
+                  The Himalayan Standard
+                </span>
+              </div>
+
+              <blockquote className="font-serif text-xl sm:text-2xl font-normal leading-snug text-white">
+                &ldquo;More than you anticipate... Packaging engineered for lasting impressions.&rdquo;
+              </blockquote>
+
+              <p className="text-stone-300 font-sans text-xs sm:text-sm leading-relaxed">
+                From traditional retail stores across New Road and Thamel to boutique embassies, 
+                destination luxury weddings in Pokhara, and organic food exporters — we tailor every stitch, 
+                gsm weight, and handle reinforcement to your exact brand demands.
               </p>
-              
-              <p>
-                Our production lines cover the full spectrum of sustainable materials: lightweight yet 
-                durable <strong className="text-brand-forest font-semibold">Non-Woven Fabric</strong>, 
-                heavyweight organic <strong className="text-brand-forest font-semibold">Cotton Canvas</strong>, 
-                biodegradable <strong className="text-brand-forest font-semibold">Brown Kraft Paper</strong>, 
-                and Nepal&apos;s proud heritage — <strong className="text-brand-forest font-semibold">Indigenous Lokta Paper</strong>, 
-                harvested sustainably at 6,000+ ft in the Himalayas.
-              </p>
+
+              {/* 3 Core Production Pillars */}
+              <div className="space-y-3 pt-2 text-xs font-sans text-stone-200">
+                <div className="flex items-center space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+                  <span>In-House Multi-Color Screen &amp; Flexo Printing</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+                  <span>Rigorous Tensile &amp; Tear Weight-Bearing Quality Control</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+                  <span>Preservation of Ancient Himalayan Daphne Lokta Artisans</span>
+                </div>
+              </div>
+
             </div>
 
-            {/* Architectural Stat Dividers */}
-            <div className="grid grid-cols-3 gap-4 pt-6 border-t border-stone-300/80">
-              <div className="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/90 shadow-xs">
-                <div className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-forest font-bold">1,000+</div>
-                <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">
-                  Happy Clients
+            {/* Bottom Atelier Seal */}
+            <div className="relative z-10 pt-6 mt-6 border-t border-white/15 flex items-center justify-between">
+              <div>
+                <div className="font-serif font-bold text-white text-sm">ECO PRINT &amp; PACK</div>
+                <div className="text-[10px] text-stone-400 font-sans tracking-wider uppercase">
+                  Eco Promotional Industries Pvt Ltd
                 </div>
               </div>
-              
-              <div className="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/90 shadow-xs">
-                <div className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-forest font-bold">8+</div>
-                <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">
-                  Years Crafting
-                </div>
-              </div>
-
-              <div className="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200/90 shadow-xs">
-                <div className="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-forest font-bold">50K+</div>
-                <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">
-                  Bags Monthly
-                </div>
+              <div className="px-2.5 py-1 rounded-full border border-white/20 text-[10px] uppercase tracking-wider text-brand-mint">
+                Kathmandu
               </div>
             </div>
 
           </div>
+        </div>
 
-          {/* Right Editorial Manifesto Column (5 cols) */}
-          <div className="lg:col-span-5 flex">
-            <div className="w-full bg-brand-forest text-white rounded-3xl p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden border border-brand-moss shadow-xl">
-              
-              {/* Background Archival Texture */}
-              <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
+        {/* Stats Row */}
+        <div className="grid grid-cols-3 gap-4 mt-8">
+          <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-beige/90 shadow-xs text-center">
+            <div className="font-serif text-3xl sm:text-4xl text-brand-forest font-bold">1,000+</div>
+            <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">Happy Clients</div>
+          </div>
+          <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-beige/90 shadow-xs text-center">
+            <div className="font-serif text-3xl sm:text-4xl text-brand-forest font-bold">8+</div>
+            <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">Years Crafting</div>
+          </div>
+          <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-beige/90 shadow-xs text-center">
+            <div className="font-serif text-3xl sm:text-4xl text-brand-forest font-bold">50K+</div>
+            <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">Bags Monthly</div>
+          </div>
+        </div>
 
-              <div className="relative z-10 space-y-6">
-                
-                <div className="inline-block border-b border-brand-gold/40 pb-2">
-                  <span className="font-serif italic text-brand-gold text-sm sm:text-base">
-                    The Himalayan Standard
-                  </span>
-                </div>
-
-                <blockquote className="font-serif text-xl sm:text-2xl font-normal leading-snug text-white">
-                  &ldquo;More than you anticipate... Packaging engineered for lasting impressions.&rdquo;
-                </blockquote>
-
-                <p className="text-stone-300 font-sans text-xs sm:text-sm leading-relaxed">
-                  From traditional retail stores across New Road and Thamel to boutique embassies, 
-                  destination luxury weddings in Pokhara, and organic food exporters — we tailor every stitch, 
-                  gsm weight, and handle reinforcement to your exact brand demands.
-                </p>
-
-                {/* 3 Core Production Pillars */}
-                <div className="space-y-3 pt-2 text-xs font-sans text-stone-200">
-                  <div className="flex items-center space-x-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-                    <span>In-House Multi-Color Screen & Flexo Printing</span>
+        {/* 5-Step Manufacturing Process Strip */}
+        <div className="mt-10 bg-white rounded-3xl border border-brand-beige/90 shadow-xs p-6 sm:p-8 relative overflow-hidden">
+          <div className="absolute inset-0 fiber-bg opacity-50 pointer-events-none" />
+          <div className="relative z-10">
+            <div className="flex items-center gap-2 mb-6">
+              <span className="w-2 h-2 rounded-full bg-brand-olive animate-pulse" />
+              <span className="text-[11px] font-sans font-black uppercase tracking-[0.2em] text-brand-forest">
+                Our Manufacturing Process — Thashikhel, Lalitpur
+              </span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+              {[
+                { step: '01', label: 'Raw Material', sub: 'PP Fabric / Cotton / Lokta / Kraft', icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 10V7" /></svg>
+                )},
+                { step: '02', label: 'Cut & Stitch', sub: 'Die-cut, ultrasonic weld & cross-stitch', icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" /></svg>
+                )},
+                { step: '03', label: 'Screen Print', sub: 'Multi-color flexo & screen printing', icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
+                )},
+                { step: '04', label: 'Quality Check', sub: 'Tensile, tear & weight-bearing QC', icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
+                )},
+                { step: '05', label: 'Dispatch', sub: 'Nationwide delivery from Lalitpur', icon: (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
+                )},
+              ].map((s, i, arr) => (
+                <div key={s.step} className="flex flex-col items-center text-center relative">
+                  {/* Connector line */}
+                  {i < arr.length - 1 && (
+                    <div className="hidden lg:block absolute top-5 left-[calc(50%+20px)] w-[calc(100%-40px)] h-px bg-brand-beige border-t border-dashed border-brand-olive/30 z-0" />
+                  )}
+                  <div className="relative z-10 w-10 h-10 rounded-full bg-brand-linen border-2 border-brand-olive/40 flex items-center justify-center text-brand-forest mb-2.5">
+                    {s.icon}
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-                    <span>Rigorous Tensile & Tear Weight-Bearing Quality Control</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-brand-gold" />
-                    <span>Preservation of Ancient Himalayan Daphne Lokta Artisans</span>
-                  </div>
+                  <span className="text-[9px] font-sans font-black text-brand-olive uppercase tracking-widest mb-0.5">{s.step}</span>
+                  <span className="text-[11px] sm:text-xs font-serif font-bold text-brand-forest leading-tight">{s.label}</span>
+                  <span className="text-[9px] font-sans text-stone-500 mt-0.5 leading-tight hidden sm:block">{s.sub}</span>
                 </div>
+              ))}
+            </div>
+          </div>
+        </div>
 
-              </div>
-
-              {/* Bottom Atelier Seal */}
-              <div className="relative z-10 pt-6 mt-6 border-t border-white/15 flex items-center justify-between">
-                <div>
-                  <div className="font-serif font-bold text-white text-sm">ECO PRINT & PACK</div>
-                  <div className="text-[10px] text-stone-400 font-sans tracking-wider uppercase">
-                    Eco Promotional Industries Pvt Ltd
-                  </div>
-                </div>
-                <div className="px-2.5 py-1 rounded-full border border-white/20 text-[10px] uppercase tracking-wider text-brand-gold">
-                  Kathmandu
-                </div>
-              </div>
-
+        {/* Factory Address Card */}
+        <div className="mt-6 flex flex-col sm:flex-row gap-4">
+          <div className="flex-1 bg-brand-forest text-white rounded-2xl p-5 flex items-start gap-4 relative overflow-hidden">
+            <div className="absolute inset-0 opacity-[0.07] graffiti-texture pointer-events-none" />
+            <div className="relative z-10 flex-shrink-0 w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
+              <svg className="w-5 h-5 text-brand-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div className="relative z-10">
+              <div className="text-[10px] font-sans font-black uppercase tracking-[0.18em] text-brand-mint mb-1">Factory Location</div>
+              <div className="font-serif font-bold text-white text-sm">Thashikhel Chowk, Lalitpur</div>
+              <div className="text-[11px] text-stone-300 font-sans mt-0.5">Mahalaxmi Municipality, Bagmati Province, Nepal 🇳🇵</div>
             </div>
           </div>
 
+          <a
+            href="https://wa.me/9779869268248?text=Hello%20Eco%20Print%20%26%20Pack!%20I%20am%20interested%20in%20your%20products."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-2xl p-5 flex items-center gap-4 transition-all duration-300 hover:shadow-lg group"
+          >
+            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.139.564 4.143 1.547 5.878L.057 23.5l5.797-1.522A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.034-1.389l-.361-.214-3.44.903.918-3.352-.235-.375A9.818 9.818 0 0112 2.182c5.427 0 9.818 4.391 9.818 9.818S17.427 21.818 12 21.818z"/>
+              </svg>
+            </div>
+            <div>
+              <div className="text-[10px] font-sans font-black uppercase tracking-[0.18em] text-white/80 mb-0.5">Quick Inquiry on</div>
+              <div className="font-serif font-bold text-white text-sm group-hover:underline">WhatsApp: +977 9869268248</div>
+              <div className="text-[11px] text-white/80 font-sans mt-0.5">Chat with us directly — fast response</div>
+            </div>
+          </a>
         </div>
 
       </div>

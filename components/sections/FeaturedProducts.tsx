@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-// import images from public folder
-const nonWovenBags = '/asset/NonWovenFabricWcutBag/wcut2.jpg';
-const canvasBags = '/asset/CanvasToteBag/CanvasToteBag3.jpg';
-const loktaBags = '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg';
-const paperBags = '/asset/PaperBag/PaperBag3.jpg';
+// High-Resolution Studio Product Photographs
+const nonWovenBags = '/asset/products-studio/wcut-bag.jpg';
+const canvasBags = '/asset/products-studio/canvas-tote.jpg';
+const loktaBags = '/asset/products-studio/lokta-bag.jpg';
+const paperBags = '/asset/products-studio/kraft-bag.jpg';
 
 // --- Keep only gallery icons (for the product range section) ---
 const IconBoxBag = () => (
@@ -92,12 +92,12 @@ const productCategories = [
   },
   {
     id: 'lokta',
-    title: 'Lokta Paper Shopping Bags',
-    description: 'Our Lokta paper bags are crafted by Nepali artisans using a 1,000-year-old tradition. Made from the bark of the regenerating Daphne shrub, Lokta paper is naturally textured, exceptionally strong, and completely tree-free. Perfect for boutiques, corporate gifting, and weddings.',
+    title: 'Lokta Paper Bags & Boxes',
+    description: 'Our Lokta paper bags and boxes are crafted by Nepali artisans using a 1,000-year-old tradition. Made from the bark of the regenerating Daphne shrub, Lokta paper is naturally textured, exceptionally strong, and completely tree-free. Perfect for boutiques, corporate gifting, and weddings.',
     features: ['Tree-Free', '1,000-Year Tradition', 'Handcrafted'],
-    types: ['Screen Printed', 'Custom Size', 'With Tissue Lining'],
+    types: ['Handcrafted Bags', 'Rigid Boxes', 'Custom Printing'],
     imageSrc: loktaBags,
-    imageAlt: 'Lokta Paper Shopping Bags',
+    imageAlt: 'Lokta Paper Bags and Boxes',
     color: 'amber',
   },
   {
@@ -110,6 +110,16 @@ const productCategories = [
     imageAlt: 'Paper Shopping Bags',
     color: 'purple',
   },
+  {
+    id: 'covers',
+    title: 'Garment & Storage Covers',
+    description: 'Specialized protective packaging for retail fashion and apparel. Manufactured with breathable, durable non-woven fabrics, featuring full-length heavy-duty zippers and hanger openings. Ideal for suits, sherwanis, bridal lehengas, and bedding quilts.',
+    features: ['Breathable Fabric', 'Full-Length Zipper', 'Dust & Moisture Resistant'],
+    types: ['Coat & Suit Cover', 'Lehenga Cover', 'Quilt Storage Bag'],
+    imageSrc: '/asset/products-studio/coat-cover.jpg',
+    imageAlt: 'Garment and Storage Covers',
+    color: 'teal',
+  },
 ];
 
 const productGallery = [
@@ -119,27 +129,27 @@ const productGallery = [
   { name: 'Handle Loop Bag', iconComponent: <IconLoop /> },
   { name: 'Coat Cover', iconComponent: <IconCoat /> },
   { name: 'Lehenga Cover', iconComponent: <IconLehenga /> },
-  { name: 'Blanket Cover', iconComponent: <IconBlanket /> },
+  { name: 'Quilt Bag', iconComponent: <IconBlanket /> },
   { name: 'Tote Bag', iconComponent: <IconToteBag /> },
 ];
 
 export function FeaturedProducts() {
   return (
-    <section id="products" className="section-padding pt-0 bg-gray-50">
+    <section id="products" className="section-padding bg-brand-linen pt-12 md:pt-16">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-3">
-            <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center bg-brand-beige text-brand-forest px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border border-brand-mint/30">
+            <svg className="w-3 h-3 mr-1.5 text-brand-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" />
             </svg>
             SUSTAINABLE PACKAGING
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-3">
-            Our Featured <span className="text-green-600">Products</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-forest mb-3">
+            Our Featured <span className="italic font-serif text-brand-olive">Products</span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-stone-600 max-w-2xl mx-auto font-sans">
             From non-woven fabrics to traditional Lokta paper, we manufacture bags that protect your products and the planet.
           </p>
         </div>
@@ -153,30 +163,31 @@ export function FeaturedProducts() {
             >
               <div className="grid lg:grid-cols-12 gap-0">
                 
-                {/* Visual Side - Now with Image */}
-                <div className={`lg:col-span-4 bg-gray-50 p-5 md:p-6 flex items-center justify-center`}>
-                  <div className="relative w-32 h-32 md:w-40 md:h-40">
+                {/* Visual Side - Now with Studio Photography */}
+                <div className="lg:col-span-4 bg-[#FAF8F5] p-5 md:p-6 flex items-center justify-center rounded-l-2xl">
+                  <div className="relative w-36 h-36 md:w-48 md:h-48 overflow-hidden rounded-xl">
                     <Image
                       src={category.imageSrc}
                       alt={category.imageAlt}
                       fill
-                      className="object-contain"
-                      sizes="(max-width: 768px) 128px, 160px"
+                      unoptimized
+                      className="object-cover"
+                      sizes="(max-width: 768px) 144px, 192px"
                     />
                   </div>
                 </div>
 
                 {/* Content Side */}
                 <div className="lg:col-span-8 p-5 md:p-6">
-                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-3">{category.title}</h3>
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-4">
+                  <h3 className="text-lg md:text-xl font-serif font-bold text-brand-forest mb-3">{category.title}</h3>
+                  <p className="text-stone-600 text-sm md:text-base leading-relaxed mb-4 font-sans">
                     {category.description}
                   </p>
                   
                   {/* Features Tags */}
                   <div className="flex flex-wrap gap-1.5 mb-4">
                     {category.features.map((feature, idx) => (
-                      <span key={idx} className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded-full font-medium border border-gray-200">
+                      <span key={idx} className="text-xs bg-brand-beige/60 text-brand-forest px-2.5 py-1 rounded-full font-medium border border-brand-mint/30">
                         {feature}
                       </span>
                     ))}
@@ -187,9 +198,9 @@ export function FeaturedProducts() {
                     {category.types.map((type, idx) => (
                       <div 
                         key={idx}
-                        className="bg-gray-50 border border-gray-200 rounded-lg p-2 text-center hover:bg-green-50 hover:border-green-200 transition-colors cursor-pointer group"
+                        className="bg-brand-linen border border-brand-beige rounded-lg p-2 text-center hover:bg-brand-beige/50 hover:border-brand-olive/40 transition-colors cursor-pointer group"
                       >
-                        <span className="text-xs font-semibold text-gray-700 group-hover:text-green-700">{type}</span>
+                        <span className="text-xs font-semibold text-stone-700 group-hover:text-brand-olive">{type}</span>
                       </div>
                     ))}
                   </div>
@@ -202,22 +213,22 @@ export function FeaturedProducts() {
         {/* Product Gallery Display */}
         <div className="mt-10 md:mt-12">
           <div className="text-center mb-6 md:mb-8">
-            <h3 className="text-xl md:text-2xl font-black text-gray-900">
-              Product <span className="text-green-600">Range</span>
+            <h3 className="text-xl md:text-2xl font-serif font-bold text-brand-forest">
+              Product <span className="italic font-serif text-brand-olive">Range</span>
             </h3>
-            <p className="text-gray-500 text-sm mt-1">Explore our diverse range of eco-friendly solutions</p>
+            <p className="text-stone-500 text-sm mt-1 font-sans">Explore our diverse range of eco-friendly solutions</p>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 md:gap-3">
             {productGallery.map((product, idx) => (
               <div 
                 key={idx}
-                className="bg-white border border-gray-200 rounded-lg p-3 text-center hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center"
+                className="bg-white border border-brand-beige rounded-lg p-3 text-center hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-pointer group flex flex-col items-center justify-center"
               >
-                <div className="text-gray-400 group-hover:text-green-600 transition-colors mb-1">
+                <div className="text-stone-400 group-hover:text-brand-olive transition-colors mb-1">
                   {product.iconComponent}
                 </div>
-                <span className="text-[10px] md:text-xs font-semibold text-gray-700">{product.name}</span>
+                <span className="text-[10px] md:text-xs font-semibold text-stone-700">{product.name}</span>
               </div>
             ))}
           </div>

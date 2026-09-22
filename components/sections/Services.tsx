@@ -31,21 +31,21 @@ const services = [
 
 export function Services() {
   return (
-    <section className="section-padding bg-gradient-to-b from-emerald-50 to-white">
+    <section className="section-padding bg-gradient-to-b from-brand-beige/40 via-brand-linen to-white">
       <div className="max-w-7xl mx-auto">
         
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center bg-emerald-100 text-emerald-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-3">
-            <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center bg-brand-beige text-brand-forest px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border border-brand-mint/30">
+            <svg className="w-3 h-3 mr-1.5 text-brand-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
             WHAT WE OFFER
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-3">
-            Our <span className="text-emerald-600">Services</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-forest mb-3">
+            Our <span className="italic font-serif text-brand-olive">Services</span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-stone-600 max-w-2xl mx-auto font-sans">
             Comprehensive eco-friendly packaging solutions for your business
           </p>
         </div>
@@ -55,13 +55,13 @@ export function Services() {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-4 shadow-md border border-gray-100 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 text-center group"
+              className="bg-white rounded-xl p-4 shadow-xs border border-brand-beige/90 hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 text-center group"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-emerald-100 to-green-100 rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 h-12 bg-brand-beige rounded-xl flex items-center justify-center text-2xl mx-auto mb-3 group-hover:scale-110 transition-transform duration-300 border border-brand-mint/30">
                 {service.icon}
               </div>
-              <h3 className="text-sm font-bold text-gray-900 mb-1.5">{service.title}</h3>
-              <p className="text-gray-600 text-xs leading-relaxed">{service.description}</p>
+              <h3 className="text-sm font-serif font-bold text-brand-forest mb-1.5">{service.title}</h3>
+              <p className="text-stone-600 text-xs leading-relaxed font-sans">{service.description}</p>
             </div>
           ))}
         </div>

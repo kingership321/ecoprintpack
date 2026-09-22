@@ -17,7 +17,7 @@ import { Contact } from '@/components/sections/Contact';
 
 export default function Home() {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen flex flex-col bg-brand-linen text-brand-charcoal font-sans antialiased">
       <Head>
         <title>Sustainable Shopping Bags Manufactured in Nepal | ECO PRINT & PACK</title>
         <meta name="description" content="Eco Promotional Industries - Leading manufacturer of Non-Woven, Canvas, and Lokta Paper bags in Nepal. Go Green with sustainable packaging." />

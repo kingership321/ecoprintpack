@@ -72,16 +72,16 @@ export function WhoWeServe() {
         
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-3">
-            <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center bg-brand-beige text-brand-forest px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border border-brand-mint/30">
+            <svg className="w-3 h-3 mr-1.5 text-brand-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
             </svg>
             OUR CLIENTS
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-3">
-            Who We <span className="text-green-600">Serve</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-forest mb-3">
+            Who We <span className="italic font-serif text-brand-olive">Serve</span>
           </h2>
-          <p className="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-stone-600 max-w-2xl mx-auto font-sans">
             What industry are you in? We have solutions tailored for every business need.
           </p>
         </div>
@@ -91,17 +91,17 @@ export function WhoWeServe() {
           {industries.map((industry, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-4 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
+              className="bg-white rounded-xl p-4 border border-brand-beige/90 shadow-xs hover:shadow-md hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden"
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-green-50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-brand-beige/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               <div className="relative z-10">
-                <div className="text-gray-400 group-hover:text-green-600 transition-colors mb-3">
+                <div className="text-stone-400 group-hover:text-brand-olive transition-colors mb-3">
                   {industry.iconComponent}
                 </div>
-                <h3 className="text-base font-bold text-gray-900 mb-1.5">{industry.title}</h3>
-                <p className="text-gray-600 text-xs mb-3 leading-relaxed">{industry.description}</p>
-                <div className="text-[10px] text-green-700 font-semibold bg-green-50 border border-green-200 px-2 py-0.5 rounded-full inline-block">
+                <h3 className="text-base font-serif font-bold text-brand-forest mb-1.5">{industry.title}</h3>
+                <p className="text-stone-600 text-xs mb-3 leading-relaxed font-sans">{industry.description}</p>
+                <div className="text-[10px] text-brand-forest font-semibold bg-brand-beige border border-brand-mint/30 px-2 py-0.5 rounded-full inline-block">
                   {industry.example}
                 </div>
               </div>
@@ -110,15 +110,15 @@ export function WhoWeServe() {
         </div>
 
         {/* Nepal Coverage Banner */}
-        <div className="bg-gradient-to-r from-green-700 to-emerald-600 rounded-2xl p-5 md:p-6 text-white relative overflow-hidden">
+        <div className="bg-gradient-to-r from-brand-forest to-brand-moss rounded-2xl p-5 md:p-6 text-white relative overflow-hidden border border-brand-moss">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 right-0 w-64 h-64 bg-white rounded-full transform translate-x-1/3 -translate-y-1/2"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-white rounded-full transform -translate-x-1/4 translate-y-1/2"></div>
           </div>
 
           <div className="relative z-10 text-center">
-            <h3 className="text-lg md:text-xl font-bold mb-2">Serving Across Nepal</h3>
-            <p className="text-green-100 max-w-3xl mx-auto leading-relaxed text-xs md:text-sm mb-4">
+            <h3 className="text-lg md:text-xl font-serif font-bold mb-2">Serving Across Nepal</h3>
+            <p className="text-brand-beige max-w-3xl mx-auto leading-relaxed text-xs md:text-sm mb-4 font-sans">
               Whether you need sturdy carriers for your <strong className="text-white">Kirana pasal</strong>, elegant bags for a <strong className="text-white">Pashmina boutique</strong>, 
               or protective covers for a traditional <strong className="text-white">Lehenga or Daura Suruwal</strong>, we understand the local landscape 
               and have the expertise to deliver.

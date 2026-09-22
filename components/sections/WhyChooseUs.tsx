@@ -59,7 +59,7 @@ export function WhyChooseUs() {
             <span>Our Distinction</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-brand-forest">
-            Why Discerning Brands <span className="italic font-serif text-brand-gold">Choose Us</span>
+            Why Discerning Brands <span className="italic font-serif text-brand-olive">Choose Us</span>
           </h2>
           <p className="mt-3 text-stone-600 font-sans text-sm sm:text-base leading-relaxed">
             We don&apos;t just produce packaging; we engineer dependable, eco-conscious brand ambassadors for your business.
@@ -71,15 +71,15 @@ export function WhyChooseUs() {
           {reasons.map((reason) => (
             <div 
               key={reason.index}
-              className="bg-white rounded-3xl p-7 sm:p-9 border border-stone-200/90 shadow-xs hover:shadow-md hover:border-brand-moss/40 transition-all duration-300 flex flex-col justify-between group"
+              className="bg-white rounded-3xl p-7 sm:p-9 border border-brand-beige/90 shadow-xs hover:shadow-md hover:border-brand-olive/50 transition-all duration-300 flex flex-col justify-between group"
             >
               <div>
                 {/* Header row with Index number and icon */}
                 <div className="flex items-center justify-between mb-6 pb-4 border-b border-stone-100">
-                  <span className="font-serif text-3xl sm:text-4xl text-brand-gold/70 font-bold tracking-tight">
+                  <span className="font-serif text-3xl sm:text-4xl text-brand-olive font-bold tracking-tight">
                     {reason.index}
                   </span>
-                  <div className="w-11 h-11 rounded-2xl bg-brand-linen flex items-center justify-center text-brand-forest group-hover:bg-brand-forest group-hover:text-brand-gold transition-colors duration-300 border border-stone-200/60">
+                  <div className="w-11 h-11 rounded-2xl bg-brand-linen flex items-center justify-center text-brand-forest group-hover:bg-brand-forest group-hover:text-brand-mint transition-colors duration-300 border border-brand-beige">
                     {reason.icon}
                   </div>
                 </div>
@@ -88,7 +88,7 @@ export function WhyChooseUs() {
                   <h3 className="font-serif text-xl sm:text-2xl text-brand-forest font-bold group-hover:text-brand-moss transition-colors">
                     {reason.title}
                   </h3>
-                  <p className="text-xs font-sans uppercase tracking-wider font-semibold text-brand-gold">
+                  <p className="text-xs font-sans uppercase tracking-wider font-semibold text-brand-olive">
                     {reason.subtitle}
                   </p>
                   <p className="text-stone-600 font-sans text-sm leading-relaxed pt-2">
@@ -101,11 +101,50 @@ export function WhyChooseUs() {
               <div className="pt-6 mt-6 border-t border-stone-100 flex items-center justify-between text-[11px] font-sans font-semibold text-stone-400">
                 <span className="uppercase tracking-widest text-stone-500">Eco Print & Pack Standard</span>
                 <span className="text-brand-forest font-bold group-hover:translate-x-1 transition-transform inline-flex items-center">
-                  Learn More <span className="ml-1 text-brand-gold">→</span>
+                  Learn More <span className="ml-1 text-brand-olive">→</span>
                 </span>
               </div>
             </div>
           ))}
+        </div>
+
+        {/* GSM Specification Callout Strip */}
+        <div className="mt-10 rounded-3xl border border-brand-beige bg-white overflow-hidden">
+          <div className="bg-brand-forest px-6 py-3.5 flex items-center justify-between flex-wrap gap-3">
+            <div className="flex items-center gap-2.5">
+              <svg className="w-4 h-4 text-brand-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+              </svg>
+              <span className="text-[11px] font-sans font-black uppercase tracking-[0.2em] text-white">
+                Material Specifications &amp; Minimums
+              </span>
+            </div>
+            <div className="flex items-center gap-1.5 bg-[#25D366]/20 border border-[#25D366]/30 rounded-full px-3 py-1">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+              <span className="text-[10px] font-sans font-bold text-[#25D366] uppercase tracking-wider">Ready to Ship — Lalitpur 🇳🇵</span>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-brand-beige/80">
+            {[
+              { material: 'Non-Woven PP', gsm: '60–90 GSM', moq: 'MOQ: 500 pcs', handle: 'Loop / Loop-cut' },
+              { material: 'Cotton Canvas', gsm: '10–12 OZ', moq: 'MOQ: 100 pcs', handle: '25mm Web Strap' },
+              { material: 'Lokta Paper', gsm: '40–80 GSM', moq: 'MOQ: 50 pcs', handle: 'Twisted rope' },
+              { material: 'Kraft Paper', gsm: '90–120 GSM', moq: 'MOQ: 100 pcs', handle: 'Twisted / Flat' },
+              { material: 'Garment Cover', gsm: '30–60 GSM', moq: 'MOQ: 200 pcs', handle: 'Full-zip hanger' },
+            ].map((spec) => (
+              <div key={spec.material} className="p-4 sm:p-5 flex flex-col gap-1">
+                <span className="text-[9px] font-sans font-black uppercase tracking-[0.18em] text-brand-olive">{spec.material}</span>
+                <span className="font-serif text-lg font-bold text-brand-forest leading-none">{spec.gsm}</span>
+                <span className="text-[10px] font-sans text-stone-500 mt-0.5">{spec.handle}</span>
+                <span className="text-[9px] font-sans font-semibold text-brand-moss uppercase tracking-wider mt-1 inline-flex items-center gap-1">
+                  <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  {spec.moq}
+                </span>
+              </div>
+            ))}
+          </div>
         </div>
 
       </div>

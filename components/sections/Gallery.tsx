@@ -96,7 +96,7 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
               <span>Visual Atelier Lookbook</span>
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-brand-forest">
-              Manufactured <span className="italic font-serif text-brand-gold">Portfolio</span>
+              Manufactured <span className="italic font-serif text-brand-olive">Portfolio</span>
             </h2>
             <p className="mt-3 text-stone-600 font-sans text-sm sm:text-base leading-relaxed">
               Real manufactured packaging specimens photographed in our Kathmandu atelier.
@@ -108,17 +108,18 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
               <div
                 key={item.id}
                 onClick={() => openModal(item, previewItems)}
-                className="group relative bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
+                className="group relative bg-white rounded-2xl overflow-hidden border border-brand-beige/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
               >
-                <div className="relative aspect-square w-full bg-[#F7F4EE] flex items-center justify-center p-3 overflow-hidden">
+                <div className="relative aspect-square w-full bg-[#FAF8F5] overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.alt}
                     fill
+                    unoptimized
                     sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                    className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-brand-forest/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
+                  <div className="absolute inset-0 bg-brand-forest/30 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-xs">
                     <span className="text-white text-[11px] font-sans font-semibold tracking-wider uppercase bg-brand-forest/80 px-3 py-1.5 rounded-full border border-white/20">
                       Enlarge View
                     </span>
@@ -126,7 +127,7 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
                 </div>
                 
                 <div className="p-3.5 bg-white border-t border-stone-100">
-                  <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold block">
+                  <span className="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-olive block">
                     {item.badge}
                   </span>
                   <h3 className="text-xs font-serif font-bold text-brand-forest truncate mt-0.5">
@@ -143,7 +144,7 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
               className="inline-flex items-center gap-2.5 bg-brand-forest hover:bg-brand-moss text-white font-sans text-xs font-semibold tracking-widest uppercase px-7 py-3.5 rounded-full border border-brand-forest shadow-xs hover:shadow-md transition-all duration-300"
             >
               <span>Explore Complete Lookbook</span>
-              <span className="text-brand-gold font-bold">→</span>
+              <span className="text-brand-mint font-bold">→</span>
             </Link>
           </div>
         </div>
@@ -374,14 +375,15 @@ function PhotoCard({
       onClick={onClick}
       className="group relative bg-white rounded-2xl overflow-hidden border border-stone-200/90 shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col justify-between"
     >
-      <div className="relative aspect-square w-full bg-[#F7F4EE] flex items-center justify-center p-3 overflow-hidden">
+      <div className="relative aspect-square w-full bg-[#FAF8F5] overflow-hidden">
         {!isFailed ? (
           <Image
             src={item.image}
             alt={item.alt}
             fill
+            unoptimized
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-            className="object-contain p-2 group-hover:scale-105 transition-transform duration-500"
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
             onError={() => setFailedImages(prev => ({ ...prev, [item.id]: true }))}
           />
         ) : (
@@ -456,6 +458,7 @@ function renderModal(
             src={item.image}
             alt={item.alt}
             fill
+            unoptimized
             sizes="95vw"
             className="object-contain p-2"
             priority
@@ -493,7 +496,7 @@ function renderModal(
         {/* Minimalist Bottom Caption Bar */}
         <div className="w-full mt-3 px-5 py-3 rounded-2xl bg-white/10 backdrop-blur-md text-white flex flex-col sm:flex-row items-center justify-between gap-2 border border-white/10 font-sans">
           <div className="flex items-center gap-2.5">
-            <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-gold/30 text-brand-gold border border-brand-gold/40">
+            <span className="text-[10px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-brand-mint/30 text-brand-mint border border-brand-mint/40">
               {item.category}
             </span>
             <span className="text-xs sm:text-sm font-serif font-bold">{item.title}</span>

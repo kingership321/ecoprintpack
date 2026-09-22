@@ -1,4 +1,4 @@
-﻿// data/galleryData.ts
+// data/galleryData.ts
 export interface GalleryItem {
   id: number;
   title: string;
@@ -18,7 +18,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%201.jpg',
+    image: '/asset/gallery-studio/gallery-1.jpg',
     alt: 'Canvas Tote Bag Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -27,7 +27,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%202.jpg',
+    image: '/asset/gallery-studio/gallery-2.jpg',
     alt: 'Canvas Tote Bag Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -36,7 +36,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%204.jpg',
+    image: '/asset/gallery-studio/gallery-3.jpg',
     alt: 'Canvas Tote Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -45,7 +45,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%205.jpg',
+    image: '/asset/gallery-studio/gallery-4.jpg',
     alt: 'Canvas Tote Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -54,7 +54,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%206.jpg',
+    image: '/asset/gallery-studio/gallery-5.jpg',
     alt: 'Canvas Tote Bag Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -63,7 +63,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%207.jpg',
+    image: '/asset/gallery-studio/gallery-6.jpg',
     alt: 'Canvas Tote Bag Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -72,7 +72,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/Canvas%20Tote%20Bag%209.jpg',
+    image: '/asset/gallery-studio/gallery-7.jpg',
     alt: 'Canvas Tote Bag Design #7 - Eco Print & Pack Nepal'
   },
   {
@@ -81,7 +81,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Canvas',
     subCategory: 'Canvas Tote Bag',
     badge: 'Canvas',
-    image: '/asset/CanvasToteBag/CanvasToteBag3.jpg',
+    image: '/asset/gallery-studio/gallery-8.jpg',
     alt: 'Canvas Tote Bag Design #8 - Eco Print & Pack Nepal'
   },
   {
@@ -90,7 +90,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Add%20a%20touch%20of%20green%20to%20your%20bags%20with%20our%20plantable%20seed%20paper%20tags!.%20%F0%9F%8C%BC%E2%9C%A8%20%E2%9E%BC%20%E2%9E%BC%20%E2%9E%BC%20%E2%9E%BC%20%E2%9E%BC%20%23SustainableLiving%20%23EcoChic%20%23LittleGreenPaperShop%20%23smallbusiness%20%23seedpaper%20%23papertags%20%23giftbagtags%20%23sustainable%20%23giftideas%20%23customise.jpg',
+    image: '/asset/gallery-studio/gallery-11.jpg',
     alt: 'Lokta Paper Bag Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -99,7 +99,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%201.jpg',
+    image: '/asset/gallery-studio/gallery-13.jpg',
     alt: 'Lokta Paper Bag Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -108,7 +108,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%203.jpg',
+    image: '/asset/gallery-studio/gallery-9.jpg',
     alt: 'Lokta Paper Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -117,7 +117,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%204.jpg',
+    image: '/asset/gallery-studio/gallery-12.jpg',
     alt: 'Lokta Paper Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -126,7 +126,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%205.jpg',
+    image: '/asset/gallery-studio/gallery-10.jpg',
     alt: 'Lokta Paper Bag Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -135,7 +135,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%206.jpg',
+    image: '/asset/gallery-studio/gallery-14.jpg',
     alt: 'Lokta Paper Bag Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -144,7 +144,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%207.jpg',
+    image: '/asset/gallery-studio/gallery-15.jpg',
     alt: 'Lokta Paper Bag Design #7 - Eco Print & Pack Nepal'
   },
   {
@@ -153,7 +153,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/Nepali%20Lokta%20Products%208.jpg',
+    image: '/asset/gallery-studio/gallery-16.jpg',
     alt: 'Lokta Paper Bag Design #8 - Eco Print & Pack Nepal'
   },
   {
@@ -162,7 +162,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg',
+    image: '/asset/gallery-studio/gallery-17.jpg',
     alt: 'Lokta Paper Bag Design #9 - Eco Print & Pack Nepal'
   },
   {
@@ -171,7 +171,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/LoktaPaperProducts/NepaliLoktaProducts9.jpg',
+    image: '/asset/gallery-studio/gallery-18.jpg',
     alt: 'Lokta Paper Bag Design #10 - Eco Print & Pack Nepal'
   },
   {
@@ -180,7 +180,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%201.jpg',
+    image: '/asset/gallery-studio/gallery-20.jpg',
     alt: 'Brown Kraft Paper Bag Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -189,7 +189,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%2010.jpg',
+    image: '/asset/gallery-studio/gallery-19.jpg',
     alt: 'Brown Kraft Paper Bag Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -198,7 +198,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%2011.jpg',
+    image: '/asset/gallery-studio/gallery-21.jpg',
     alt: 'Brown Kraft Paper Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -207,7 +207,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%2012.jpg',
+    image: '/asset/gallery-studio/gallery-22.jpg',
     alt: 'Brown Kraft Paper Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -216,7 +216,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%203.jpg',
+    image: '/asset/gallery-studio/gallery-23.jpg',
     alt: 'Brown Kraft Paper Bag Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -225,7 +225,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%204.jpg',
+    image: '/asset/gallery-studio/gallery-24.jpg',
     alt: 'Brown Kraft Paper Bag Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -234,7 +234,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%205.jpg',
+    image: '/asset/gallery-studio/gallery-25.jpg',
     alt: 'Brown Kraft Paper Bag Design #7 - Eco Print & Pack Nepal'
   },
   {
@@ -243,7 +243,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%207.jpg',
+    image: '/asset/gallery-studio/gallery-26.jpg',
     alt: 'Brown Kraft Paper Bag Design #8 - Eco Print & Pack Nepal'
   },
   {
@@ -252,7 +252,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%208.jpg',
+    image: '/asset/gallery-studio/gallery-27.jpg',
     alt: 'Brown Kraft Paper Bag Design #9 - Eco Print & Pack Nepal'
   },
   {
@@ -261,7 +261,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/Brown%20Kraft%20Paper%20Bag%209.jpg',
+    image: '/asset/gallery-studio/gallery-28.jpg',
     alt: 'Brown Kraft Paper Bag Design #10 - Eco Print & Pack Nepal'
   },
   {
@@ -270,7 +270,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/BrownKraftPaperBag2.jpg',
+    image: '/asset/gallery-studio/gallery-29.jpg',
     alt: 'Brown Kraft Paper Bag Design #11 - Eco Print & Pack Nepal'
   },
   {
@@ -279,7 +279,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/BrownPaperKraftBagPhoto/BrownKraftPaperBag6.jpg',
+    image: '/asset/gallery-studio/gallery-30.jpg',
     alt: 'Brown Kraft Paper Bag Design #12 - Eco Print & Pack Nepal'
   },
   {
@@ -288,7 +288,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%201.jpg',
+    image: '/asset/gallery-studio/gallery-31.jpg',
     alt: 'Paper Shopping Bag Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -297,7 +297,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%202.jpg',
+    image: '/asset/gallery-studio/gallery-32.jpg',
     alt: 'Paper Shopping Bag Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -306,7 +306,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%204.jpg',
+    image: '/asset/gallery-studio/gallery-33.jpg',
     alt: 'Paper Shopping Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -315,7 +315,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%205.jpg',
+    image: '/asset/gallery-studio/gallery-34.jpg',
     alt: 'Paper Shopping Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -324,7 +324,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%206.jpg',
+    image: '/asset/gallery-studio/gallery-35.jpg',
     alt: 'Paper Shopping Bag Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -333,7 +333,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%207.jpg',
+    image: '/asset/gallery-studio/gallery-36.jpg',
     alt: 'Paper Shopping Bag Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -342,7 +342,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%208.jpg',
+    image: '/asset/gallery-studio/gallery-37.jpg',
     alt: 'Paper Shopping Bag Design #7 - Eco Print & Pack Nepal'
   },
   {
@@ -351,7 +351,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/Paper%20Bag%209.jpg',
+    image: '/asset/gallery-studio/gallery-38.jpg',
     alt: 'Paper Shopping Bag Design #8 - Eco Print & Pack Nepal'
   },
   {
@@ -360,7 +360,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Paper Shopping Bag',
     badge: 'Paper',
-    image: '/asset/PaperBag/PaperBag3.jpg',
+    image: '/asset/gallery-studio/gallery-39.jpg',
     alt: 'Paper Shopping Bag Design #9 - Eco Print & Pack Nepal'
   },
   {
@@ -369,7 +369,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/Box%20Bag%20Non%20woven%20Fabric%201.jpg',
+    image: '/asset/gallery-studio/gallery-40.jpg',
     alt: 'Box Bag Non-Woven Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -378,7 +378,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/Box%20Bag%20Non%20woven%20Fabric%202.jpg',
+    image: '/asset/gallery-studio/gallery-41.jpg',
     alt: 'Box Bag Non-Woven Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -387,7 +387,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/Box%20Bag%20Non%20woven%20Fabric%203.jpg',
+    image: '/asset/gallery-studio/gallery-42.jpg',
     alt: 'Box Bag Non-Woven Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -396,7 +396,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/Box%20Bag%20Non%20woven%20Fabric%205.jpg',
+    image: '/asset/gallery-studio/gallery-43.jpg',
     alt: 'Box Bag Non-Woven Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -405,7 +405,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/Box%20Bag%20Non%20woven%20Fabric%206.jpg',
+    image: '/asset/gallery-studio/gallery-44.jpg',
     alt: 'Box Bag Non-Woven Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -414,7 +414,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/Box%20Bag%20Non%20woven%20Fabric%207.jpg',
+    image: '/asset/gallery-studio/gallery-45.jpg',
     alt: 'Box Bag Non-Woven Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -423,7 +423,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Box Bag Non-Woven',
     badge: 'Box Bag',
-    image: '/asset/NonWovenFabricBoxBag/BoxBagNonwovenFabric4.jpg',
+    image: '/asset/gallery-studio/gallery-46.jpg',
     alt: 'Box Bag Non-Woven Design #7 - Eco Print & Pack Nepal'
   },
   {
@@ -432,7 +432,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'D-Cut Bag Non-Woven',
     badge: 'D-Cut',
-    image: '/asset/NonWovenFabricDcut/D%20cut%20Bag%201.jpg',
+    image: '/asset/gallery-studio/gallery-47.jpg',
     alt: 'D-Cut Bag Non-Woven Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -441,7 +441,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'D-Cut Bag Non-Woven',
     badge: 'D-Cut',
-    image: '/asset/NonWovenFabricDcut/D%20cut%20Bag%202.jpg',
+    image: '/asset/gallery-studio/gallery-48.jpg',
     alt: 'D-Cut Bag Non-Woven Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -450,7 +450,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'D-Cut Bag Non-Woven',
     badge: 'D-Cut',
-    image: '/asset/NonWovenFabricDcut/D%20cut%20Bag%204.jpg',
+    image: '/asset/gallery-studio/gallery-49.jpg',
     alt: 'D-Cut Bag Non-Woven Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -459,7 +459,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'D-Cut Bag Non-Woven',
     badge: 'D-Cut',
-    image: '/asset/NonWovenFabricDcut/D%20cut%20Bag%205.jpg',
+    image: '/asset/gallery-studio/gallery-50.jpg',
     alt: 'D-Cut Bag Non-Woven Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -468,7 +468,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'D-Cut Bag Non-Woven',
     badge: 'D-Cut',
-    image: '/asset/NonWovenFabricDcut/D%20cut%20Bag%206.jpg',
+    image: '/asset/gallery-studio/gallery-51.jpg',
     alt: 'D-Cut Bag Non-Woven Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -477,7 +477,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'D-Cut Bag Non-Woven',
     badge: 'D-Cut',
-    image: '/asset/NonWovenFabricDcut/DcutBag3.jpg',
+    image: '/asset/gallery-studio/gallery-52.jpg',
     alt: 'D-Cut Bag Non-Woven Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -486,7 +486,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%201.jpg',
+    image: '/asset/gallery-studio/gallery-53.jpg',
     alt: 'W-Cut Bag Non-Woven Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -495,7 +495,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%203.jpg',
+    image: '/asset/gallery-studio/gallery-54.jpg',
     alt: 'W-Cut Bag Non-Woven Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -504,7 +504,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%204.jpg',
+    image: '/asset/gallery-studio/gallery-55.jpg',
     alt: 'W-Cut Bag Non-Woven Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -513,7 +513,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%205.jpg',
+    image: '/asset/gallery-studio/gallery-56.jpg',
     alt: 'W-Cut Bag Non-Woven Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -522,7 +522,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%206.jpg',
+    image: '/asset/gallery-studio/gallery-57.jpg',
     alt: 'W-Cut Bag Non-Woven Design #5 - Eco Print & Pack Nepal'
   },
   {
@@ -531,7 +531,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%207.jpg',
+    image: '/asset/gallery-studio/gallery-58.jpg',
     alt: 'W-Cut Bag Non-Woven Design #6 - Eco Print & Pack Nepal'
   },
   {
@@ -540,7 +540,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/W%20Cut%20Bag%20Non%20Woven%20Fabric%208.jpg',
+    image: '/asset/gallery-studio/gallery-59.jpg',
     alt: 'W-Cut Bag Non-Woven Design #7 - Eco Print & Pack Nepal'
   },
   {
@@ -549,7 +549,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'W-Cut Bag Non-Woven',
     badge: 'W-Cut',
-    image: '/asset/NonWovenFabricWcutBag/wcut2.jpg',
+    image: '/asset/gallery-studio/gallery-60.jpg',
     alt: 'W-Cut Bag Non-Woven Design #8 - Eco Print & Pack Nepal'
   },
   {
@@ -558,7 +558,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Handle Loop Bag',
     badge: 'Loop Handle',
-    image: '/asset/HandleLoopNonWovenBag/Handle%20Loop%20Bag%201.jpg',
+    image: '/asset/gallery-studio/gallery-61.jpg',
     alt: 'Handle Loop Bag Design #1 - Eco Print & Pack Nepal'
   },
   {
@@ -567,7 +567,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Handle Loop Bag',
     badge: 'Loop Handle',
-    image: '/asset/HandleLoopNonWovenBag/Handle%20Loop%20Bag%202.jpg',
+    image: '/asset/gallery-studio/gallery-62.jpg',
     alt: 'Handle Loop Bag Design #2 - Eco Print & Pack Nepal'
   },
   {
@@ -576,7 +576,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Handle Loop Bag',
     badge: 'Loop Handle',
-    image: '/asset/HandleLoopNonWovenBag/Handle%20Loop%20Bag%203.jpg',
+    image: '/asset/gallery-studio/gallery-63.jpg',
     alt: 'Handle Loop Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
@@ -585,7 +585,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Handle Loop Bag',
     badge: 'Loop Handle',
-    image: '/asset/HandleLoopNonWovenBag/Handle%20Loop%20Bag%205.jpg',
+    image: '/asset/gallery-studio/gallery-64.jpg',
     alt: 'Handle Loop Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
@@ -594,7 +594,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Non-Woven',
     subCategory: 'Handle Loop Bag',
     badge: 'Loop Handle',
-    image: '/asset/HandleLoopNonWovenBag/HandleLoopBag4.jpg',
+    image: '/asset/gallery-studio/gallery-65.jpg',
     alt: 'Handle Loop Bag Design #5 - Eco Print & Pack Nepal'
   },
 ];

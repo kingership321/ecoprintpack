@@ -42,4 +42,7 @@ public/asset/LoktaPaperProducts/
 
 # screenshots
 /screenshots
+
+# documentation / correction files
+*.pdf
 

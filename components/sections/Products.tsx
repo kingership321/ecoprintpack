@@ -4,23 +4,24 @@ import { useState, useMemo, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
-// Product images from public folder
-const nonWovenBagsW = '/asset/NonWovenFabricWcutBag/wcut2.jpg';
-const nonWovenBagsD = '/asset/NonWovenFabricDcut/DcutBag3.jpg';
-const nonWovenBoxBags = '/asset/NonWovenFabricBoxBag/BoxBagNonwovenFabric4.jpg';
-const handleLoopBags = '/asset/HandleLoopNonWovenBag/HandleLoopBag4.jpg';
-const canvasBags = '/asset/CanvasToteBag/CanvasToteBag3.jpg';
-const canvasPouch = '/asset/CanvasToteBag/Canvas Tote Bag 4.jpg';
-const canvasHeavy = '/asset/CanvasToteBag/Canvas Tote Bag 5.jpg';
-const loktaBags = '/asset/LoktaPaperProducts/NepaliLoktaProducts2.jpg';
-const loktaWine = '/asset/LoktaPaperProducts/Nepali Lokta Products 1.jpg';
-const loktashopBags = '/asset/LoktaPaperProducts/NepaliLoktaProducts9.jpg';
-const paperBrownBags = '/asset/BrownPaperKraftBagPhoto/BrownKraftPaperBag6.jpg';
-const paperBoutique = '/asset/PaperBag/PaperBag3.jpg';
-const paperGloss = '/asset/PaperBag/Paper Bag 1.jpg';
-const coatCover = '/asset/product4.jpg';
-const lehengaCover = '/asset/product5.jpg';
-const blanketCover = '/asset/product6.jpg';
+// High-Resolution Studio Product Photographs
+const nonWovenBagsW = '/asset/products-studio/wcut-bag.jpg';
+const nonWovenBagsD = '/asset/products-studio/dcut-bag.jpg';
+const nonWovenBoxBags = '/asset/products-studio/box-bag.jpg';
+const handleLoopBags = '/asset/products-studio/handle-loop-bag.jpg';
+const canvasBags = '/asset/products-studio/canvas-tote.jpg';
+const canvasPouch = '/asset/products-studio/canvas-pouch.jpg';
+const canvasHeavy = '/asset/products-studio/canvas-heavy.jpg';
+const loktaBags = '/asset/products-studio/lokta-bag.jpg';
+const loktaWine = '/asset/products-studio/lokta-wine.jpg';
+const loktashopBags = '/asset/products-studio/lokta-shopper.jpg';
+const loktaBoxes = '/asset/products-studio/lokta-box.jpg';
+const paperBrownBags = '/asset/products-studio/kraft-bag.jpg';
+const paperBoutique = '/asset/products-studio/paper-boutique.jpg';
+const paperGloss = '/asset/products-studio/paper-gloss.jpg';
+const coatCover = '/asset/products-studio/coat-cover.jpg';
+const lehengaCover = '/asset/products-studio/lehenga-cover.jpg';
+const quiltBag = '/asset/products-studio/quilt-bag.jpg';
 
 // Icons
 const IconSearch = () => (
@@ -186,6 +187,17 @@ const allProducts: Product[] = [
     image: loktashopBags,
     alt: 'Lokta Paper Shopping Bag'
   },
+  { 
+    id: 101, 
+    name: 'Lokta & Bridal Heritage Boxes', 
+    category: 'Lokta', 
+    categoryKey: 'lokta',
+    description: 'Custom handcrafted rigid Lokta and bridal gift boxes with luxury artisanal texture.', 
+    color: 'amber', 
+    minQty: '50 Pcs',
+    image: loktaBoxes,
+    alt: 'Handcrafted Lokta Heritage Boxes'
+  },
 
   // Paper
   { 
@@ -247,14 +259,14 @@ const allProducts: Product[] = [
   },
   { 
     id: 16, 
-    name: 'Blanket & Bedding Cover', 
+    name: 'Quilt & Bedding Storage Bag', 
     category: 'Covers', 
     categoryKey: 'covers',
     description: 'High-capacity zippered storage bag for blankets, quilts, and linens.', 
     color: 'teal', 
     minQty: '50 Pcs',
-    image: blanketCover,
-    alt: 'Blanket Storage Cover'
+    image: quiltBag,
+    alt: 'Quilt & Bedding Storage Bag'
   },
 ];
 
@@ -275,8 +287,8 @@ const categoryMetadata = [
   },
   {
     key: 'lokta',
-    title: 'Himalayan Lokta Paper Bags',
-    subtitle: '1,000-year heritage artisanal tree-free paper crafted from Daphne bark',
+    title: 'Lokta Paper Bags and Boxes',
+    subtitle: '1,000-year heritage artisanal tree-free paper & rigid gift boxes',
     badge: 'Nepali Heritage',
     accentColor: 'amber',
   },
@@ -340,11 +352,11 @@ export default function Products() {
         <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-stone-200 text-[11px] font-sans font-semibold tracking-widest uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-mint animate-pulse" />
             <span>Manufactured in Kathmandu & Lalitpur, Nepal</span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-white">
-            Our Product <span className="italic font-serif text-brand-gold">Collections</span>
+            Our Product <span className="italic font-serif text-brand-mint">Collections</span>
           </h1>
           <p className="text-stone-300 text-sm md:text-base max-w-2xl mx-auto leading-relaxed font-sans">
             Explore our diverse range of sustainable packaging solutions. From non-woven retail bags to 1,000-year-old Lokta paper craft, find the perfect packaging for your brand.
@@ -355,7 +367,7 @@ export default function Products() {
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14">
         
         {/* Toolbar: Search and Filter Tabs */}
-        <div className="bg-white p-3 md:p-4 rounded-3xl shadow-xs border border-stone-200/90 mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
+        <div className="bg-white p-3 md:p-4 rounded-3xl shadow-xs border border-brand-beige/90 mb-10 flex flex-col md:flex-row gap-4 items-center justify-between">
           
           {/* Search */}
           <div className="relative w-full md:w-80">
@@ -367,7 +379,7 @@ export default function Products() {
               placeholder="Search by name or material..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-10 pr-4 py-2 text-xs font-sans border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss focus:border-brand-moss bg-stone-50 transition-all text-stone-800"
+              className="w-full pl-10 pr-4 py-2 text-xs font-sans border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-olive focus:border-brand-olive bg-stone-50 transition-all text-stone-800"
             />
           </div>
 
@@ -380,7 +392,7 @@ export default function Products() {
                 className={`px-4 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase whitespace-nowrap transition-all duration-200 ${
                   selectedCategory === cat
                     ? 'bg-brand-forest text-white shadow-xs'
-                    : 'bg-stone-100 text-stone-600 hover:text-brand-forest hover:bg-stone-200'
+                    : 'bg-brand-beige/50 text-brand-forest hover:text-brand-forest hover:bg-brand-beige'
                 }`}
               >
                 {cat}
@@ -446,18 +458,19 @@ export default function Products() {
                   {group.products.map((product) => (
                     <div 
                       key={product.id}
-                      className="flex-none w-72 sm:w-80 snap-start bg-white rounded-3xl overflow-hidden shadow-xs hover:shadow-md border border-stone-200/90 hover:border-brand-moss/40 transition-all duration-300 flex flex-col justify-between group"
+                      className="flex-none w-72 sm:w-80 snap-start bg-white rounded-3xl overflow-hidden shadow-xs hover:shadow-md border border-brand-beige/90 hover:border-brand-olive/50 transition-all duration-300 flex flex-col justify-between group"
                     >
                       {/* Product Image Stage */}
-                      <div className="relative h-48 sm:h-52 bg-[#F7F4EE] flex items-center justify-center p-4 overflow-hidden">
+                      <div className="relative h-48 sm:h-52 bg-[#FAF8F5] overflow-hidden border-b border-stone-100">
                         <Image
                           src={product.image}
                           alt={product.alt || product.name}
-                          width={320}
-                          height={240}
-                          className="w-auto h-auto max-w-full max-h-full object-contain transition-transform duration-500 group-hover:scale-105"
+                          fill
+                          unoptimized
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
-                        <span className="absolute top-3 left-3 bg-white/95 backdrop-blur-xs text-stone-700 text-[10px] font-sans font-bold uppercase tracking-wider px-2 py-0.5 rounded-md shadow-xs border border-stone-200">
+                        <span className="absolute top-3 left-3 bg-brand-beige/90 backdrop-blur-xs text-brand-forest text-[10px] font-sans font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs border border-brand-mint/30">
                           {product.category}
                         </span>
                       </div>
@@ -465,7 +478,7 @@ export default function Products() {
                       {/* Content Area */}
                       <div className="p-4 sm:p-5 flex-grow flex flex-col justify-between">
                         <div>
-                          <h4 className="text-base font-serif font-bold text-brand-forest group-hover:text-brand-moss transition-colors mb-1.5">
+                          <h4 className="text-base font-serif font-bold text-brand-forest group-hover:text-brand-olive transition-colors mb-1.5">
                             {product.name}
                           </h4>
                           <p className="text-xs font-sans text-stone-600 leading-relaxed line-clamp-2">
@@ -484,13 +497,16 @@ export default function Products() {
                             </span>
                           </div>
 
-                          <Link
-                            href="/contact#quote"
+                          <a
+                            href={`https://wa.me/9779869268248?text=${encodeURIComponent(`Hello Eco Print & Pack, I would like to inquire about ${product.name} (Category: ${product.category}, Min. Order: ${product.minQty}).`)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-1.5 bg-brand-forest hover:bg-brand-moss text-white text-xs font-semibold tracking-wider uppercase py-2 px-4 rounded-full border border-brand-forest shadow-xs hover:shadow-sm transition-all group-hover:scale-[1.02]"
+                            aria-label={`Inquire about ${product.name} on WhatsApp`}
                           >
                             <span>Inquire</span>
-                            <span className="text-brand-gold font-bold">→</span>
-                          </Link>
+                            <span className="text-brand-mint font-bold">→</span>
+                          </a>
                         </div>
                       </div>
                     </div>

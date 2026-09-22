@@ -67,21 +67,21 @@ export function OurOutlets() {
         
         {/* Section Header */}
         <div className="text-center mb-8 md:mb-10">
-          <div className="inline-flex items-center bg-green-100 text-green-700 px-3 py-1.5 rounded-full text-xs font-semibold mb-3">
-            <svg className="w-3 h-3 mr-1.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <div className="inline-flex items-center bg-brand-beige text-brand-forest px-3.5 py-1.5 rounded-full text-xs font-semibold mb-3 border border-brand-mint/30">
+            <svg className="w-3 h-3 mr-1.5 text-brand-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
             </svg>
             OUR FACILITY
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 mb-3">
-            Our <span className="text-green-600">Workplace</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold text-brand-forest mb-3">
+            Our <span className="italic font-serif text-brand-olive">Workplace</span>
           </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-5 lg:gap-6">
           
           {/* Company Info Card */}
-          <div className="bg-gradient-to-br from-green-600 to-emerald-700 rounded-2xl p-6 md:p-8 text-white min-h-[300px] flex items-center justify-center relative overflow-hidden shadow-lg">
+          <div className="bg-gradient-to-br from-brand-forest to-brand-moss rounded-2xl p-6 md:p-8 text-white min-h-[300px] flex items-center justify-center relative overflow-hidden shadow-lg border border-brand-moss">
             <div className="absolute inset-0 opacity-10">
               <svg className="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
                 <defs>
@@ -93,13 +93,13 @@ export function OurOutlets() {
               </svg>
             </div>
             <div className="relative z-10 text-center">
-              <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md border border-white/10">
+              <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center mx-auto mb-4 shadow-md border border-white/15 text-brand-mint">
                 <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
                   <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"/>
                 </svg>
               </div>
-              <h3 className="text-xl md:text-2xl font-bold mb-1">Eco Promotional Industries</h3>
-              <p className="text-green-100 text-sm md:text-base">Thashikhel Chowk, Lalitpur, Nepal</p>
+              <h3 className="font-serif text-xl md:text-2xl font-bold mb-1">Eco Promotional Industries</h3>
+              <p className="text-brand-beige text-sm md:text-base font-sans">Thashikhel Chowk, Lalitpur, Nepal</p>
             </div>
           </div>
 
@@ -108,13 +108,13 @@ export function OurOutlets() {
             {machines.map((machine, index) => (
               <div 
                 key={index}
-                className="bg-white rounded-xl p-4 md:p-5 border border-gray-200 shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300 group flex flex-col items-center text-center"
+                className="bg-white rounded-xl p-4 md:p-5 border border-brand-beige/90 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 group flex flex-col items-center text-center"
               >
-                <div className="text-gray-400 group-hover:text-green-600 transition-colors mb-2">
+                <div className="text-stone-400 group-hover:text-brand-olive transition-colors mb-2">
                   {machine.iconComponent}
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 mb-1">{machine.name}</h3>
-                <p className="text-gray-600 text-xs leading-relaxed">{machine.description}</p>
+                <h3 className="text-sm font-serif font-bold text-brand-forest mb-1">{machine.name}</h3>
+                <p className="text-stone-600 text-xs leading-relaxed font-sans">{machine.description}</p>
               </div>
             ))}
           </div>

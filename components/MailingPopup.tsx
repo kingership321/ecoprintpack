@@ -79,7 +79,7 @@ export function MailingPopup() {
             <div className="absolute inset-0 opacity-[0.09] graffiti-texture-sm pointer-events-none" />
 
             <div className="relative z-10">
-              <span className="text-[10px] uppercase font-sans tracking-widest text-brand-gold font-bold">
+              <span className="text-[10px] uppercase font-sans tracking-widest text-brand-mint font-bold">
                 Atelier Journal
               </span>
               <h3 className="font-serif text-2xl font-bold mt-2 leading-tight">
@@ -111,7 +111,7 @@ export function MailingPopup() {
                   type="text" 
                   name="name"
                   placeholder="Your Name" 
-                  className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss outline-none text-xs font-sans text-stone-800"
+                  className="w-full px-4 py-2.5 bg-white border border-brand-beige rounded-full focus:ring-2 focus:ring-brand-olive outline-none text-xs font-sans text-stone-800"
                   required
                 />
               </div>
@@ -121,7 +121,7 @@ export function MailingPopup() {
                   type="email" 
                   name="email"
                   placeholder="you@company.com" 
-                  className="w-full px-4 py-2.5 bg-white border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss outline-none text-xs font-sans text-stone-800"
+                  className="w-full px-4 py-2.5 bg-white border border-brand-beige rounded-full focus:ring-2 focus:ring-brand-olive outline-none text-xs font-sans text-stone-800"
                   required
                 />
               </div>

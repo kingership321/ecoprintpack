@@ -35,15 +35,26 @@ export const Header = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-6">
             <span className="flex items-center text-stone-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-gold mr-2 animate-pulse" />
-              Direct Manufacturer • Lalitpur, Nepal
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mr-2 animate-pulse" />
+              🇳🇵 Direct Manufacturer • Thashikhel, Lalitpur, Nepal
             </span>
             <span className="text-white/20">|</span>
-            <a href="tel:+9779869268248" className="hover:text-brand-gold transition-colors flex items-center">
-              <span>+977 9869268248 / 9851189191</span>
+            {/* WhatsApp primary contact */}
+            <a
+              href="https://wa.me/9779869268248"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-[#25D366] transition-colors flex items-center gap-1.5"
+              aria-label="WhatsApp"
+            >
+              <svg className="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                <path d="M12 0C5.373 0 0 5.373 0 12c0 2.139.564 4.143 1.547 5.878L.057 23.5l5.797-1.522A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.034-1.389l-.361-.214-3.44.903.918-3.352-.235-.375A9.818 9.818 0 0112 2.182c5.427 0 9.818 4.391 9.818 9.818S17.427 21.818 12 21.818z"/>
+              </svg>
+              <span>+977 9869268248</span>
             </a>
             <span className="text-white/20">|</span>
-            <a href="mailto:Ecopromotional2@gmail.com" className="hover:text-brand-gold transition-colors flex items-center">
+            <a href="mailto:Ecopromotional2@gmail.com" className="hover:text-brand-mint transition-colors flex items-center">
               <span>Ecopromotional2@gmail.com</span>
             </a>
           </div>
@@ -67,8 +78,8 @@ export const Header = () => {
       {/* Main Navigation Bar */}
       <div className={`transition-all duration-300 border-b ${
         scrolled
-          ? 'bg-white/90 backdrop-blur-md border-stone-200/80 shadow-xs py-2.5'
-          : 'bg-brand-linen/95 backdrop-blur-sm border-stone-200/60 py-3 md:py-4'
+          ? 'bg-white/95 backdrop-blur-md border-brand-beige/80 shadow-xs py-2.5'
+          : 'bg-brand-linen/95 backdrop-blur-sm border-brand-beige py-3 md:py-4'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between gap-6">
@@ -76,17 +87,24 @@ export const Header = () => {
             {/* Logo */}
             <Link
               href="/"
-              className="group outline-none rounded-lg flex items-center justify-center flex-shrink-0"
+              className="group outline-none rounded-lg flex items-center gap-3 flex-shrink-0"
             >
-              <div className="relative w-36 h-12 sm:w-44 sm:h-14 md:w-52 md:h-16 transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="relative w-36 h-12 sm:w-44 sm:h-14 md:w-48 md:h-16 transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
-                  src="/logo-header.png"
+                  src="/logo.svg"
                   alt="ECO PRINT & PACK Logo"
                   fill
                   sizes="(max-width: 768px) 176px, 208px"
                   className="object-contain object-left"
                   priority
+                  unoptimized
                 />
+              </div>
+              {/* Archival Est. stamp beside logo */}
+              <div className="hidden sm:flex flex-col items-start border-l border-brand-forest/15 pl-3">
+                <span className="text-[9px] font-sans font-black uppercase tracking-[0.2em] text-brand-olive">Est.</span>
+                <span className="text-[15px] font-serif font-bold leading-none text-brand-forest">2018</span>
+                <span className="text-[8px] font-sans uppercase tracking-widest text-stone-500">Lalitpur, Nepal</span>
               </div>
             </Link>
 
@@ -99,12 +117,12 @@ export const Header = () => {
                     key={link.name}
                     href={link.href}
                     className={`text-xs font-semibold uppercase tracking-widest transition-colors duration-200 relative py-1 ${
-                      active ? 'text-brand-forest font-bold' : 'text-stone-600 hover:text-brand-forest'
+                      active ? 'text-brand-forest font-bold' : 'text-stone-600 hover:text-brand-olive'
                     }`}
                   >
                     {link.name}
                     {active && (
-                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-brand-gold rounded-full" />
+                      <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-brand-olive rounded-full" />
                     )}
                   </Link>
                 );
@@ -118,7 +136,7 @@ export const Header = () => {
                 className="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-moss text-white text-xs font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full border border-brand-forest shadow-xs hover:shadow-md transition-all duration-300 group"
               >
                 <span>Request Quote</span>
-                <span className="text-brand-gold transform transition-transform group-hover:translate-x-1">→</span>
+                <span className="text-brand-mint transform transition-transform group-hover:translate-x-1">→</span>
               </Link>
             </div>
 
@@ -156,7 +174,7 @@ export const Header = () => {
 
             <div className="pt-3 space-y-2 text-stone-600 text-xs">
               <p className="flex items-center">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-gold mr-2" />
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-olive mr-2" />
                 Thashikhel, Lalitpur, Nepal
               </p>
               <p>+977 9869268248 / 9851189191</p>
@@ -169,7 +187,7 @@ export const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 <span>Request Quote</span>
-                <span className="text-brand-gold">→</span>
+                <span className="text-brand-mint font-bold">→</span>
               </Link>
             </div>
           </div>

@@ -9,22 +9,22 @@ export function DirectorsMessage() {
         
         {/* Section Header */}
         <div className="text-center mb-10 md:mb-12">
-          <div className="editorial-tag mb-3 bg-stone-150 text-stone-700">
+          <div className="editorial-tag mb-3">
             <span>The Founder's Letter</span>
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-normal text-brand-forest">
-            A Commitment to <span className="italic font-serif text-brand-gold">Craft & Care</span>
+            A Commitment to <span className="italic font-serif text-brand-olive">Craft & Care</span>
           </h2>
         </div>
 
         {/* Journal Profile Card */}
-        <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 border border-stone-200/90 shadow-[0_8px_30px_-6px_rgba(20,35,26,0.06)] relative overflow-hidden">
+        <div className="bg-white rounded-3xl p-6 sm:p-8 md:p-12 border border-brand-beige/90 shadow-[0_8px_30px_-6px_rgba(27,67,50,0.06)] relative overflow-hidden">
           
           <div className="grid md:grid-cols-12 gap-8 md:gap-12 items-start">
             
             {/* Founder Portrait Column (4 cols) */}
             <div className="md:col-span-4 flex flex-col items-center text-center">
-              <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-2xl overflow-hidden shadow-md border-2 border-brand-linen bg-stone-100 flex-shrink-0">
+              <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-2xl overflow-hidden shadow-md border-2 border-brand-beige bg-stone-100 flex-shrink-0">
                 <Image 
                   src="/asset/DipeshJI.jpg" 
                   alt="Dipesh Rai - Managing Director, Eco Promotional Industries" 
@@ -35,7 +35,7 @@ export function DirectorsMessage() {
               
               <div className="mt-4 space-y-1 text-center">
                 <h3 className="font-serif text-lg font-bold text-brand-forest">Dipesh Rai</h3>
-                <p className="text-xs font-sans font-semibold tracking-wider uppercase text-brand-moss">
+                <p className="text-xs font-sans font-semibold tracking-wider uppercase text-brand-olive">
                   Managing Director
                 </p>
                 <p className="text-[11px] font-sans text-stone-500">
@@ -44,7 +44,7 @@ export function DirectorsMessage() {
               </div>
 
               {/* Artisanal Heritage Seal */}
-              <div className="mt-5 px-3 py-1.5 rounded-full bg-stone-50 border border-stone-200 text-[10px] font-sans uppercase tracking-widest text-stone-600">
+              <div className="mt-5 px-3 py-1.5 rounded-full bg-brand-beige/50 border border-brand-beige text-[10px] font-sans uppercase tracking-widest text-brand-forest">
                 Kathmandu Valley Atelier
               </div>
             </div>
@@ -53,7 +53,7 @@ export function DirectorsMessage() {
             <div className="md:col-span-8 space-y-5 text-stone-700 font-sans text-sm sm:text-base leading-relaxed">
               
               {/* Pull Quote */}
-              <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-brand-forest italic leading-snug border-l-2 border-brand-gold pl-5 py-1">
+              <blockquote className="font-serif text-lg sm:text-xl md:text-2xl text-brand-forest italic leading-snug border-l-2 border-brand-olive pl-5 py-1">
                 &ldquo;Why bags? Because every day, thousands of kilograms of plastic are thrown away after ten minutes of use. We wanted to offer an alternative that comes with zero guilt.&rdquo;
               </blockquote>
 
@@ -72,7 +72,7 @@ export function DirectorsMessage() {
               </p>
 
               {/* Highlight callout in warm paper style */}
-              <div className="p-4 sm:p-5 rounded-2xl bg-brand-linen/80 border border-stone-200/80">
+              <div className="p-4 sm:p-5 rounded-2xl bg-brand-beige/30 border border-brand-beige">
                 <p className="font-serif text-base sm:text-lg text-brand-forest italic">
                   Practical sustainability. Dependable local craftsmanship. Genuine care for the future of our environment.
                 </p>
@@ -90,7 +90,7 @@ export function DirectorsMessage() {
                     Managing Director • Eco Promotional Industries Pvt Ltd
                   </div>
                 </div>
-                <span className="font-serif text-2xl text-brand-gold italic">~ D. Rai</span>
+                <span className="font-serif text-2xl text-brand-olive italic">~ D. Rai</span>
               </div>
 
             </div>

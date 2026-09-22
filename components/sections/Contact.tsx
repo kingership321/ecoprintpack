@@ -67,7 +67,7 @@ export function Contact() {
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-start">
           
           {/* Contact Form Column (7 cols) */}
-          <div className="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-10 border border-stone-200/90 shadow-xs">
+          <div className="lg:col-span-7 bg-white rounded-3xl p-7 sm:p-10 border border-brand-beige/90 shadow-xs">
             <div className="mb-6">
               <span className="editorial-tag mb-2">Direct Quotation Request</span>
               <h3 className="font-serif text-2xl sm:text-3xl font-bold text-brand-forest">
@@ -80,9 +80,9 @@ export function Contact() {
 
             {/* Success Message */}
             {submitStatus === 'success' && (
-              <div className="bg-brand-linen border border-brand-moss/30 rounded-2xl p-4 mb-6">
+              <div className="bg-brand-beige/40 border border-brand-olive/30 rounded-2xl p-4 mb-6">
                 <div className="flex items-center">
-                  <span className="text-brand-moss font-bold text-lg mr-3">✦</span>
+                  <span className="text-brand-olive font-bold text-lg mr-3">✦</span>
                   <div>
                     <h4 className="font-serif font-bold text-brand-forest text-sm">Thank You for Your Inquiry</h4>
                     <p className="text-stone-600 text-xs mt-0.5">Our production desk will reach out via phone or email shortly.</p>
@@ -216,7 +216,7 @@ export function Contact() {
                 ) : (
                   <>
                     <span>Submit Quotation Request</span>
-                    <span className="text-brand-gold font-bold">→</span>
+                    <span className="text-brand-mint font-bold">→</span>
                   </>
                 )}
               </button>
@@ -232,7 +232,7 @@ export function Contact() {
               
               <div className="relative z-10 space-y-6">
                 <div>
-                  <span className="text-[10px] uppercase font-sans tracking-widest text-brand-gold font-bold">
+                  <span className="text-[10px] uppercase font-sans tracking-widest text-brand-mint font-bold">
                     Kathmandu Valley Atelier
                   </span>
                   <h3 className="font-serif text-2xl font-bold text-white mt-1">
@@ -251,13 +251,21 @@ export function Contact() {
 
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-stone-400 font-semibold block">Direct Dispatch Lines</span>
-                    <a href="tel:+9779869268248" className="text-stone-200 hover:text-brand-gold block mt-0.5 text-sm">+977 9869268248</a>
-                    <a href="tel:+9779851189191" className="text-stone-200 hover:text-brand-gold block text-sm">+977 9851189191</a>
+                    <a href="tel:+9779869268248" className="text-stone-200 hover:text-brand-mint block mt-0.5 text-sm">+977 9869268248</a>
+                    <a href="tel:+9779851189191" className="text-stone-200 hover:text-brand-mint block text-sm">+977 9851189191</a>
+                    <a
+                      href="https://wa.me/9779869268248?text=Hello%20Eco%20Print%20%26%20Pack,%20I%20would%20like%20to%20inquire%20about%20your%20bags%20and%20packaging."
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 mt-2 px-3 py-1 rounded-full bg-brand-olive hover:bg-brand-moss text-white text-[11px] font-semibold tracking-wider transition-all"
+                    >
+                      <span>💬 Chat on WhatsApp (9869268248)</span>
+                    </a>
                   </div>
 
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-stone-400 font-semibold block">Email Correspondence</span>
-                    <a href="mailto:Ecopromotional2@gmail.com" className="text-stone-200 hover:text-brand-gold block mt-0.5 text-sm">
+                    <a href="mailto:Ecopromotional2@gmail.com" className="text-stone-200 hover:text-brand-mint block mt-0.5 text-sm">
                       Ecopromotional2@gmail.com
                     </a>
                   </div>
@@ -271,8 +279,8 @@ export function Contact() {
             </div>
 
             {/* Nationwide Dispatch Badge */}
-            <div className="bg-white rounded-3xl p-6 border border-stone-200/90 shadow-xs flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-2xl bg-brand-linen flex items-center justify-center text-brand-forest text-xl flex-shrink-0 border border-stone-200/70">
+            <div className="bg-white rounded-3xl p-6 border border-brand-beige/90 shadow-xs flex items-center space-x-4">
+              <div className="w-12 h-12 rounded-2xl bg-brand-beige flex items-center justify-center text-brand-forest text-xl flex-shrink-0 border border-brand-mint/30">
                 🇳🇵
               </div>
               <div>
