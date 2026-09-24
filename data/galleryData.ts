@@ -9,7 +9,7 @@ export interface GalleryItem {
   alt: string;
 }
 
-export const galleryCategories = ['All', 'Non-Woven', 'Canvas', 'Lokta Paper', 'Kraft & Paper'] as const;
+export const galleryCategories = ['All', 'Non-Woven', 'Canvas', 'Lokta Paper', 'Kraft & Paper', 'Factory & Showroom'] as const;
 
 export const galleryItems: GalleryItem[] = [
   {
@@ -552,5 +552,95 @@ export const galleryItems: GalleryItem[] = [
     badge: 'Loop Handle',
     image: '/asset/gallery-studio/gallery-65.jpg',
     alt: 'Handle Loop Bag Design #5 - Eco Print & Pack Nepal'
+  },
+  {
+    id: 70,
+    title: 'Office Showroom & Sample Display Wall',
+    category: 'Factory & Showroom',
+    subCategory: 'Office Setup',
+    badge: 'Showroom Setup',
+    image: '/asset/atelier/office-showroom-display-wall.jpg',
+    alt: 'Office Showroom & Sample Display Wall - Eco Promotional Industries Lalitpur'
+  },
+  {
+    id: 71,
+    title: 'Client Sample Archive & Bag Showcase',
+    category: 'Factory & Showroom',
+    subCategory: 'Office Setup',
+    badge: 'Showroom Setup',
+    image: '/asset/atelier/office-showroom-sample-collection.jpg',
+    alt: 'Client Sample Archive & Bag Showcase - Eco Promotional Industries Lalitpur'
+  },
+  {
+    id: 72,
+    title: 'Artisan Screen Printing Studio in Action',
+    category: 'Factory & Showroom',
+    subCategory: 'Screen Printing',
+    badge: 'Hand Screen Print',
+    image: '/asset/atelier/screen-printing-craftsman.jpg',
+    alt: 'Artisan Screen Printing Studio in Action - Eco Print & Pack Nepal'
+  },
+  {
+    id: 73,
+    title: 'Automated Bag Production & Batching Machine',
+    category: 'Factory & Showroom',
+    subCategory: 'Production Floor',
+    badge: 'Automated Line',
+    image: '/asset/atelier/automated-bag-production.jpg',
+    alt: 'Automated Bag Production Machine with Red & Green Stacks - Eco Print & Pack Nepal'
+  },
+  {
+    id: 74,
+    title: 'Artisan Tailor & Industrial Sewing Station',
+    category: 'Factory & Showroom',
+    subCategory: 'Stitching & Tailoring',
+    badge: 'Precision Sewing',
+    image: '/asset/atelier/artisan-sewing-bags.jpg',
+    alt: 'Artisan Tailor Sewing Non-Woven Bags - Eco Print & Pack Nepal'
+  },
+  {
+    id: 75,
+    title: 'Factory Entrance & Official Company Signboard',
+    category: 'Factory & Showroom',
+    subCategory: 'Facility Exterior',
+    badge: 'Lalitpur Facility',
+    image: '/asset/atelier/factory-signboard-exterior.jpg',
+    alt: 'Eco Promotional Industries Factory Entrance & Signboard - Lalitpur Metropolitan City Ward 13'
+  },
+  {
+    id: 76,
+    title: 'Factory Facility Gate & Industrial Building',
+    category: 'Factory & Showroom',
+    subCategory: 'Facility Exterior',
+    badge: 'Lalitpur Facility',
+    image: '/asset/atelier/factory-entrance-gate.jpg',
+    alt: 'Factory Entrance Gate - Eco Promotional Industries Lalitpur Ward 13'
+  },
+  {
+    id: 77,
+    title: 'Custom Boutique Shopping Bags for Kshitiza',
+    category: 'Factory & Showroom',
+    subCategory: 'Client Production',
+    badge: 'Client Specimen',
+    image: '/asset/atelier/custom-printed-bags-kshitiza.jpg',
+    alt: 'Custom Printed Non-Woven Boutique Bags for Kshitiza - Eco Print & Pack'
+  },
+  {
+    id: 78,
+    title: 'Bag Cutting & Material Preparation Station',
+    category: 'Factory & Showroom',
+    subCategory: 'Production Floor',
+    badge: 'Material Cutting',
+    image: '/asset/atelier/factory-cutting-station.jpg',
+    alt: 'Bag Cutting & Material Station - Eco Promotional Industries Lalitpur'
+  },
+  {
+    id: 79,
+    title: 'Industrial Bag Stitching & Finishing Line',
+    category: 'Factory & Showroom',
+    subCategory: 'Stitching & Tailoring',
+    badge: 'Industrial Stitching',
+    image: '/asset/atelier/factory-bag-stitching-line.jpg',
+    alt: 'Industrial Bag Stitching Line - Eco Promotional Industries Lalitpur'
   },
 ];

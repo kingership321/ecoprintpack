@@ -1,5 +1,6 @@
 // pages/about.js
 import { WhoWeAre } from '@/components/sections/WhoWeAre';
+import { OurOutlets } from '@/components/sections/OurOutlets';
 import { WhyChooseUs } from '@/components/sections/WhyChooseUs';
 import { MissionVision } from '@/components/sections/MissionVision';
 import { Layout } from '@/components/Layout';
@@ -26,6 +27,7 @@ export default function AboutPage() {
 
       <div>
         <WhoWeAre />
+        <OurOutlets />
         <WhyChooseUs />
         <MissionVision />
       </div>

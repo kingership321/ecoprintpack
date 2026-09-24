@@ -3,6 +3,7 @@ import {Hero} from '@/components/sections/Hero';
 import {DirectorsMessage} from '@/components/sections/DirectorsMessage';
 import GallerySection from '@/components/sections/Gallery';
 import {WhoWeAre} from '@/components/sections/WhoWeAre';
+import {OurOutlets} from '@/components/sections/OurOutlets';
 import {WhyChooseUs} from '@/components/sections/WhyChooseUs';
 import {MissionVision} from '@/components/sections/MissionVision';
 import { Layout } from '@/components/Layout';
@@ -14,6 +15,7 @@ export default function HomePage() {
       <DirectorsMessage />
       <GallerySection isHomePage />
       <WhoWeAre />
+      <OurOutlets />
       <WhyChooseUs />
       <MissionVision />
     </Layout>

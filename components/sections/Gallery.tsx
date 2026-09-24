@@ -15,9 +15,16 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
   const [modalIndex, setModalIndex] = useState<number>(0);
   const [activeNonWovenSub, setActiveNonWovenSub] = useState<string>('All');
   const [activePaperSub, setActivePaperSub] = useState<string>('All');
+  const [activeFactorySub, setActiveFactorySub] = useState<string>('All');
   const [failedImages, setFailedImages] = useState<Record<number, boolean>>({});
 
   // Group items by category
+  const factoryItems = useMemo(() => {
+    const all = galleryItems.filter(i => i.category === 'Factory & Showroom');
+    if (activeFactorySub === 'All') return all;
+    return all.filter(i => i.subCategory === activeFactorySub);
+  }, [activeFactorySub]);
+
   const canvasItems = useMemo(
     () => galleryItems.filter(i => i.category === 'Canvas'),
     []
@@ -81,10 +88,10 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
   // If used on HomePage as an editorial preview
   if (isHomePage) {
     const previewItems = [
+      ...factoryItems.slice(0, 2),
       ...canvasItems.slice(0, 2),
       ...loktaItems.slice(0, 2),
       ...nonWovenItems.slice(0, 2),
-      ...paperItems.slice(0, 2),
     ];
 
     return (
@@ -166,6 +173,13 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
             Collections:
           </span>
           <div className="flex items-center gap-2">
+            <a
+              href="#factory-section"
+              className="px-4 py-1.5 rounded-full text-xs font-semibold text-brand-forest bg-brand-beige hover:bg-stone-200 transition-all border border-brand-olive/30 whitespace-nowrap flex items-center gap-1.5"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-olive animate-pulse"></span>
+              Factory &amp; Showroom ({galleryItems.filter(i => i.category === 'Factory & Showroom').length})
+            </a>
             <a
               href="#non-woven-section"
               className="px-4 py-1.5 rounded-full text-xs font-semibold text-stone-700 hover:text-brand-forest hover:bg-stone-100 transition-all border border-stone-200 whitespace-nowrap"
@@ -341,6 +355,55 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
                 key={item.id}
                 item={item}
                 onClick={() => openModal(item, paperItems)}
+                failedImages={failedImages}
+                setFailedImages={setFailedImages}
+              />
+            ))}
+          </div>
+        </section>
+
+        {/* SECTION 5: FACTORY & OFFICE SHOWROOM SETUP */}
+        <section id="factory-section" className="scroll-mt-28">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 pb-4 border-b border-stone-200 gap-4">
+            <div>
+              <div className="editorial-tag mb-2">
+                <span>Authentic Workplace • Lalitpur Metropolitan City Ward 13</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-serif font-bold text-brand-forest">
+                Factory Tour &amp; Office Showroom Setup
+              </h2>
+              <p className="text-xs md:text-sm text-stone-600 mt-1 max-w-2xl font-sans">
+                Real photographs from our active Lalitpur facility: client sample showroom display wall, hand screen printing studio, automated bag production lines, and industrial tailoring stations.
+              </p>
+            </div>
+
+            {/* Sub-category Filter Tabs */}
+            <div className="flex items-center gap-1.5 overflow-x-auto pb-1 scrollbar-none">
+              {['All', 'Office Setup', 'Screen Printing', 'Production Floor', 'Stitching & Tailoring', 'Facility Exterior'].map(sub => {
+                const label = sub === 'All' ? 'All Views' : sub;
+                return (
+                  <button
+                    key={sub}
+                    onClick={() => setActiveFactorySub(sub)}
+                    className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-all ${
+                      activeFactorySub === sub
+                        ? 'bg-brand-forest text-white shadow-xs'
+                        : 'bg-white text-stone-600 hover:bg-stone-100 border border-stone-200'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 md:gap-5">
+            {factoryItems.map(item => (
+              <PhotoCard
+                key={item.id}
+                item={item}
+                onClick={() => openModal(item, factoryItems)}
                 failedImages={failedImages}
                 setFailedImages={setFailedImages}
               />
