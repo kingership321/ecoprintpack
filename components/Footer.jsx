@@ -111,11 +111,11 @@ export const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-3.5 mb-4 pb-4 border-b border-white/5">
             <span className="text-[9px] font-sans font-black uppercase tracking-[0.2em] text-stone-400">Accepted Payments &amp; Settlement:</span>
             <div className="flex flex-wrap items-center justify-center gap-2.5">
-              <div className="h-7 w-24 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="eSewa Digital Wallet">
-                <Image src="/asset/payments/esewa.svg" alt="eSewa" fill className="object-contain" unoptimized />
+              <div className="h-7 w-24 bg-white px-2 py-0.5 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200 flex items-center justify-center" title="eSewa Digital Wallet">
+                <Image src="/asset/payments/esewa.png" alt="eSewa" width={80} height={22} className="object-contain max-h-5 w-auto" unoptimized />
               </div>
-              <div className="h-7 w-24 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="Khalti Digital Wallet">
-                <Image src="/asset/payments/khalti.svg" alt="Khalti" fill className="object-contain" unoptimized />
+              <div className="h-7 w-24 bg-white px-2 py-0.5 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200 flex items-center justify-center" title="Khalti Digital Wallet">
+                <Image src="/asset/payments/khalti.png" alt="Khalti" width={80} height={22} className="object-contain max-h-5 w-auto" unoptimized />
               </div>
               <div className="h-7 w-28 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="Direct Bank Transfer / ConnectIPS">
                 <Image src="/asset/payments/bank-transfer.svg" alt="Bank Transfer" fill className="object-contain" unoptimized />
