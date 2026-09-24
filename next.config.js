@@ -24,6 +24,25 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     formats: ['image/webp'],
   },
+  async redirects() {
+    return [
+      {
+        source: '/tiktok',
+        destination: 'https://www.tiktok.com/@ecobags81?_r=1&_t=ZS-9A0JdEMZ8XX',
+        permanent: false,
+      },
+      {
+        source: '/facebook',
+        destination: 'https://www.facebook.com/61581404986839/',
+        permanent: false,
+      },
+      {
+        source: '/instagram',
+        destination: 'https://www.instagram.com/ecobagssupplier?stkn=YzhpaHlxdGRqZTAw&utm_source=qr',
+        permanent: false,
+      },
+    ];
+  },
 }
 
 module.exports = nextConfig
