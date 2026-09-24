@@ -40,15 +40,6 @@ export const galleryItems: GalleryItem[] = [
     alt: 'Canvas Tote Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
-    id: 4,
-    title: 'Canvas Tote Bag Design #4',
-    category: 'Canvas',
-    subCategory: 'Canvas Tote Bag',
-    badge: 'Canvas',
-    image: '/asset/gallery-studio/gallery-4.jpg',
-    alt: 'Canvas Tote Bag Design #4 - Eco Print & Pack Nepal'
-  },
-  {
     id: 5,
     title: 'Canvas Tote Bag Design #5',
     category: 'Canvas',
@@ -207,7 +198,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Kraft & Paper',
     subCategory: 'Brown Kraft Paper Bag',
     badge: 'Kraft Paper',
-    image: '/asset/gallery-studio/gallery-22.jpg',
+    image: '/asset/products-studio/kraft-bag.jpg',
     alt: 'Brown Kraft Paper Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
