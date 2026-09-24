@@ -559,7 +559,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Factory & Showroom',
     subCategory: 'Office Setup',
     badge: 'Showroom Setup',
-    image: '/asset/atelier/office-showroom-display-wall.jpg',
+    image: '/asset/atelier/office-showroom-display-wall-v2.jpg',
     alt: 'Office Showroom & Sample Display Wall - Eco Promotional Industries Lalitpur'
   },
   {
@@ -568,7 +568,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Factory & Showroom',
     subCategory: 'Office Setup',
     badge: 'Showroom Setup',
-    image: '/asset/atelier/office-showroom-sample-collection.jpg',
+    image: '/asset/atelier/office-showroom-sample-collection-v2.jpg',
     alt: 'Client Sample Archive & Bag Showcase - Eco Promotional Industries Lalitpur'
   },
   {
@@ -579,15 +579,6 @@ export const galleryItems: GalleryItem[] = [
     badge: 'Hand Screen Print',
     image: '/asset/atelier/screen-printing-craftsman.jpg',
     alt: 'Artisan Screen Printing Studio in Action - Eco Print & Pack Nepal'
-  },
-  {
-    id: 73,
-    title: 'Automated Bag Production & Batching Machine',
-    category: 'Factory & Showroom',
-    subCategory: 'Production Floor',
-    badge: 'Automated Line',
-    image: '/asset/atelier/automated-bag-production.jpg',
-    alt: 'Automated Bag Production Machine with Red & Green Stacks - Eco Print & Pack Nepal'
   },
   {
     id: 74,
@@ -631,7 +622,7 @@ export const galleryItems: GalleryItem[] = [
     category: 'Factory & Showroom',
     subCategory: 'Production Floor',
     badge: 'Material Cutting',
-    image: '/asset/atelier/factory-cutting-station.jpg',
+    image: '/asset/atelier/factory-cutting-station-v2.jpg',
     alt: 'Bag Cutting & Material Station - Eco Promotional Industries Lalitpur'
   },
   {
