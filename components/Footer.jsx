@@ -17,14 +17,14 @@ export const Footer = () => {
           {/* 1. Brand Info & Atelier Mission (4 cols) */}
           <div className="lg:col-span-4 text-center md:text-left space-y-4">
             <div className="flex items-center justify-center md:justify-start">
-              <Link href="/" className="group inline-block" aria-label="Eco Print & Pack Home">
-                <div className="relative w-48 h-12 sm:w-56 sm:h-14 transition-transform duration-300 group-hover:scale-[1.02]">
+              <Link href="/" className="group inline-block">
+                <div className="relative w-44 h-16 bg-white/95 rounded-2xl p-2.5 shadow-xs border border-white/20 transition-all duration-300 overflow-hidden">
                   <Image
-                    src="/logo-dark.svg"
+                    src="/logo.svg"
                     alt="ECO PRINT & PACK Logo"
                     fill
-                    sizes="224px"
-                    className="object-contain object-center md:object-left"
+                    sizes="176px"
+                    className="object-contain"
                     unoptimized
                   />
                 </div>
