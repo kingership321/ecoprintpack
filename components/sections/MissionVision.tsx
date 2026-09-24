@@ -128,23 +128,42 @@ export function MissionVision() {
                   year: '~1,000 AD',
                   title: 'Ancient Himalayan Origins',
                   desc: 'Lokta paper is hand-crafted from the bark of the Daphne plant — a shrub native to Nepal\'s highland forests between 5,000–13,000 ft elevation. The craft has been practiced in Nepal for over a millennium.',
-                  icon: '🏔️',
+                  renderIcon: () => (
+                    <svg className="w-5 h-5 text-brand-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M8 3l4 8 5-5 5 14H2L8 3z" />
+                      <path d="M4.5 15l3.5-3.5 4 4" stroke="#C8933A" strokeWidth="1.6" />
+                      <circle cx="17.5" cy="5.5" r="1.5" fill="#C8933A" stroke="none" />
+                    </svg>
+                  ),
                 },
                 {
                   year: 'Traditional Process',
                   title: 'Tree-Free, Hand-Made',
                   desc: 'The fibrous Daphne bark is boiled, beaten, and sun-dried on flat wooden frames. No trees are felled — the bark regenerates within 5–7 years. Every sheet is unique.',
-                  icon: '🌿',
+                  renderIcon: () => (
+                    <svg className="w-5 h-5 text-brand-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2a10 10 0 0 1 10 10c0 5.5-4.5 10-10 10S2 17.5 2 12c0-3.5 1.8-6.6 4.5-8.4" />
+                      <path d="M7 17l5-5c2-2 5-2 7 0" stroke="#2D6A4F" strokeWidth="1.8" />
+                      <path d="M12 12c0-3 2-6 5-7" stroke="#C8933A" strokeWidth="1.5" />
+                    </svg>
+                  ),
                 },
                 {
                   year: 'Eco Print & Pack Today',
                   title: 'Preserving the Craft',
                   desc: 'We source Lokta paper directly from Bhaktapur and Baglung artisans, employing traditional families who have practiced this craft for generations — keeping the heritage alive in every bag.',
-                  icon: '🤝',
+                  renderIcon: () => (
+                    <svg className="w-5 h-5 text-brand-forest" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke="#C8933A" strokeWidth="1.6" />
+                      <path d="M9 12l2 2 4-4" stroke="#1B4332" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  ),
                 },
               ].map((item) => (
                 <div key={item.year} className="px-0 py-4 sm:px-6 sm:py-0 first:pl-0 last:pr-0">
-                  <div className="text-2xl mb-2">{item.icon}</div>
+                  <div className="w-10 h-10 rounded-xl bg-white border border-brand-mint/40 shadow-xs flex items-center justify-center mb-3">
+                    {item.renderIcon()}
+                  </div>
                   <div className="text-[9px] font-sans font-black uppercase tracking-[0.18em] text-brand-olive mb-1">{item.year}</div>
                   <div className="font-serif font-bold text-brand-forest text-sm mb-1.5">{item.title}</div>
                   <p className="text-[11px] sm:text-xs font-sans text-stone-600 leading-relaxed">{item.desc}</p>

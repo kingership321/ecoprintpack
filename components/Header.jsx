@@ -89,12 +89,12 @@ export const Header = () => {
               href="/"
               className="group outline-none rounded-lg flex items-center gap-3 flex-shrink-0"
             >
-              <div className="relative w-36 h-12 sm:w-44 sm:h-14 md:w-48 md:h-16 transition-transform duration-300 group-hover:scale-[1.02]">
+              <div className="relative w-44 h-11 sm:w-52 sm:h-13 md:w-56 md:h-14 transition-transform duration-300 group-hover:scale-[1.02]">
                 <Image
                   src="/logo.svg"
                   alt="ECO PRINT & PACK Logo"
                   fill
-                  sizes="(max-width: 768px) 176px, 208px"
+                  sizes="(max-width: 768px) 190px, 224px"
                   className="object-contain object-left"
                   priority
                   unoptimized
