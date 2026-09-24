@@ -489,24 +489,7 @@ export const galleryItems: GalleryItem[] = [
     image: '/asset/gallery-studio/gallery-56.jpg',
     alt: 'W-Cut Bag Non-Woven Design #4 - Eco Print & Pack Nepal'
   },
-  {
-    id: 57,
-    title: 'W-Cut Bag Non-Woven Design #5',
-    category: 'Non-Woven',
-    subCategory: 'W-Cut Bag Non-Woven',
-    badge: 'W-Cut',
-    image: '/asset/gallery-studio/gallery-57.jpg',
-    alt: 'W-Cut Bag Non-Woven Design #5 - Eco Print & Pack Nepal'
-  },
-  {
-    id: 58,
-    title: 'W-Cut Bag Non-Woven Design #6',
-    category: 'Non-Woven',
-    subCategory: 'W-Cut Bag Non-Woven',
-    badge: 'W-Cut',
-    image: '/asset/gallery-studio/gallery-58.jpg',
-    alt: 'W-Cut Bag Non-Woven Design #6 - Eco Print & Pack Nepal'
-  },
+
   {
     id: 59,
     title: 'W-Cut Bag Non-Woven Design #7',
