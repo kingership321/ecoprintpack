@@ -1,6 +1,5 @@
 // components/sections/WhoWeAre.tsx
 'use client';
-import Image from 'next/image';
 
 export function WhoWeAre() {
   return (
@@ -81,57 +80,8 @@ export function WhoWeAre() {
           </div>
         </div>
 
-        {/* Authentic Factory & Showroom Snapshot Grid (Tile of 4 pictures a row on bigger screens) */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5">
-          {[
-            {
-              src: '/asset/atelier/office-showroom-wall.jpg',
-              title: 'Lalitpur Showroom Wall',
-              badge: 'Office Setup',
-            },
-            {
-              src: '/asset/atelier/screen-printing-studio.jpg',
-              title: 'Screen Printing Studio',
-              badge: 'Master Craft',
-            },
-            {
-              src: '/asset/atelier/artisan-sewing-bags.jpg',
-              title: 'Stitching & Tailoring',
-              badge: 'Precision Seams',
-            },
-            {
-              src: '/asset/atelier/factory-signboard-exterior.jpg',
-              title: 'Eco Promotional Industries',
-              badge: 'Lalitpur Facility',
-            },
-          ].map((item, idx) => (
-            <div 
-              key={idx} 
-              className="group relative rounded-2xl overflow-hidden aspect-[16/10] bg-stone-900 border border-brand-beige/90 shadow-xs hover:shadow-md transition-all duration-300"
-            >
-              <Image
-                src={item.src}
-                alt={item.title}
-                fill
-                unoptimized
-                sizes="(max-width: 768px) 50vw, 25vw"
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-forest/90 via-brand-forest/20 to-transparent opacity-85 group-hover:opacity-70 transition-opacity" />
-              <div className="absolute bottom-2.5 left-3 right-3 text-white">
-                <span className="text-[9px] font-sans font-bold uppercase tracking-widest text-brand-mint block mb-0.5">
-                  {item.badge}
-                </span>
-                <span className="text-xs sm:text-sm font-serif font-bold truncate block">
-                  {item.title}
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Stats Row */}
-        <div className="grid grid-cols-3 gap-4 mt-6 sm:mt-8">
+        <div className="grid grid-cols-3 gap-4 mt-8">
           <div className="bg-white p-4 sm:p-6 rounded-2xl border border-brand-beige/90 shadow-xs text-center">
             <div className="font-serif text-3xl sm:text-4xl text-brand-forest font-bold">1,000+</div>
             <div className="text-[11px] font-sans text-stone-500 uppercase tracking-wider font-semibold mt-1">Happy Clients</div>

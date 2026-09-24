@@ -2,7 +2,6 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
 
 interface FacilityPhoto {
   id: string;
@@ -159,47 +158,6 @@ export function OurOutlets() {
           <div className="bg-[#FAF8F5] p-5 rounded-2xl border border-brand-beige text-center">
             <div className="font-serif text-2xl sm:text-3xl font-bold text-brand-forest">Ward No. 13</div>
             <div className="text-[11px] font-sans font-semibold uppercase tracking-wider text-stone-500 mt-1">Lalitpur Metropolitan City</div>
-          </div>
-        </div>
-
-        {/* Showroom Visit & Inquiries Invitation Banner */}
-        <div className="mt-10 bg-brand-forest text-white rounded-3xl p-6 sm:p-8 lg:p-10 relative overflow-hidden shadow-xl border border-brand-moss">
-          <div className="absolute inset-0 opacity-[0.08] graffiti-texture pointer-events-none" />
-          <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="space-y-2 text-center lg:text-left max-w-2xl">
-              <span className="text-[10px] font-sans font-black uppercase tracking-[0.2em] text-brand-mint">
-                Planning Custom Branded Packaging?
-              </span>
-              <h3 className="font-serif text-xl sm:text-2xl lg:text-3xl font-normal text-white">
-                Visit our Lalitpur Showroom to inspect sample bags in person.
-              </h3>
-              <p className="text-stone-300 text-xs sm:text-sm font-sans leading-relaxed">
-                Touch our fabric GSM grades, examine screen print opacity, test handle durability, and consult directly with our packaging specialists.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row items-center gap-3 w-full lg:w-auto">
-              <a
-                href="https://wa.me/9779869268248?text=Hello%20Eco%20Print%20%26%20Pack!%20I%20would%20like%20to%20visit%20your%20Lalitpur%20showroom%20and%20discuss%20custom%20bags."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white text-xs font-semibold uppercase tracking-wider transition-all duration-300 shadow-md hover:shadow-lg"
-              >
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                  <path d="M12 0C5.373 0 0 5.373 0 12c0 2.139.564 4.143 1.547 5.878L.057 23.5l5.797-1.522A11.944 11.944 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.034-1.389l-.361-.214-3.44.903.918-3.352-.235-.375A9.818 9.818 0 0112 2.182c5.427 0 9.818 4.391 9.818 9.818S17.427 21.818 12 21.818z"/>
-                </svg>
-                <span>WhatsApp: +977 9869268248</span>
-              </a>
-
-              <Link
-                href="/gallery#factory-section"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white text-xs font-semibold uppercase tracking-wider border border-white/20 transition-all duration-300"
-              >
-                <span>View All 10 Factory Photos</span>
-                <span className="text-brand-mint">→</span>
-              </Link>
-            </div>
           </div>
         </div>
 
