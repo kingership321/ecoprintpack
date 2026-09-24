@@ -20,7 +20,7 @@ const facilityPhotos: FacilityPhoto[] = [
     title: 'Office Showroom & Sample Display Wall',
     tag: 'Office Setup & Showroom',
     badge: 'Lalitpur Showroom',
-    image: '/asset/atelier/office-showroom-display-wall.jpg',
+    image: '/asset/atelier/office-showroom-wall.jpg',
     alt: 'Office Showroom & Sample Display Wall - Eco Promotional Industries Lalitpur',
     description: 'Our client sample showroom in Lalitpur featuring hundreds of custom manufactured non-woven and boutique bag samples on display. Clients can inspect GSM weight, texture, stitch durability, and vibrant print finishes before placing bulk orders.'
   },
@@ -29,18 +29,18 @@ const facilityPhotos: FacilityPhoto[] = [
     title: 'Precision Screen Printing Workshop',
     tag: 'Artisan Workshop',
     badge: 'Screen Printing Studio',
-    image: '/asset/atelier/screen-printing-craftsman.jpg',
+    image: '/asset/atelier/screen-printing-studio.jpg',
     alt: 'Screen Printing Craftsman in Workshop - Eco Print & Pack Nepal',
     description: 'Master craftsman in our printing workshop meticulously hand-pulling crisp, multi-color water-based ink impressions onto custom bags, ensuring sharp brand logos and long-lasting durability.'
   },
   {
-    id: 'automated-line',
-    title: 'Automated Bag Machine & Production Floor',
-    tag: 'High-Volume Capacity',
-    badge: 'Automated Machinery',
-    image: '/asset/atelier/automated-bag-production.jpg',
-    alt: 'Automated Bag Production Machine with Red & Green Stacks - Eco Print & Pack Nepal',
-    description: 'Continuous roll-to-bag production machinery and high-speed precision stitching stations producing stacks of vibrant, eco-friendly non-woven shopping bags with a capacity of 50,000+ units monthly.'
+    id: 'stitching-line',
+    title: 'Artisan Stitching & Precision Sewing Station',
+    tag: 'Precision Tailoring',
+    badge: 'Industrial Stitching',
+    image: '/asset/atelier/artisan-sewing-bags.jpg',
+    alt: 'Artisan at Sewing Machine with Thread Spools - Eco Print & Pack Nepal',
+    description: 'Skilled tailors operating industrial sewing machines with heavy-duty thread spools, crafting reinforced cross-stitched handles and durable seam finishes for high-load retail and promotional totes.'
   },
   {
     id: 'factory-entrance',
@@ -74,12 +74,12 @@ export function OurOutlets() {
           </h2>
           <p className="mt-3 text-stone-600 text-sm sm:text-base font-sans leading-relaxed">
             Real snapshots from our active workspace at Thashikhel Chowk, Lalitpur Metropolitan City Ward No. 13. 
-            From our client sample showroom display wall to master screen-printing and high-capacity bag-making machines.
+            From our client sample showroom display wall to master screen-printing and industrial tailoring stations.
           </p>
         </div>
 
-        {/* 4 Spotlight Real Factory Photos Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        {/* 4 Spotlight Real Factory Photos Grid (Tile of 4 pictures a row on bigger screens) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6">
           {facilityPhotos.map((photo) => (
             <div
               key={photo.id}

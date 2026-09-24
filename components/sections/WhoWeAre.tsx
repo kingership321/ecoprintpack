@@ -81,16 +81,16 @@ export function WhoWeAre() {
           </div>
         </div>
 
-        {/* Real Factory & Showroom Snapshot Grid */}
-        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4">
+        {/* Authentic Factory & Showroom Snapshot Grid (Tile of 4 pictures a row on bigger screens) */}
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-3.5 sm:gap-4 lg:gap-5">
           {[
             {
-              src: '/asset/atelier/office-showroom-display-wall.jpg',
+              src: '/asset/atelier/office-showroom-wall.jpg',
               title: 'Lalitpur Showroom Wall',
               badge: 'Office Setup',
             },
             {
-              src: '/asset/atelier/screen-printing-craftsman.jpg',
+              src: '/asset/atelier/screen-printing-studio.jpg',
               title: 'Screen Printing Studio',
               badge: 'Master Craft',
             },
@@ -105,7 +105,10 @@ export function WhoWeAre() {
               badge: 'Lalitpur Facility',
             },
           ].map((item, idx) => (
-            <div key={idx} className="group relative rounded-2xl overflow-hidden aspect-[4/3] bg-stone-200 border border-brand-beige/90 shadow-xs hover:shadow-md transition-all duration-300">
+            <div 
+              key={idx} 
+              className="group relative rounded-2xl overflow-hidden aspect-[16/10] bg-stone-900 border border-brand-beige/90 shadow-xs hover:shadow-md transition-all duration-300"
+            >
               <Image
                 src={item.src}
                 alt={item.title}
@@ -114,12 +117,12 @@ export function WhoWeAre() {
                 sizes="(max-width: 768px) 50vw, 25vw"
                 className="object-cover group-hover:scale-105 transition-transform duration-500"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-brand-forest/85 via-brand-forest/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-forest/90 via-brand-forest/20 to-transparent opacity-85 group-hover:opacity-70 transition-opacity" />
               <div className="absolute bottom-2.5 left-3 right-3 text-white">
-                <span className="text-[9px] font-sans font-bold uppercase tracking-widest text-brand-mint block">
+                <span className="text-[9px] font-sans font-bold uppercase tracking-widest text-brand-mint block mb-0.5">
                   {item.badge}
                 </span>
-                <span className="text-xs font-serif font-bold truncate block">
+                <span className="text-xs sm:text-sm font-serif font-bold truncate block">
                   {item.title}
                 </span>
               </div>

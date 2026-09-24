@@ -88,10 +88,10 @@ export default function GallerySection({ isHomePage = false }: GalleryProps) {
   // If used on HomePage as an editorial preview
   if (isHomePage) {
     const previewItems = [
-      ...factoryItems.slice(0, 2),
       ...canvasItems.slice(0, 2),
       ...loktaItems.slice(0, 2),
       ...nonWovenItems.slice(0, 2),
+      ...paperItems.slice(0, 2),
     ];
 
     return (
