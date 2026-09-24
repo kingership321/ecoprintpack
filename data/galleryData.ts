@@ -99,8 +99,8 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-9.jpg',
-    alt: 'Lokta Paper Bag Design #3 - Eco Print & Pack Nepal'
+    image: '/asset/products-studio/lokta-wine.jpg',
+    alt: 'Botanical Petal Lokta Paper Bag Design #3 - Eco Print & Pack Nepal'
   },
   {
     id: 12,
@@ -108,35 +108,35 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-12.jpg',
-    alt: 'Lokta Paper Bag Design #4 - Eco Print & Pack Nepal'
+    image: '/asset/products-studio/lokta-shopper.jpg',
+    alt: 'Artisanal Textured Indigo Lokta Paper Bag Design #4 - Eco Print & Pack Nepal'
   },
   {
     id: 13,
-    title: 'Lokta Paper Bag Design #5',
+    title: 'Lokta Paper Packaging Design #5',
     category: 'Lokta Paper',
-    subCategory: 'Lokta Paper Bag',
+    subCategory: 'Lokta Paper Packaging',
     badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-10.jpg',
-    alt: 'Lokta Paper Bag Design #5 - Eco Print & Pack Nepal'
+    image: '/asset/products-studio/lokta-envelope.jpg',
+    alt: 'Handmade Lokta Button Document Pouch & Envelope - Eco Print & Pack Nepal'
   },
   {
     id: 14,
-    title: 'Lokta Paper Bag Design #6',
+    title: 'Lokta Gift Box Design #6',
     category: 'Lokta Paper',
-    subCategory: 'Lokta Paper Bag',
+    subCategory: 'Lokta Paper Box',
     badge: 'Lokta',
     image: '/asset/gallery-studio/gallery-14.jpg',
-    alt: 'Lokta Paper Bag Design #6 - Eco Print & Pack Nepal'
+    alt: 'Cobalt Blue Lokta Box Design #6 - Eco Print & Pack Nepal'
   },
   {
     id: 15,
-    title: 'Lokta Paper Bag Design #7',
+    title: 'Lokta Rigid Luxury Box Design #7',
     category: 'Lokta Paper',
-    subCategory: 'Lokta Paper Bag',
+    subCategory: 'Lokta Paper Box',
     badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-15.jpg',
-    alt: 'Lokta Paper Bag Design #7 - Eco Print & Pack Nepal'
+    image: '/asset/products-studio/lokta-box.jpg',
+    alt: 'Handcrafted Rigid Lokta Luxury Box Design #7 - Eco Print & Pack Nepal'
   },
   {
     id: 16,
@@ -144,26 +144,8 @@ export const galleryItems: GalleryItem[] = [
     category: 'Lokta Paper',
     subCategory: 'Lokta Paper Bag',
     badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-16.jpg',
-    alt: 'Lokta Paper Bag Design #8 - Eco Print & Pack Nepal'
-  },
-  {
-    id: 17,
-    title: 'Lokta Paper Bag Design #9',
-    category: 'Lokta Paper',
-    subCategory: 'Lokta Paper Bag',
-    badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-17.jpg',
-    alt: 'Lokta Paper Bag Design #9 - Eco Print & Pack Nepal'
-  },
-  {
-    id: 18,
-    title: 'Lokta Paper Bag Design #10',
-    category: 'Lokta Paper',
-    subCategory: 'Lokta Paper Bag',
-    badge: 'Lokta',
-    image: '/asset/gallery-studio/gallery-18.jpg',
-    alt: 'Lokta Paper Bag Design #10 - Eco Print & Pack Nepal'
+    image: '/asset/products-studio/lokta-terracotta.jpg',
+    alt: 'Terracotta Artisanal Lokta Paper Bag Design #8 - Eco Print & Pack Nepal'
   },
   {
     id: 19,
