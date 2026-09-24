@@ -1,6 +1,5 @@
 // components/sections/WhoWeAre.tsx
 'use client';
-import Image from 'next/image';
 
 export function WhoWeAre() {
   return (
@@ -18,93 +17,63 @@ export function WhoWeAre() {
           </h2>
         </div>
 
-        {/* Full-Width Row: Factory Picture + Manifesto Card */}
-        <div className="grid lg:grid-cols-2 gap-6 items-stretch">
+        {/* Editorial Manifesto Card */}
+        <div className="w-full bg-brand-forest text-white rounded-3xl p-7 sm:p-10 lg:p-12 relative overflow-hidden border border-brand-moss shadow-xl">
+          {/* Background Archival Texture */}
+          <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
 
-          {/* Left: Authentic Nepali Factory & Atelier Picture Card */}
-          <div className="relative group rounded-3xl overflow-hidden border border-brand-beige shadow-md bg-white">
-            <div className="relative h-72 sm:h-80 lg:h-full min-h-[320px] w-full overflow-hidden">
-              <Image
-                src="/asset/production/nepal-factory-lalitpur-editorial.jpg"
-                alt="Authentic Nepali Bag and Packaging Production Culture at Lalitpur Facility"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                sizes="(max-width: 1024px) 100vw, 50vw"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-black/10" />
-              
-              {/* Heritage Badge Overlay */}
-              <div className="absolute top-4 left-4 flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/55 backdrop-blur-md border border-white/20 text-white text-[10px] font-sans font-semibold tracking-wider uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand-mint animate-pulse" />
-                <span>Lalitpur Atelier • Nepal</span>
-              </div>
-
-              {/* Caption Overlay at Bottom */}
-              <div className="absolute bottom-5 left-5 right-5 text-white">
-                <div className="font-serif italic text-base sm:text-lg text-white/95">
-                  Authentic Artisan Weaving &amp; Bag Crafting
-                </div>
-                <div className="text-[10px] font-sans text-stone-300 uppercase tracking-widest mt-1 flex items-center gap-2">
-                  <span>Mahalaxmi, Lalitpur</span>
-                  <span>•</span>
-                  <span className="text-brand-mint font-semibold">100% In-House Production</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right: Editorial Manifesto Card */}
-          <div className="w-full bg-brand-forest text-white rounded-3xl p-7 sm:p-9 flex flex-col justify-between relative overflow-hidden border border-brand-moss shadow-xl">
+          <div className="relative z-10 grid lg:grid-cols-12 gap-8 items-center">
             
-            {/* Background Archival Texture */}
-            <div className="absolute inset-0 opacity-[0.09] graffiti-texture pointer-events-none" />
-
-            <div className="relative z-10 space-y-6">
-              
+            {/* Left Col: Mission Statement & Philosophy */}
+            <div className="lg:col-span-7 space-y-5">
               <div className="inline-block border-b border-brand-mint/40 pb-2">
                 <span className="font-serif italic text-brand-mint text-sm sm:text-base">
                   The Himalayan Standard
                 </span>
               </div>
 
-              <blockquote className="font-serif text-xl sm:text-2xl font-normal leading-snug text-white">
+              <blockquote className="font-serif text-2xl sm:text-3xl font-normal leading-snug text-white">
                 &ldquo;More than you anticipate... Packaging engineered for lasting impressions.&rdquo;
               </blockquote>
 
-              <p className="text-stone-300 font-sans text-xs sm:text-sm leading-relaxed">
+              <p className="text-stone-300 font-sans text-xs sm:text-sm leading-relaxed max-w-2xl">
                 From traditional retail stores across New Road and Thamel to boutique embassies, 
                 destination luxury weddings in Pokhara, and organic food exporters — we tailor every stitch, 
                 gsm weight, and handle reinforcement to your exact brand demands.
               </p>
+            </div>
 
-              {/* 3 Core Production Pillars */}
-              <div className="space-y-3 pt-2 text-xs font-sans text-stone-200">
-                <div className="flex items-center space-x-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+            {/* Right Col: 3 Core Pillars */}
+            <div className="lg:col-span-5 space-y-3 bg-white/5 border border-white/10 rounded-2xl p-5 sm:p-6 backdrop-blur-xs">
+              <div className="text-[10px] font-sans font-black uppercase tracking-[0.18em] text-brand-mint mb-2">
+                Manufacturing Commitments
+              </div>
+              <div className="space-y-3 text-xs sm:text-sm font-sans text-stone-200">
+                <div className="flex items-start space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 flex-shrink-0" />
                   <span>In-House Multi-Color Screen &amp; Flexo Printing</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+                <div className="flex items-start space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 flex-shrink-0" />
                   <span>Rigorous Tensile &amp; Tear Weight-Bearing Quality Control</span>
                 </div>
-                <div className="flex items-center space-x-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint" />
+                <div className="flex items-start space-x-3">
+                  <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mt-1.5 flex-shrink-0" />
                   <span>Preservation of Ancient Himalayan Daphne Lokta Artisans</span>
                 </div>
               </div>
-
             </div>
 
-            {/* Bottom Atelier Seal */}
-            <div className="relative z-10 pt-6 mt-6 border-t border-white/15 flex items-center justify-between">
+            {/* Bottom Atelier Seal spanning full width */}
+            <div className="lg:col-span-12 pt-6 mt-2 border-t border-white/15 flex items-center justify-between flex-wrap gap-4">
               <div>
-                <div className="font-serif font-bold text-white text-sm">ECO PRINT &amp; PACK</div>
+                <div className="font-serif font-bold text-white text-base">ECO PRINT &amp; PACK</div>
                 <div className="text-[10px] text-stone-400 font-sans tracking-wider uppercase">
-                  Eco Promotional Industries Pvt Ltd
+                  Eco Promotional Industries Pvt Ltd • Thashikhel, Lalitpur
                 </div>
               </div>
-              <div className="px-2.5 py-1 rounded-full border border-white/20 text-[10px] uppercase tracking-wider text-brand-mint">
-                Kathmandu
+              <div className="px-3 py-1 rounded-full border border-white/20 text-[10px] uppercase tracking-wider text-brand-mint font-semibold">
+                Kathmandu Valley Atelier
               </div>
             </div>
 

@@ -100,44 +100,7 @@ export function WhyChooseUs() {
           ))}
         </div>
 
-        {/* GSM Specification Callout Strip - Compact */}
-        <div className="mt-6 rounded-2xl border border-brand-beige bg-white overflow-hidden shadow-2xs">
-          <div className="bg-brand-forest px-4 sm:px-6 py-2.5 flex items-center justify-between flex-wrap gap-2">
-            <div className="flex items-center gap-2">
-              <svg className="w-3.5 h-3.5 text-brand-mint" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
-              </svg>
-              <span className="text-[10px] font-sans font-black uppercase tracking-[0.18em] text-white">
-                Material Specifications &amp; Minimums
-              </span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-[#25D366]/20 border border-[#25D366]/30 rounded-full px-2.5 py-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
-              <span className="text-[9px] font-sans font-bold text-[#25D366] uppercase tracking-wider">Ready to Ship — Lalitpur 🇳🇵</span>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 divide-x divide-brand-beige/80">
-            {[
-              { material: 'Non-Woven PP', gsm: '60–90 GSM', moq: 'MOQ: 500 pcs', handle: 'Loop / D-Cut' },
-              { material: 'Cotton Canvas', gsm: '10–12 OZ', moq: 'MOQ: 100 pcs', handle: 'Webbing Strap' },
-              { material: 'Lokta Paper', gsm: '40–80 GSM', moq: 'MOQ: 50 pcs', handle: 'Twisted Rope' },
-              { material: 'Kraft Paper', gsm: '90–120 GSM', moq: 'MOQ: 100 pcs', handle: 'Twisted / Flat' },
-              { material: 'Garment Cover', gsm: '30–60 GSM', moq: 'MOQ: 200 pcs', handle: 'Full-zip Hanger' },
-            ].map((spec) => (
-              <div key={spec.material} className="p-3 sm:p-4 flex flex-col gap-0.5">
-                <span className="text-[8.5px] font-sans font-black uppercase tracking-[0.15em] text-brand-olive">{spec.material}</span>
-                <span className="font-serif text-base font-bold text-brand-forest leading-none">{spec.gsm}</span>
-                <span className="text-[9.5px] font-sans text-stone-500 mt-0.5">{spec.handle}</span>
-                <span className="text-[8.5px] font-sans font-semibold text-brand-moss uppercase tracking-wider mt-0.5 inline-flex items-center gap-1">
-                  <svg className="w-2.5 h-2.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  {spec.moq}
-                </span>
-              </div>
-            ))}
-          </div>
-        </div>
+
 
       </div>
     </section>
