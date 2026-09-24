@@ -28,7 +28,7 @@ const nextConfig = {
     return [
       {
         source: '/tiktok',
-        destination: 'https://www.tiktok.com/@ecobags81?_r=1&_t=ZS-9A0JdEMZ8XX',
+        destination: 'https://www.tiktok.com/@ecobagsa1?_r=1&_t=ZS-9A0JdEMZ8XX',
         permanent: false,
       },
       {
