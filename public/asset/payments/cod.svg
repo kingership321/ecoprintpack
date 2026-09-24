@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 126 36" width="100%" height="100%">
+  <!-- Background Badge -->
+  <rect width="126" height="36" rx="6" fill="#FFFFFF" />
+
+  <!-- Cash Icon -->
+  <g transform="translate(10, 8)" stroke="#2D6A4F" stroke-width="1.8" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="1" y="4" width="19" height="12" rx="2" />
+    <circle cx="10.5" cy="10" r="2.5" fill="#2D6A4F" stroke="none" />
+    <line x1="4" y1="10" x2="4.01" y2="10" stroke-width="2" />
+    <line x1="17" y1="10" x2="17.01" y2="10" stroke-width="2" />
+  </g>
+
+  <!-- Typography -->
+  <text x="36" y="19" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#1B3A29" letter-spacing="0.2">CASH ON DELIVERY</text>
+  <text x="36" y="27" font-family="'Plus Jakarta Sans', system-ui, -apple-system, sans-serif" font-size="7" font-weight="700" fill="#6B7280" letter-spacing="0.5">PAY UPON RECEIPT</text>
+</svg>

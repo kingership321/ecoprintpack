@@ -108,23 +108,21 @@ export const Footer = () => {
       <div className="border-t border-white/5 bg-[#132A20] py-5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Payment & Trust Strip */}
-          <div className="flex flex-wrap items-center justify-center gap-3 mb-4 pb-4 border-b border-white/5">
-            <span className="text-[9px] font-sans font-black uppercase tracking-[0.2em] text-stone-500">Accepted Payments &amp; Service</span>
-            <div className="flex flex-wrap items-center gap-2">
-              {[
-                { label: 'eSewa', color: '#60BB46' },
-                { label: 'Khalti', color: '#5C2D91' },
-                { label: 'Bank Transfer', color: '#74C69D' },
-                { label: 'Cash on Delivery', color: '#D8F3DC' },
-              ].map((p) => (
-                <span
-                  key={p.label}
-                  className="inline-flex items-center px-2.5 py-1 rounded-md text-[9px] font-sans font-bold uppercase tracking-wider border border-white/10 text-stone-300"
-                  style={{ borderColor: p.color + '40', color: p.color }}
-                >
-                  {p.label}
-                </span>
-              ))}
+          <div className="flex flex-wrap items-center justify-center gap-3.5 mb-4 pb-4 border-b border-white/5">
+            <span className="text-[9px] font-sans font-black uppercase tracking-[0.2em] text-stone-400">Accepted Payments &amp; Settlement:</span>
+            <div className="flex flex-wrap items-center justify-center gap-2.5">
+              <div className="h-7 w-24 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="eSewa Digital Wallet">
+                <Image src="/asset/payments/esewa.svg" alt="eSewa" fill className="object-contain" unoptimized />
+              </div>
+              <div className="h-7 w-24 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="Khalti Digital Wallet">
+                <Image src="/asset/payments/khalti.svg" alt="Khalti" fill className="object-contain" unoptimized />
+              </div>
+              <div className="h-7 w-28 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="Direct Bank Transfer / ConnectIPS">
+                <Image src="/asset/payments/bank-transfer.svg" alt="Bank Transfer" fill className="object-contain" unoptimized />
+              </div>
+              <div className="h-7 w-28 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200" title="Cash on Delivery Across Nepal">
+                <Image src="/asset/payments/cod.svg" alt="Cash on Delivery" fill className="object-contain" unoptimized />
+              </div>
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-400 font-sans">
