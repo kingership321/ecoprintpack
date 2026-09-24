@@ -36,7 +36,7 @@ export const Header = () => {
           <div className="flex items-center space-x-6">
             <span className="flex items-center text-stone-300">
               <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mr-2 animate-pulse" />
-              🇳🇵 Direct Manufacturer • Thashikhel, Lalitpur, Nepal
+              🇳🇵 Direct Manufacturer • Thashikhel, Lalitpur Metropolitan City Ward No. 13
             </span>
             <span className="text-white/20">|</span>
             {/* WhatsApp primary contact */}
@@ -223,7 +223,7 @@ export const Header = () => {
             <div className="pt-3 space-y-2 text-stone-600 text-xs">
               <p className="flex items-center">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-olive mr-2" />
-                Thashikhel, Lalitpur, Nepal
+                Thashikhel, Lalitpur Metropolitan City Ward No. 13, Nepal
               </p>
               <p>+977 9869268248 / 9851189191</p>
             </div>

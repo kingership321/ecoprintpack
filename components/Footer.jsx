@@ -95,7 +95,7 @@ export const Footer = () => {
             <div className="space-y-3 text-xs font-sans text-stone-300">
               <div>
                 <p className="text-[10px] uppercase tracking-wider text-stone-400 font-semibold">Location</p>
-                <p className="mt-0.5">Thashikhel Chowk, Lalitpur, Nepal</p>
+                <p className="mt-0.5">Thashikhel Chowk, Lalitpur Metropolitan City Ward No. 13, Nepal</p>
               </div>
 
               <div>

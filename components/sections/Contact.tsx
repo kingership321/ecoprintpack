@@ -246,7 +246,7 @@ export function Contact() {
                 <div className="space-y-4 pt-4 border-t border-white/15 text-xs font-sans">
                   <div>
                     <span className="text-[10px] uppercase tracking-wider text-stone-400 font-semibold block">Factory Address</span>
-                    <p className="text-white text-sm font-serif mt-0.5">Thashikhel Chowk, Lalitpur, Nepal</p>
+                    <p className="text-white text-sm font-serif mt-0.5">Thashikhel Chowk, Lalitpur Metropolitan City Ward No. 13, Nepal</p>
                   </div>
 
                   <div>

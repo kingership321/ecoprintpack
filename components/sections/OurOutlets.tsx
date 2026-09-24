@@ -99,7 +99,7 @@ export function OurOutlets() {
                 </svg>
               </div>
               <h3 className="font-serif text-xl md:text-2xl font-bold mb-1">Eco Promotional Industries</h3>
-              <p className="text-brand-beige text-sm md:text-base font-sans">Thashikhel Chowk, Lalitpur, Nepal</p>
+              <p className="text-brand-beige text-sm md:text-base font-sans">Thashikhel Chowk, Lalitpur Metropolitan City Ward No. 13, Nepal</p>
             </div>
           </div>
 

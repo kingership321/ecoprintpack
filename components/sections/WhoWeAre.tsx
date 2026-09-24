@@ -69,7 +69,7 @@ export function WhoWeAre() {
               <div>
                 <div className="font-serif font-bold text-white text-base">ECO PRINT &amp; PACK</div>
                 <div className="text-[10px] text-stone-400 font-sans tracking-wider uppercase">
-                  Eco Promotional Industries Pvt Ltd • Thashikhel, Lalitpur
+                  Eco Promotional Industries Pvt Ltd • Thashikhel, Lalitpur Metropolitan City Ward No. 13
                 </div>
               </div>
               <div className="px-3 py-1 rounded-full border border-white/20 text-[10px] uppercase tracking-wider text-brand-mint font-semibold">
@@ -154,7 +154,7 @@ export function WhoWeAre() {
             <div className="relative z-10">
               <div className="text-[10px] font-sans font-black uppercase tracking-[0.18em] text-brand-mint mb-1">Factory Location</div>
               <div className="font-serif font-bold text-white text-sm">Thashikhel Chowk, Lalitpur</div>
-              <div className="text-[11px] text-stone-300 font-sans mt-0.5">Mahalaxmi Municipality, Bagmati Province, Nepal 🇳🇵</div>
+              <div className="text-[11px] text-stone-300 font-sans mt-0.5">Lalitpur Metropolitan City Ward No. 13, Nepal 🇳🇵</div>
             </div>
           </div>
 
