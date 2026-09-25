@@ -16,17 +16,19 @@ export const Footer = () => {
           
           {/* 1. Brand Info & Atelier Mission (4 cols) */}
           <div className="lg:col-span-4 text-center md:text-left space-y-4">
-            <div className="flex items-center justify-center md:justify-start">
+            <div className="flex items-center justify-center md:justify-start py-1">
               <Link href="/" className="group inline-block">
-                <div className="relative w-44 h-16 bg-white/95 rounded-2xl p-2.5 shadow-xs border border-white/20 transition-all duration-300 overflow-hidden">
-                  <Image
-                    src="/logo.svg"
-                    alt="ECO PRINT & PACK Logo"
-                    fill
-                    sizes="176px"
-                    className="object-contain"
-                    unoptimized
-                  />
+                <div className="relative w-48 h-20 bg-white/95 rounded-2xl py-3 px-4 shadow-xs border border-white/20 transition-all duration-300 overflow-hidden flex items-center justify-center">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src="/logo.svg"
+                      alt="ECO PRINT & PACK Logo"
+                      fill
+                      sizes="192px"
+                      className="object-contain py-0.5"
+                      unoptimized
+                    />
+                  </div>
                 </div>
               </Link>
             </div>
@@ -123,8 +125,8 @@ export const Footer = () => {
           <div className="flex flex-wrap items-center justify-center gap-3.5 mb-4 pb-4 border-b border-white/5">
             <span className="text-[9px] font-sans font-black uppercase tracking-[0.2em] text-stone-400">Accepted Payments &amp; Settlement:</span>
             <div className="flex flex-wrap items-center justify-center gap-2.5">
-              <div className="h-7 w-24 bg-white px-2 py-0.5 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200 flex items-center justify-center" title="eSewa Digital Wallet">
-                <Image src="/asset/payments/esewa.png" alt="eSewa" width={80} height={22} className="object-contain max-h-5 w-auto" unoptimized />
+              <div className="h-7 w-28 bg-white px-2 py-0.5 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200 flex items-center justify-center" title="eSewa Digital Wallet">
+                <Image src="/asset/payments/esewa.png" alt="eSewa" width={90} height={24} className="object-contain max-h-[22px] w-auto" unoptimized />
               </div>
               <div className="h-7 w-24 bg-white px-2 py-0.5 relative rounded-md overflow-hidden shadow-xs hover:scale-105 transition-transform duration-200 flex items-center justify-center" title="Khalti Digital Wallet">
                 <Image src="/asset/payments/khalti.png" alt="Khalti" width={80} height={22} className="object-contain max-h-5 w-auto" unoptimized />
