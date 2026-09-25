@@ -26,7 +26,7 @@ export function DirectorsMessage() {
             <div className="md:col-span-4 flex flex-col items-center text-center">
               <div className="relative w-40 h-48 sm:w-44 sm:h-52 rounded-2xl overflow-hidden shadow-md border-2 border-brand-beige bg-stone-100 flex-shrink-0">
                 <Image 
-                  src="/asset/DipeshJI.jpg" 
+                  src="/asset/director_photo.jpeg" 
                   alt="Dipesh Rai - Managing Director, Eco Promotional Industries" 
                   fill 
                   className="object-cover object-top"

@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 // Import director images
 import amrishThapa from '/public/asset/DipeshJI.jpg';
-import dipeshRai from '/public/asset/DipeshJI.jpg';
+import dipeshRai from '/public/asset/director_photo.jpeg';
 import sujanGhimire from '/public/asset/DipeshJI.jpg';
 import krishnaMahat from '/public/asset/DipeshJI.jpg';
 
