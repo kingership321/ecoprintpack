@@ -83,21 +83,13 @@ export function DirectorsMessage() {
               </p>
 
               {/* Signature Line */}
-              <div className="pt-4 border-t border-stone-200 flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4">
-                <div className="min-w-0">
-                  <div className="flex items-baseline justify-between sm:justify-start gap-3">
-                    <span className="font-serif font-bold text-brand-forest text-base">Dipesh Rai</span>
-                    <span className="font-serif text-xl sm:text-2xl text-brand-olive italic whitespace-nowrap sm:hidden flex-shrink-0">
-                      ~ D. Rai
-                    </span>
-                  </div>
+              <div className="pt-4 border-t border-stone-200">
+                <div>
+                  <span className="font-serif font-bold text-brand-forest text-base block">Dipesh Rai</span>
                   <div className="text-[11px] text-stone-500 font-sans uppercase tracking-wider mt-0.5">
                     Managing Director • Eco Promotional Industries Pvt Ltd
                   </div>
                 </div>
-                <span className="hidden sm:inline-block font-serif text-2xl text-brand-olive italic whitespace-nowrap flex-shrink-0">
-                  ~ D. Rai
-                </span>
               </div>
 
             </div>
