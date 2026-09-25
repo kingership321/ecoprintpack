@@ -1,6 +1,7 @@
 // components/Footer.jsx
 import Link from 'next/link';
 import Image from 'next/image';
+import NepalFlag from './NepalFlag';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -140,9 +141,9 @@ export const Footer = () => {
             </div>
           </div>
           <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-stone-400 font-sans">
-            <p>
-              &copy; {currentYear} <span className="text-white font-medium">Eco Promotional Industries Pvt Ltd</span>.
-              {' '}Manufactured in Lalitpur, Nepal 🇳🇵
+            <p className="flex items-center gap-1.5 flex-wrap justify-center sm:justify-start">
+              <span>&copy; {currentYear} <span className="text-white font-medium">Eco Promotional Industries Pvt Ltd</span>. Manufactured in Lalitpur, Nepal</span>
+              <NepalFlag className="w-3.5 h-4 inline-block drop-shadow-xs" />
             </p>
             <p className="text-[11px] text-stone-400 font-serif italic">
               Integrity in every fiber • Conscious Nepali Packaging

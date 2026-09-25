@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
+import NepalFlag from './NepalFlag';
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,9 +35,10 @@ export const Header = () => {
       <div className="bg-brand-forest text-stone-300 py-2 hidden md:block border-b border-white/10 text-[11px] font-medium tracking-wider">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center">
           <div className="flex items-center space-x-6">
-            <span className="flex items-center text-stone-300">
-              <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mr-2 animate-pulse" />
-              🇳🇵 Direct Manufacturer • Thashikhel, Lalitpur Metropolitan City Ward No. 13
+            <span className="flex items-center text-stone-300 gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-mint mr-1 animate-pulse" />
+              <NepalFlag className="w-3.5 h-4 inline-block drop-shadow-xs" />
+              <span>Direct Manufacturer • Thashikhel, Lalitpur Metropolitan City Ward No. 13</span>
             </span>
             <span className="text-white/20">|</span>
             {/* WhatsApp primary contact */}

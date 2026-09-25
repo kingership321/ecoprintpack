@@ -1,5 +1,6 @@
 // components/sections/WhoWeAre.tsx
 'use client';
+import NepalFlag from '../NepalFlag';
 
 export function WhoWeAre() {
   return (
@@ -109,7 +110,10 @@ export function WhoWeAre() {
             <div className="relative z-10">
               <div className="text-[10px] font-sans font-black uppercase tracking-[0.18em] text-brand-mint mb-1">Factory Location</div>
               <div className="font-serif font-bold text-white text-sm">Thashikhel Chowk, Lalitpur</div>
-              <div className="text-[11px] text-stone-300 font-sans mt-0.5">Lalitpur Metropolitan City Ward No. 13, Nepal 🇳🇵</div>
+              <div className="text-[11px] text-stone-300 font-sans mt-0.5 flex items-center gap-1.5">
+                <span>Lalitpur Metropolitan City Ward No. 13, Nepal</span>
+                <NepalFlag className="w-3.5 h-4 inline-block drop-shadow-xs" />
+              </div>
             </div>
           </div>
 

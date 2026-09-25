@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import NepalFlag from '../NepalFlag';
 
 const heroProducts = [
   {
@@ -275,7 +276,7 @@ export function Hero() {
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2 pt-4">
               {/* Made in Nepal badge */}
               <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-brand-forest/20 bg-white/80 text-[10px] font-sans font-bold uppercase tracking-wider text-brand-forest">
-                <span className="text-base leading-none">🇳🇵</span>
+                <NepalFlag className="w-3.5 h-4 inline-block" />
                 <span>Made in Nepal</span>
               </div>
               {/* Factory Direct badge */}

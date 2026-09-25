@@ -2,6 +2,7 @@
 'use client';
 
 import { useState } from 'react';
+import NepalFlag from '../NepalFlag';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -315,8 +316,8 @@ export function Contact() {
 
             {/* Nationwide Dispatch Badge */}
             <div className="bg-white rounded-3xl p-6 border border-brand-beige/90 shadow-xs flex items-center space-x-4">
-              <div className="w-12 h-12 rounded-2xl bg-brand-beige flex items-center justify-center text-brand-forest text-xl flex-shrink-0 border border-brand-mint/30">
-                🇳🇵
+              <div className="w-12 h-12 rounded-2xl bg-brand-beige flex items-center justify-center text-brand-forest flex-shrink-0 border border-brand-mint/30 p-2">
+                <NepalFlag className="w-7 h-8 object-contain" />
               </div>
               <div>
                 <h4 className="font-serif font-bold text-brand-forest text-sm">
