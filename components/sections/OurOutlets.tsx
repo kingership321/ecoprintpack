@@ -82,12 +82,12 @@ export function OurOutlets() {
         </div>
 
         {/* 5-Step Manufacturing Process Strip */}
-        <div className="mt-8 md:mt-10 bg-[#FAF8F5] rounded-3xl border border-brand-beige/90 shadow-xs p-6 sm:p-8 relative overflow-hidden">
-          <div className="absolute inset-0 fiber-bg opacity-50 pointer-events-none" />
+        <div className="mt-8 md:mt-10 bg-brand-forest text-white rounded-3xl border border-brand-moss shadow-xl p-6 sm:p-8 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[0.08] graffiti-texture pointer-events-none" />
           <div className="relative z-10">
             <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 rounded-full bg-brand-olive animate-pulse" />
-              <span className="text-[11px] font-sans font-black uppercase tracking-[0.2em] text-brand-forest">
+              <span className="w-2 h-2 rounded-full bg-brand-mint animate-pulse" />
+              <span className="text-[11px] font-sans font-black uppercase tracking-[0.2em] text-brand-mint">
                 Our Manufacturing Process — Thashikhel, Lalitpur
               </span>
             </div>
@@ -109,17 +109,17 @@ export function OurOutlets() {
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
                 )},
               ].map((s, i, arr) => (
-                <div key={s.step} className="flex flex-col items-center text-center relative">
+                <div key={s.step} className="flex flex-col items-center text-center relative group">
                   {/* Connector line */}
                   {i < arr.length - 1 && (
-                    <div className="hidden lg:block absolute top-5 left-[calc(50%+20px)] w-[calc(100%-40px)] h-px bg-brand-beige border-t border-dashed border-brand-olive/30 z-0" />
+                    <div className="hidden lg:block absolute top-5 left-[calc(50%+22px)] w-[calc(100%-44px)] h-px border-t border-dashed border-white/20 z-0" />
                   )}
-                  <div className="relative z-10 w-10 h-10 rounded-full bg-white border-2 border-brand-olive/40 flex items-center justify-center text-brand-forest mb-2.5 shadow-2xs">
+                  <div className="relative z-10 w-11 h-11 rounded-full bg-white/10 backdrop-blur-md border border-brand-mint/40 flex items-center justify-center text-brand-mint mb-2.5 shadow-sm group-hover:scale-110 group-hover:bg-brand-mint group-hover:text-brand-forest transition-all duration-300">
                     {s.icon}
                   </div>
-                  <span className="text-[9px] font-sans font-black text-brand-olive uppercase tracking-widest mb-0.5">{s.step}</span>
-                  <span className="text-[11px] sm:text-xs font-serif font-bold text-brand-forest leading-tight">{s.label}</span>
-                  <span className="text-[9px] font-sans text-stone-500 mt-0.5 leading-tight hidden sm:block">{s.sub}</span>
+                  <span className="text-[10px] font-sans font-black text-brand-mint uppercase tracking-widest mb-0.5">{s.step}</span>
+                  <span className="text-xs sm:text-sm font-serif font-bold text-white leading-tight">{s.label}</span>
+                  <span className="text-[10px] font-sans text-stone-300 mt-1 leading-snug hidden sm:block max-w-[140px]">{s.sub}</span>
                 </div>
               ))}
             </div>
