@@ -96,53 +96,8 @@ export function WhoWeAre() {
           </div>
         </div>
 
-        {/* 5-Step Manufacturing Process Strip */}
-        <div className="mt-10 bg-white rounded-3xl border border-brand-beige/90 shadow-xs p-6 sm:p-8 relative overflow-hidden">
-          <div className="absolute inset-0 fiber-bg opacity-50 pointer-events-none" />
-          <div className="relative z-10">
-            <div className="flex items-center gap-2 mb-6">
-              <span className="w-2 h-2 rounded-full bg-brand-olive animate-pulse" />
-              <span className="text-[11px] font-sans font-black uppercase tracking-[0.2em] text-brand-forest">
-                Our Manufacturing Process — Thashikhel, Lalitpur
-              </span>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-              {[
-                { step: '01', label: 'Raw Material', sub: 'PP Fabric / Cotton / Lokta / Kraft', icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 10V7" /></svg>
-                )},
-                { step: '02', label: 'Cut & Stitch', sub: 'Die-cut, ultrasonic weld & cross-stitch', icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758a3 3 0 10-4.243 4.243 3 3 0 004.243-4.243zm0-5.758a3 3 0 10-4.243-4.243 3 3 0 004.243 4.243z" /></svg>
-                )},
-                { step: '03', label: 'Screen Print', sub: 'Multi-color flexo & screen printing', icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" /></svg>
-                )},
-                { step: '04', label: 'Quality Check', sub: 'Tensile, tear & weight-bearing QC', icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>
-                )},
-                { step: '05', label: 'Dispatch', sub: 'Nationwide delivery from Lalitpur', icon: (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
-                )},
-              ].map((s, i, arr) => (
-                <div key={s.step} className="flex flex-col items-center text-center relative">
-                  {/* Connector line */}
-                  {i < arr.length - 1 && (
-                    <div className="hidden lg:block absolute top-5 left-[calc(50%+20px)] w-[calc(100%-40px)] h-px bg-brand-beige border-t border-dashed border-brand-olive/30 z-0" />
-                  )}
-                  <div className="relative z-10 w-10 h-10 rounded-full bg-brand-linen border-2 border-brand-olive/40 flex items-center justify-center text-brand-forest mb-2.5">
-                    {s.icon}
-                  </div>
-                  <span className="text-[9px] font-sans font-black text-brand-olive uppercase tracking-widest mb-0.5">{s.step}</span>
-                  <span className="text-[11px] sm:text-xs font-serif font-bold text-brand-forest leading-tight">{s.label}</span>
-                  <span className="text-[9px] font-sans text-stone-500 mt-0.5 leading-tight hidden sm:block">{s.sub}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-
         {/* Factory Address Card */}
-        <div className="mt-6 flex flex-col sm:flex-row gap-4">
+        <div className="mt-8 flex flex-col sm:flex-row gap-4">
           <div className="flex-1 bg-brand-forest text-white rounded-2xl p-5 flex items-start gap-4 relative overflow-hidden">
             <div className="absolute inset-0 opacity-[0.07] graffiti-texture pointer-events-none" />
             <div className="relative z-10 flex-shrink-0 w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center">
