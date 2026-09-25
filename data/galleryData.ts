@@ -555,21 +555,21 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 70,
-    title: 'Office Showroom & Sample Display Wall',
+    title: 'Heidelberg MO Press Control Console',
     category: 'Factory & Showroom',
-    subCategory: 'Office Setup',
-    badge: 'Showroom Setup',
-    image: '/asset/atelier/office-showroom-display-wall-v2.jpg',
-    alt: 'Office Showroom & Sample Display Wall - Eco Promotional Industries Lalitpur'
+    subCategory: 'Printing & Offset',
+    badge: 'Offset Printing',
+    image: '/asset/atelier/atelier-heidelberg-press-control-console.jpg',
+    alt: 'Heidelberg MO Offset Press Control Desk - Eco Promotional Industries Lalitpur'
   },
   {
     id: 71,
-    title: 'Client Sample Archive & Bag Showcase',
+    title: 'High-Speed Sheet-Fed Offset Printing Press',
     category: 'Factory & Showroom',
-    subCategory: 'Office Setup',
-    badge: 'Showroom Setup',
-    image: '/asset/atelier/office-showroom-sample-collection-v2.jpg',
-    alt: 'Client Sample Archive & Bag Showcase - Eco Promotional Industries Lalitpur'
+    subCategory: 'Printing & Offset',
+    badge: 'Industrial Feed',
+    image: '/asset/atelier/atelier-offset-press-sheet-feeder.jpg',
+    alt: 'Industrial Sheet-Fed High-Speed Printing Press - Eco Print & Pack Nepal'
   },
   {
     id: 72,
@@ -577,17 +577,26 @@ export const galleryItems: GalleryItem[] = [
     category: 'Factory & Showroom',
     subCategory: 'Screen Printing',
     badge: 'Hand Screen Print',
-    image: '/asset/atelier/screen-printing-craftsman.jpg',
+    image: '/asset/atelier/screen-printing-studio.jpg',
     alt: 'Artisan Screen Printing Studio in Action - Eco Print & Pack Nepal'
   },
   {
+    id: 73,
+    title: 'Precision Rotary Electric Fabric Cutting',
+    category: 'Factory & Showroom',
+    subCategory: 'Cutting & Tailoring',
+    badge: 'Material Prep',
+    image: '/asset/atelier/atelier-precision-rotary-fabric-cutting.jpg',
+    alt: 'High-Precision Rotary Electric Fabric Cutting - Eco Promotional Industries'
+  },
+  {
     id: 74,
-    title: 'Artisan Tailor & Industrial Sewing Station',
+    title: 'Master Artisan at Industrial Sewing Machine',
     category: 'Factory & Showroom',
     subCategory: 'Stitching & Tailoring',
-    badge: 'Precision Sewing',
-    image: '/asset/atelier/artisan-sewing-bags.jpg',
-    alt: 'Artisan Tailor Sewing Non-Woven Bags - Eco Print & Pack Nepal'
+    badge: 'Precision Stitching',
+    image: '/asset/atelier/atelier-artisan-tailor-stitching.jpg',
+    alt: 'Master Artisan at Industrial Sewing Machine - Eco Print & Pack Nepal'
   },
   {
     id: 75,
@@ -600,38 +609,56 @@ export const galleryItems: GalleryItem[] = [
   },
   {
     id: 76,
-    title: 'Factory Facility Gate & Industrial Building',
+    title: 'Artisan Bag Assembly & Precision Cross-Stitching',
     category: 'Factory & Showroom',
-    subCategory: 'Facility Exterior',
-    badge: 'Lalitpur Facility',
-    image: '/asset/atelier/factory-entrance-gate.jpg',
-    alt: 'Factory Entrance Gate - Eco Promotional Industries Lalitpur Ward 13'
+    subCategory: 'Stitching & Tailoring',
+    badge: 'Local Craft',
+    image: '/asset/atelier/atelier-artisan-craftsman-portrait.jpg',
+    alt: 'Artisan Craftsman at Sewing Station - Eco Promotional Industries Lalitpur'
   },
   {
     id: 77,
-    title: 'Custom Boutique Shopping Bags for Kshitiza',
+    title: 'Custom Screen-Printed Boutique Shopping Bags',
     category: 'Factory & Showroom',
     subCategory: 'Client Production',
     badge: 'Client Specimen',
-    image: '/asset/atelier/custom-printed-bags-kshitiza.jpg',
+    image: '/asset/atelier/atelier-custom-printed-black-bags.jpg',
     alt: 'Custom Printed Non-Woven Boutique Bags for Kshitiza - Eco Print & Pack'
   },
   {
     id: 78,
-    title: 'Bag Cutting & Material Preparation Station',
+    title: 'Automated Ultrasonic Bag Assembly & Sealing',
     category: 'Factory & Showroom',
     subCategory: 'Production Floor',
-    badge: 'Material Cutting',
-    image: '/asset/atelier/factory-cutting-station-v2.jpg',
-    alt: 'Bag Cutting & Material Station - Eco Promotional Industries Lalitpur'
+    badge: 'Heat-Sealing',
+    image: '/asset/atelier/atelier-automated-ultrasonic-bag-welding.jpg',
+    alt: 'High-Speed Ultrasonic Bag Assembly and Heat Sealing - Eco Print & Pack'
   },
   {
     id: 79,
-    title: 'Industrial Bag Stitching & Finishing Line',
+    title: 'Automated Bag Machine Digital Interface & Console',
     category: 'Factory & Showroom',
-    subCategory: 'Stitching & Tailoring',
-    badge: 'Industrial Stitching',
-    image: '/asset/atelier/factory-bag-stitching-line.jpg',
-    alt: 'Industrial Bag Stitching Line - Eco Promotional Industries Lalitpur'
+    subCategory: 'Production Floor',
+    badge: 'CNC Interface',
+    image: '/asset/atelier/atelier-automated-bag-machine-console.jpg',
+    alt: 'Automated Bag Machine Digital Interface and Production Workspace'
+  },
+  {
+    id: 80,
+    title: 'Virgin Non-Woven Fabric Roll Inventory Storage',
+    category: 'Factory & Showroom',
+    subCategory: 'Raw Materials',
+    badge: 'Raw Material',
+    image: '/asset/atelier/atelier-fabric-raw-material-storage.jpg',
+    alt: 'Raw Non-Woven Fabric Rolls in Material Storage - Eco Promotional Industries'
+  },
+  {
+    id: 81,
+    title: 'Handcrafted Rope-Handle White Paper Bag Specimen',
+    category: 'Factory & Showroom',
+    subCategory: 'Paper Packaging',
+    badge: 'Paper Packaging',
+    image: '/asset/atelier/atelier-handcrafted-paper-bag-specimen.jpg',
+    alt: 'Handcrafted Rope-Handle White Paper Bag Specimen - Eco Promotional Industries'
   },
 ];
