@@ -223,19 +223,19 @@ export function Hero() {
 
             {/* Editorial Title */}
             <div className="space-y-2">
-              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-serif font-normal tracking-tight text-brand-forest leading-[1.15] break-words">
-                Packaging Crafted with <span className="italic font-serif text-brand-olive font-normal">Integrity.</span>
+              <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-5xl font-serif font-normal tracking-tight text-brand-forest leading-[1.15] break-words">
+                Eco Bags &amp; Paper Bags Manufactured in <span className="italic font-serif text-brand-olive font-normal">Nepal.</span>
               </h1>
-              <p className="text-base sm:text-xl font-serif italic text-stone-600 font-normal">
-                Manufactured locally. Built for conscious brands.
+              <p className="text-base sm:text-lg font-serif italic text-stone-600 font-normal">
+                Sustainable shopping bags &amp; custom packaging by Eco Print &amp; Pack.
               </p>
             </div>
 
             {/* Story copy */}
             <p className="text-stone-700 text-sm sm:text-base font-sans leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
-              From Kathmandu’s heritage ateliers to wholesale retail chains nationwide — we engineer durable, 
-              eco-friendly bags in Non-Woven, Cotton Canvas, 1,000-year Himalayan Lokta, and Kraft Paper. 
-              Zero guilt. Uncompromising strength. Direct from our Lalitpur manufacturing facility.
+              <strong>Eco Print &amp; Pack</strong> is a premier <strong>eco bag manufacturer and paper bag supplier in Nepal</strong>. 
+              From traditional 1,000-year Himalayan Lokta paper bags to degradable brown kraft paper bags, cotton canvas totes, and 
+              non-woven retail shopping bags — we engineer high-strength, custom printed eco packaging direct from our Lalitpur manufacturing atelier.
             </p>
 
             {/* CTAs */}

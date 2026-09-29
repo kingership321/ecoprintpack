@@ -89,14 +89,14 @@ export const Footer = () => {
           {/* 3. Core Collections (3 cols) */}
           <div className="lg:col-span-3 text-center md:text-left">
             <h4 className="font-serif text-sm font-bold text-white mb-3 uppercase tracking-wider">
-              Product Lines
+              Product Lines &amp; SEO Guides
             </h4>
             <ul className="space-y-2 text-xs font-sans">
-              <li><Link href="/products#non-woven" className="hover:text-brand-mint transition-colors">Non-Woven Bags (D/W Cut)</Link></li>
-              <li><Link href="/products#canvas" className="hover:text-brand-mint transition-colors">Cotton Canvas Totes</Link></li>
-              <li><Link href="/products#lokta" className="hover:text-brand-mint transition-colors">Himalayan Lokta Paper</Link></li>
-              <li><Link href="/products#paper" className="hover:text-brand-mint transition-colors">Brown Kraft & Boutique Paper</Link></li>
-              <li><Link href="/products#covers" className="hover:text-brand-mint transition-colors">Coat & Garment Storage Covers</Link></li>
+              <li><Link href="/eco-bags" className="hover:text-brand-mint transition-colors font-medium">Eco Bags Nepal (Non-Woven/Canvas)</Link></li>
+              <li><Link href="/paper-bags" className="hover:text-brand-mint transition-colors font-medium">Paper Bag Manufacturer &amp; Supplier</Link></li>
+              <li><Link href="/lokta-paper-bags" className="hover:text-brand-mint transition-colors font-medium">Himalayan Lokta Paper Bags</Link></li>
+              <li><Link href="/custom-paper-bags" className="hover:text-brand-mint transition-colors font-medium">Custom Printed Paper Bags</Link></li>
+              <li><Link href="/eco-friendly-packaging" className="hover:text-brand-mint transition-colors font-medium">Sustainable Packaging Solutions</Link></li>
             </ul>
           </div>
 

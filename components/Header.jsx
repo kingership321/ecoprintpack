@@ -16,11 +16,20 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  const navLinks = [
+  const productSubLinks = [
+    { name: 'All Products Overview', href: '/products', tag: 'Browse complete catalog' },
+    { name: 'Eco Non-Woven Bags', href: '/eco-bags', tag: 'D-Cut, W-Cut & Box Bags' },
+    { name: 'Kraft Paper Bags', href: '/paper-bags', tag: 'Degradable Brown Kraft & Retail' },
+    { name: 'Himalayan Lokta Bags', href: '/lokta-paper-bags', tag: 'Traditional 1000-Yr Artisan Paper' },
+    { name: 'Custom Paper Bags', href: '/custom-paper-bags', tag: 'Bespoke Boutique & Brand Print' },
+    { name: 'Eco-Friendly Packaging', href: '/eco-friendly-packaging', tag: 'Wholesale Garment & Protective Covers' },
+  ];
+
+  const mainNavLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Products', href: '/products' },
+    { name: 'Products', href: '/products', hasDropdown: true },
     { name: 'Gallery', href: '/gallery' },
-    { name: 'About Us', href: '/#about' },
+    { name: 'About Us', href: '/about' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -123,15 +132,62 @@ export const Header = () => {
             </Link>
 
             {/* Desktop Navigation Links */}
-            <nav className="hidden lg:flex items-center space-x-8">
-              {navLinks.map((link) => {
+            <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+              {mainNavLinks.map((link) => {
                 const active = isActive(link.href);
+
+                if (link.hasDropdown) {
+                  return (
+                    <div key={link.name} className="relative group/dropdown py-2">
+                      <Link
+                        href={link.href}
+                        className={`text-xs xl:text-sm font-semibold uppercase tracking-wider xl:tracking-widest transition-colors duration-200 inline-flex items-center gap-1.5 whitespace-nowrap ${
+                          active ? 'text-brand-forest font-bold' : 'text-stone-700 hover:text-brand-olive'
+                        }`}
+                      >
+                        <span>{link.name}</span>
+                        <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover/dropdown:rotate-180 text-brand-olive" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
+                        </svg>
+                        {active && (
+                          <span className="absolute bottom-0 left-0 w-full h-[2.5px] bg-brand-olive rounded-full" />
+                        )}
+                      </Link>
+
+                      {/* Dropdown Menu Card */}
+                      <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-2xl shadow-2xl border border-brand-beige/80 p-3 opacity-0 invisible group-hover/dropdown:opacity-100 group-hover/dropdown:visible transition-all duration-200 z-50 transform translate-y-2 group-hover/dropdown:translate-y-0">
+                        <div className="text-[10px] font-sans font-black uppercase tracking-[0.2em] text-brand-olive px-3 py-1.5 border-b border-stone-100 mb-1 flex items-center justify-between">
+                          <span>Packaging Categories</span>
+                          <span className="text-stone-400 font-serif italic text-[11px] capitalize">Atelier</span>
+                        </div>
+                        <div className="space-y-0.5 pt-1">
+                          {productSubLinks.map((sub) => (
+                            <Link
+                              key={sub.name}
+                              href={sub.href}
+                              className="flex flex-col px-3 py-2 rounded-xl hover:bg-brand-linen transition-colors group/sub"
+                            >
+                              <span className="text-xs font-bold text-stone-800 group-hover/sub:text-brand-forest transition-colors flex items-center justify-between">
+                                <span>{sub.name}</span>
+                                <span className="text-stone-400 group-hover/sub:text-brand-olive text-xs transition-transform group-hover/sub:translate-x-1">→</span>
+                              </span>
+                              <span className="text-[10px] text-stone-500 font-sans mt-0.5">
+                                {sub.tag}
+                              </span>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                }
+
                 return (
                   <Link
                     key={link.name}
                     href={link.href}
-                    className={`text-xs font-semibold uppercase tracking-widest transition-colors duration-200 relative py-1 ${
-                      active ? 'text-brand-forest font-bold' : 'text-stone-600 hover:text-brand-olive'
+                    className={`text-xs xl:text-sm font-semibold uppercase tracking-wider xl:tracking-widest transition-colors duration-200 relative py-2 whitespace-nowrap ${
+                      active ? 'text-brand-forest font-bold' : 'text-stone-700 hover:text-brand-olive'
                     }`}
                   >
                     {link.name}
@@ -144,9 +200,9 @@ export const Header = () => {
             </nav>
 
             {/* Desktop Actions */}
-            <div className="hidden lg:flex items-center space-x-3">
-              {/* Direct Social Links in Main Navbar */}
-              <div className="flex items-center space-x-1.5 pr-2 border-r border-stone-200">
+            <div className="hidden lg:flex items-center space-x-3 flex-shrink-0">
+
+              <div className="hidden">
                 <a
                   href="/facebook"
                   target="_blank"
@@ -183,7 +239,7 @@ export const Header = () => {
 
               <Link
                 href="/contact#quote"
-                className="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-moss text-white text-xs font-semibold tracking-widest uppercase px-5 py-2.5 rounded-full border border-brand-forest shadow-xs hover:shadow-md transition-all duration-300 group"
+                className="inline-flex items-center gap-2 bg-brand-forest hover:bg-brand-moss text-white text-[11px] xl:text-xs font-semibold tracking-widest uppercase px-4 xl:px-5 py-2.5 rounded-full border border-brand-forest shadow-xs hover:shadow-md transition-all duration-300 group whitespace-nowrap"
               >
                 <span>Request Quote</span>
                 <span className="text-brand-mint transform transition-transform group-hover:translate-x-1">→</span>
@@ -209,17 +265,34 @@ export const Header = () => {
         </div>
 
         {/* Mobile Navigation Drawer */}
-        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[30rem] opacity-100 border-t border-stone-200 mt-2' : 'max-h-0 opacity-0'}`}>
-          <div className="bg-brand-linen px-5 py-4 space-y-2">
-            {navLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                className="block text-stone-800 hover:text-brand-forest font-semibold text-sm tracking-wider uppercase py-2 border-b border-stone-200/50"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {link.name}
-              </Link>
+        <div className={`lg:hidden overflow-y-auto transition-all duration-300 ease-in-out ${isMenuOpen ? 'max-h-[36rem] opacity-100 border-t border-stone-200 mt-2' : 'max-h-0 opacity-0'}`}>
+          <div className="bg-brand-linen px-5 py-4 space-y-1">
+            {mainNavLinks.map((link) => (
+              <div key={link.name}>
+                <Link
+                  href={link.href}
+                  className="flex items-center justify-between text-stone-800 hover:text-brand-forest font-semibold text-sm tracking-wider uppercase py-2.5 border-b border-stone-200/50"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <span>{link.name}</span>
+                  {link.hasDropdown && <span className="text-[11px] text-brand-olive font-sans font-normal lowercase">categories ▾</span>}
+                </Link>
+
+                {link.hasDropdown && (
+                  <div className="pl-3 py-1.5 space-y-1 border-l-2 border-brand-olive/30 ml-2 my-1">
+                    {productSubLinks.map((sub) => (
+                      <Link
+                        key={sub.name}
+                        href={sub.href}
+                        className="block text-xs font-medium text-stone-700 hover:text-brand-forest py-1"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
 
             <div className="pt-3 space-y-2 text-stone-600 text-xs">

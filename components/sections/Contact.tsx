@@ -12,6 +12,7 @@ export function Contact() {
     phone: '',
     product: '',
     quantity: '',
+    unit: 'Pcs',
     message: '',
   });
 
@@ -23,6 +24,25 @@ export function Contact() {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+    }));
+  };
+
+  const handleProductChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedProduct = e.target.value;
+    // Auto-set unit to Pcs for bags/covers/totes, keep Kg if raw bulk or non-woven fabric
+    const defaultUnit = (
+      selectedProduct.includes('Paper') ||
+      selectedProduct.includes('Tote') ||
+      selectedProduct.includes('Lokta') ||
+      selectedProduct.includes('Boutique') ||
+      selectedProduct.includes('Covers')
+    ) ? 'Pcs' : formData.unit;
+
+    setFormData((prev) => ({
+      ...prev,
+      product: selectedProduct,
+      unit: defaultUnit,
+      quantity: '',
     }));
   };
 
@@ -43,6 +63,7 @@ export function Contact() {
         phone: '',
         product: '',
         quantity: '',
+        unit: 'Pcs',
         message: '',
       });
 
@@ -163,7 +184,7 @@ export function Contact() {
                   <select
                     name="product"
                     value={formData.product}
-                    onChange={handleChange}
+                    onChange={handleProductChange}
                     required
                     className="w-full px-4 py-2.5 text-xs font-sans border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss focus:border-brand-moss bg-stone-50 transition-all text-stone-800 appearance-none"
                   >
@@ -173,10 +194,39 @@ export function Contact() {
                     ))}
                   </select>
                 </div>
+
                 <div>
-                  <label className="block text-xs font-semibold text-stone-700 mb-1.5 uppercase tracking-wider">
-                    Estimated Volume *
-                  </label>
+                  <div className="flex items-center justify-between mb-1.5">
+                    <label className="block text-xs font-semibold text-stone-700 uppercase tracking-wider">
+                      Estimated Volume *
+                    </label>
+                    {/* Unit Switcher */}
+                    <div className="inline-flex items-center bg-stone-100 p-0.5 rounded-full border border-stone-200 text-[10px] font-medium">
+                      <button
+                        type="button"
+                        onClick={() => setFormData((prev) => ({ ...prev, unit: 'Pcs', quantity: '' }))}
+                        className={`px-2 py-0.5 rounded-full transition-all duration-200 ${
+                          formData.unit === 'Pcs'
+                            ? 'bg-brand-forest text-white font-semibold shadow-2xs'
+                            : 'text-stone-600 hover:text-stone-900'
+                        }`}
+                      >
+                        Pieces (Pcs)
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setFormData((prev) => ({ ...prev, unit: 'Kg', quantity: '' }))}
+                        className={`px-2 py-0.5 rounded-full transition-all duration-200 ${
+                          formData.unit === 'Kg'
+                            ? 'bg-brand-forest text-white font-semibold shadow-2xs'
+                            : 'text-stone-600 hover:text-stone-900'
+                        }`}
+                      >
+                        Weight (Kg)
+                      </button>
+                    </div>
+                  </div>
+
                   <select
                     name="quantity"
                     value={formData.quantity}
@@ -184,11 +234,23 @@ export function Contact() {
                     required
                     className="w-full px-4 py-2.5 text-xs font-sans border border-stone-200 rounded-full focus:ring-2 focus:ring-brand-moss focus:border-brand-moss bg-stone-50 transition-all text-stone-800 appearance-none"
                   >
-                    <option value="">Select Volume / Weight</option>
-                    <option value="20-50">20 - 50 KG (Initial Batch)</option>
-                    <option value="50-100">50 - 100 KG</option>
-                    <option value="100-500">100 - 500 KG</option>
-                    <option value="500+">500+ KG (Wholesale Commercial)</option>
+                    <option value="">Select Quantity ({formData.unit === 'Pcs' ? 'Pieces' : 'Kilograms'})</option>
+                    {formData.unit === 'Pcs' ? (
+                      <>
+                        <option value="100-500 Pcs">100 – 500 Pcs (Initial Sample / Small Batch)</option>
+                        <option value="500-1,000 Pcs">500 – 1,000 Pcs (Standard Retail Order)</option>
+                        <option value="1,000-5,000 Pcs">1,000 – 5,000 Pcs (Wholesale Commercial)</option>
+                        <option value="5,000-10,000 Pcs">5,000 – 10,000 Pcs (Bulk Factory Production)</option>
+                        <option value="10,000+ Pcs">10,000+ Pcs (Industrial Wholesale Order)</option>
+                      </>
+                    ) : (
+                      <>
+                        <option value="20-50 Kg">20 – 50 KG (Initial Fabric/Raw Batch)</option>
+                        <option value="50-100 Kg">50 – 100 KG (Standard Commercial)</option>
+                        <option value="100-500 Kg">100 – 500 KG (Wholesale Factory Batch)</option>
+                        <option value="500+ Kg">500+ KG (Industrial Wholesale Supply)</option>
+                      </>
+                    )}
                   </select>
                 </div>
               </div>
